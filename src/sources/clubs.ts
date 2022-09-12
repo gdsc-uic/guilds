@@ -3,7 +3,7 @@ import matter from 'gray-matter';
 import path from 'path';
 import md from 'markdown-it';
 
-const CLUB_DIRECTORY = 'clubs';
+const CLUB_DIRECTORY = path.join('src', 'clubs');
 const MD = md();
 
 export interface ClubMetadata {
