@@ -22,9 +22,26 @@ export interface Club {
     content: string
 }
 
+function getFullMarkdownFilepath(fileName: string) {
+    const fullPath = path.join(CLUB_DIRECTORY, fileName);
+    if (!fileName.endsWith('.md')) {
+        if (fs.lstatSync(fullPath).isDirectory()) {
+            // If the full path is a directory, return the location of
+            // the directory's index.md
+            return path.join(CLUB_DIRECTORY, fileName, 'index.md');
+        } else {
+            // Or else use the {fileName}.md
+            return getFullMarkdownFilepath(`${fileName}.md`);
+        }
+    }
+
+    return fullPath;
+}
+
 function loadAndProcessClubData(fileName: string): Club {
+    const fullPath = getFullMarkdownFilepath(fileName);
     const slug = fileName.replace('.md', '');
-    const clubFile = fs.readFileSync(path.join(CLUB_DIRECTORY, fileName), 'utf-8');
+    const clubFile = fs.readFileSync(fullPath, 'utf-8');
     const { data: metadata, content } = matter(clubFile);
 
     return {
@@ -40,10 +57,10 @@ export function loadClubs(): Club[] {
 }
 
 export function loadClub(slug: string) {
-    const clubData = loadAndProcessClubData(`${slug}.md`);
+    const club = loadAndProcessClubData(slug);
     return {
         props: {
-            club: clubData
+            club
         }
     }
 }
