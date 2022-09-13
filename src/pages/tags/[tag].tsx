@@ -1,5 +1,4 @@
-import { getClubsFromTag, getTags } from "../../sources/clubs";
-
+import { allClubs } from "contentlayer/generated";
 export default function TagPage({ tag, clubs }) {
     return (
         <main>
@@ -10,7 +9,8 @@ export default function TagPage({ tag, clubs }) {
 }
 
 export async function getStaticPaths() {
-    const tags = getTags();
+    const uniqueTags = new Set(allClubs.map(club => club.tags).flat());
+    const tags = Array.from(uniqueTags);
 
     return {
         paths: tags.map(tag => ({ params: { tag } })),
@@ -21,7 +21,7 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params: { tag } }) {
     return {
         props: {
-            clubs: getClubsFromTag(tag),
+            clubs: allClubs.filter(club => club.tags.includes(tag)),
             tag
         }
     }

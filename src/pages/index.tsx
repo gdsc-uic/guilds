@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import { Club, loadClubs } from '../sources/clubs'
 import Link from 'next/link'
+import { allClubs, Club } from 'contentlayer/generated'
 
 export default function Home({ clubs }: { clubs: Club[] }) {
   return (
@@ -16,7 +16,7 @@ export default function Home({ clubs }: { clubs: Club[] }) {
         <h1>Guilds</h1>
         <ul>
           {clubs.map(club => (
-            <li key={club.slug}><Link href={`/clubs/${club.slug}`}>{club.metadata.name}</Link></li>  
+            <li key={club._id}><Link href={club.url}>{club.name}</Link></li>  
           ))}
         </ul>
       </main>
@@ -27,7 +27,7 @@ export default function Home({ clubs }: { clubs: Club[] }) {
 export async function getStaticProps() {
   return {
     props: {
-      clubs: loadClubs()
+      clubs: allClubs
     }
   }
 }
