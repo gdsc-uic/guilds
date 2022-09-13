@@ -18,11 +18,11 @@ const ClubDescription = defineNestedType(() => ({
 const ClubAssets = defineNestedType(() => ({
     name: 'ClubAssets',
     fields: {
-        logo: { type: 'image' },
-        cover_photo: { type: 'image' },
+        logo: { type: 'string' },
+        cover_photo: { type: 'string' },
         slideshows: {
             type: 'list',
-            of: { type: 'image' }
+            of: { type: 'string' }
         }
     }
 }));

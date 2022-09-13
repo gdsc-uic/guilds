@@ -5,6 +5,9 @@ description:
 tags:
     - technology
     - computer
+assets:
+    logo: logo.png
+    cover_photo: gdsc-uic-cover-photo.png
 ---
 
 # Hello
