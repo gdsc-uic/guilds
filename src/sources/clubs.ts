@@ -9,6 +9,7 @@ const MD = md();
 export interface ClubMetadata {
     name: string
     description?: { short: string, long: string } | string
+    tags?: string[]
     assets?: {
         logo?: string
         cover_photo?: string
@@ -49,6 +50,17 @@ function loadAndProcessClubData(fileName: string): Club {
         content: MD.render(content),
         metadata: metadata as ClubMetadata
     }
+}
+
+export function getTags(): string[] {
+    const clubs = loadClubs();
+    const uniqueTags = new Set(clubs.map(club => club.metadata.tags ?? []).flat())
+    return Array.from(uniqueTags);
+}
+
+export function getClubsFromTag(tag: string): Club[] {
+    const clubs = loadClubs();
+    return clubs.filter(c => c.metadata.tags && c.metadata.tags.includes(tag));
 }
 
 export function loadClubs(): Club[] {

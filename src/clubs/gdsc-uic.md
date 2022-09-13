@@ -2,6 +2,10 @@
 name: GDSC-UIC
 description: 
     long: Google-supported developer club focusing on providing an environment for students to build solutions for their respective communities through Google technologies.
+tags:
+    - technology
+    - google
+    - computer
 ---
 
 # Hello
