@@ -1,11 +1,15 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
-import { allClubs, Club } from 'contentlayer/generated'
+import { Club } from 'contentlayer/generated'
+import useSWR from 'swr'
+import { fetcher } from 'src/utils'
 // import Image from 'next/image'
 // import { clubAssetURL } from 'src/utils'
 
-export default function Home({ clubs }: { clubs: Club[] }) {
+export default function Home() {
+  const { data: clubs, error } = useSWR<Club[]>('/api/clubs', fetcher);
+
   return (
     <div className='container'>
       <Head>
@@ -18,7 +22,11 @@ export default function Home({ clubs }: { clubs: Club[] }) {
         <h1 className='page-title'>Guilds</h1>
 
         <div className={styles.clubs}>
-          {clubs.map(club => (
+          {error && <h1>Fetch error</h1>}
+
+          {!clubs && !error && (<h1>Loading</h1>)}
+
+          {clubs && clubs.map(club => (
             <div key={club._id} className={styles.club}>
               <Link href={club.url}>
                 <a className={styles.card}>
@@ -52,12 +60,4 @@ export default function Home({ clubs }: { clubs: Club[] }) {
       </main>
     </div>
   )
-}
-
-export async function getStaticProps() {
-  return {
-    props: {
-      clubs: allClubs
-    }
-  }
 }
