@@ -14,13 +14,13 @@ import {
 	Spacer,
 	Input,
 	InputGroup,
-	InputLeftElement,
 	InputRightElement,
 	Center,
 } from "@chakra-ui/react";
 import NavBar from "src/components/NavBar";
 import ClubCard from "src/components/ClubCard";
 import Footer from "src/components/Footer";
+import CurveBackground from "src/components/CurveBackground";
 
 export default function Home() {
 	return (
@@ -132,27 +132,6 @@ function SearchBar() {
 				</Button>
 			</InputRightElement>
 		</InputGroup>
-	);
-}
-
-function CurveBackground() {
-	return (
-		<Box
-			pos="relative"
-			bg="#0057ff"
-			h="90vh"
-			zIndex="-1"
-			_after={{
-				content: '""',
-				w: "100%",
-				h: "70%",
-				bg: "white",
-				pos: "absolute",
-				bottom: "0",
-				borderTopLeftRadius: "50%",
-				borderTopRightRadius: "50%",
-			}}
-		/>
 	);
 }
 
