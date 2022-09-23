@@ -6,6 +6,9 @@ specifiers:
   '@chakra-ui/styled-system': ^2.3.3
   '@emotion/react': ^11.10.4
   '@emotion/styled': ^11
+  '@fontsource/inter': ^4.5.12
+  '@fontsource/montserrat': ^4.5.12
+  '@fontsource/space-grotesk': ^4.5.10
   '@types/markdown-it': ^12.2.3
   '@types/node': ^18.7.16
   '@types/react': ^18.0.19
@@ -31,6 +34,9 @@ dependencies:
   '@chakra-ui/styled-system': 2.3.3
   '@emotion/react': 11.10.4_axxkdcpdr7up57umjkldobkynm
   '@emotion/styled': 11.10.4_sn4wuyy54zwps25tv4w7lbiz6i
+  '@fontsource/inter': 4.5.12
+  '@fontsource/montserrat': 4.5.12
+  '@fontsource/space-grotesk': 4.5.10
   contentlayer: 0.2.8
   framer-motion: 7.3.6_biqbaboplfbrettd7655fr4n2y
   gray-matter: 4.0.3
@@ -1633,6 +1639,18 @@ packages:
 
   /@fal-works/esbuild-plugin-global-externals/2.1.2:
     resolution: {integrity: sha512-cEee/Z+I12mZcFJshKcCqC8tuX5hG3s+d+9nZ3LabqKF1vKdF41B92pJVCBggjAGORAeOzyyDDKrZwIkLffeOQ==}
+    dev: false
+
+  /@fontsource/inter/4.5.12:
+    resolution: {integrity: sha512-bGKk4/8tube/nCk8hav0ZDBVbzJzc7m0Vt4xF5p15IN4YImwGdtKG38Oq5bU8xHNS+VfvbFFCepgQNj7Pr/Lvg==}
+    dev: false
+
+  /@fontsource/montserrat/4.5.12:
+    resolution: {integrity: sha512-UQ+4ijm1sddIBtmEZ9bKgCB1rSi4Imog0YKz7wDLtMQ3Mw2ZaBseTgoLDfbWnfdowS0PLp+Z4T2KZ/1AySTlDQ==}
+    dev: false
+
+  /@fontsource/space-grotesk/4.5.10:
+    resolution: {integrity: sha512-Ua+3NeVpUbVrF4F0I5posgZ0/SvpX0ijmwU4MI43cormzOP6r6Z09+BWwhS85+wMJsM+ravc+65fa/rqAZQ3wg==}
     dev: false
 
   /@grpc/grpc-js/1.7.1:
