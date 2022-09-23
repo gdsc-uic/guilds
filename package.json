@@ -9,7 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@babel/core": "^7.19.1",
+    "@chakra-ui/react": "^2.3.4",
+    "@chakra-ui/styled-system": "^2.3.3",
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11",
+    "@fontsource/inter": "^4.5.12",
+    "@fontsource/montserrat": "^4.5.12",
+    "@fontsource/space-grotesk": "^4.5.10",
     "contentlayer": "^0.2.8",
+    "framer-motion": "^7.3.6",
     "gray-matter": "^4.0.3",
     "markdown-it": "^13.0.1",
     "next": "12.2.5",
@@ -24,6 +33,9 @@
     "@types/react": "^18.0.19",
     "eslint": "8.23.0",
     "eslint-config-next": "12.2.5",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.7.1",
     "typescript": "^4.8.3"
   }
 }
