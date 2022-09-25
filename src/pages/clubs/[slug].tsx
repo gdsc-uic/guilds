@@ -172,3 +172,18 @@ function ClubBox({ club }: { club: Club }) {
 		</Box>
 	);
 }
+
+function ClubDescription() {
+	return (
+		<Box my="3rem">
+			<Heading>Description</Heading>
+			<Box h="2" w="100%" bg="#94BAF9" />
+			<Box>
+				Lorem ipsum dolor sit, amet consectetur adipisicing elit. In placeat
+				commodi corporis quod ratione cupiditate necessitatibus soluta iste
+				ipsa, laborum minima impedit adipisci. Quos et libero repellendus sit
+				reiciendis repudiandae?
+			</Box>
+		</Box>
+	);
+}
