@@ -102,3 +102,73 @@ const StyledSwiperSlide = styled(SwiperSlide)`
 		border-radius: 15px;
 	}
 `;
+
+function ClubBox({ club }: { club: Club }) {
+	return (
+		<Box
+			w="80%"
+			h="650"
+			bg="#7DF1B9"
+			border="5px solid black"
+			borderRadius="35px"
+			boxShadow="24px 25px black"
+			mx="auto"
+		>
+			<Img
+				h="26rem"
+				w="100%"
+				alt="something"
+				borderRadius="35px"
+				src="/club_assets/gdsc-uic2/gdsc-uic-cover-photo.png"
+				objectFit="cover"
+				borderBottom="3px black solid"
+				borderBottomRadius="0"
+			/>
+
+			<Flex>
+				<Box px="40px">
+					<Img
+						mt="-7rem"
+						maxW="200px"
+						src="/club_assets/gdsc-uic2/logo.png"
+						objectFit="cover"
+						alt="gdsc-logo"
+						border="3px solid black"
+						borderRadius="50%"
+						boxShadow="5px 7px #68C89A"
+					/>
+				</Box>
+
+				<Flex mt="7">
+					<Box>
+						<Box>
+							<Heading fontSize="40" mb="2">
+								{club.name}
+							</Heading>
+							<Text fontSize="20">{club.description?.long ?? ""}</Text>
+						</Box>
+
+						<HStack>
+							<BsGithub size="30" />
+							<BsFacebook size="30" />
+						</HStack>
+					</Box>
+
+					<Box mx="10">
+						<Button
+							color="white"
+							bg="#0057FF"
+							border="1px solid black"
+							borderRadius="0"
+							leftIcon={<AiOutlineHeart color="#000" fontSize="1.2rem" />}
+							fontSize="1rem"
+							px="6"
+						>
+							Interested
+						</Button>
+					</Box>
+				</Flex>
+			</Flex>
+		</Box>
+	);
+}
