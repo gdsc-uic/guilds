@@ -25,7 +25,7 @@ export const Club = defineDocumentType(() => ({
 			type: "nested",
 			of: ClubAssets,
 		},
-		clubFaq: {
+		faq: {
 			type: "nested",
 			of: ClubFaq,
 		},
@@ -52,21 +52,6 @@ const ClubFaq = defineNestedType(() => ({
 	},
 }));
 
-const ClubDescription = defineNestedType(() => ({
-	name: "ClubDescription",
-	fields: {
-		long: {
-			type: "string",
-			description: "Full description of the club",
-			required: true,
-		},
-		short: {
-			type: "string",
-			description: "Short description of the club",
-		},
-	},
-}));
-
 const ClubAssets = defineNestedType(() => ({
 	name: "ClubAssets",
 	fields: {
@@ -75,6 +60,21 @@ const ClubAssets = defineNestedType(() => ({
 		slideshows: {
 			type: "list",
 			of: { type: "string" },
+		},
+	},
+}));
+
+const SocialMediaLinks = defineNestedType(() => ({
+	name: "SocialMediaLinks",
+	fields: {
+		social_media: {
+			type: "nested",
+			of: [
+				{ instagram: { type: "string" } },
+				{ facebook: { type: "string" } },
+				{ github: { type: "string" } },
+				{ website: { type: "string" } },
+			],
 		},
 	},
 }));
