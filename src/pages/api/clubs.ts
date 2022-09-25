@@ -10,11 +10,11 @@ import { NextApiRequest, NextApiResponse } from "next";
 // }
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'GET') {
-    return res.status(405);
-  }
+	if (req.method !== "GET") {
+		return res.status(405);
+	}
 
-  // TODO: use a search indexer to index clubs
-  // const params: ClubSearchOptions = req.query;
-  res.status(200).json(allClubs);
+	// TODO: use a search indexer to index clubs
+	// const params: ClubSearchOptions = req.query;
+	res.status(200).json(allClubs);
 }
