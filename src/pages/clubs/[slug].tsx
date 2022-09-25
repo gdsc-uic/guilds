@@ -234,3 +234,54 @@ function ClubFAQ() {
 		</Box>
 	);
 }
+
+function ClubOfficers() {
+	return (
+		<Box my="3rem">
+			<Box
+				p="8"
+				h="340"
+				bg="#FFE58A"
+				border="5px solid black"
+				borderRadius="35px"
+				boxShadow="24px 25px black"
+			>
+				<Heading mb="1rem">Officers</Heading>
+				<HStack columnGap="2rem">
+					<Box>
+						<VStack>
+							<Img
+								h="10rem"
+								w="10rem"
+								clipPath="circle()"
+								objectFit="cover"
+								src="/gdsc-officer.png"
+							></Img>
+
+							<Box textAlign="center">
+								<Text fontWeight="bold">John Doe</Text>
+								<Text>President</Text>
+							</Box>
+						</VStack>
+					</Box>
+					<Box>
+						<VStack>
+							<Img
+								h="10rem"
+								w="10rem"
+								clipPath="circle()"
+								objectFit="cover"
+								src="/gdsc-officer.png"
+							></Img>
+
+							<Box textAlign="center">
+								<Text fontWeight="bold">John Doe</Text>
+								<Text>Vice President</Text>
+							</Box>
+						</VStack>
+					</Box>
+				</HStack>
+			</Box>
+		</Box>
+	);
+}
