@@ -15,16 +15,18 @@ const ClubDescription = defineNestedType(() => ({
     }
 }));
 
-const ClubAssets = defineNestedType(() => ({
-    name: 'ClubAssets',
+const ClubFaq = defineNestedType(() => ({
+	name: "ClubFaq",
     fields: {
-        logo: { type: 'string' },
-        cover_photo: { type: 'string' },
-        slideshows: {
-            type: 'list',
-            of: { type: 'string' }
-        }
-    }
+		question: {
+			type: "string",
+			description: "Write a question that is frequently asked",
+		},
+		answer: {
+			type: "string",
+			description: "Answer description",
+		},
+	},
 }));
 
 export const Club = defineDocumentType(() => ({
