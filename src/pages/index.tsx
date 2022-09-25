@@ -35,7 +35,7 @@ export default function Home() {
 
 			<Box marginTop="-850">
 				<NavBar />
-				<Container as="main" maxWidth="95rem">
+				<Container maxWidth="95rem">
 					<Flex>
 						<Heading color="white" fontWeight="500">
 							Find your place where your
