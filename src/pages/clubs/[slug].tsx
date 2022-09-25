@@ -33,3 +33,23 @@ export async function getStaticProps({ params: { slug } }) {
 		},
 	};
 }
+
+export default function ClubPage({ club }: { club: Club }) {
+	return (
+		<Layout>
+			<Head>
+				<title>{club.name}</title>
+				<meta name="description" content={club.description?.long ?? ""} />
+			</Head>
+			<ClubBox club={club} />
+			<Carousel />
+			<Container maxW="70rem" px="2rem" my="8rem">
+				<ClubDescription />
+				<ClubOfficers />
+				<ClubFAQ />
+				<InterestedBox club={club} />
+			</Container>
+			<Footer />
+		</Layout>
+	);
+}
