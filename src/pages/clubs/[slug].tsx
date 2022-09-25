@@ -285,3 +285,38 @@ function ClubOfficers() {
 		</Box>
 	);
 }
+
+function InterestedBox({ club }: { club: Club }) {
+	return (
+		<Box
+			h="428"
+			bg="#A3F9B6"
+			border="5px solid black"
+			borderRadius="35px"
+			boxShadow="24px 25px black"
+			my="9rem"
+		>
+			<HStack h="100%">
+				<Flex w="50%" pl="2rem" direction="column">
+					<Heading fontWeight="500">Interested to join in</Heading>
+					<Heading fontWeight="bold">{club.name}?</Heading>
+				</Flex>
+				<Box w="50%" h="100%" p="8">
+					<Heading fontSize="30">Connect with the club</Heading>
+					<Button
+						w="27rem"
+						as="a"
+						px="55px"
+						py="25px"
+						bg="white"
+						borderWidth="4px"
+						borderColor="black"
+						borderRadius="0px"
+					>
+						Website
+					</Button>
+				</Box>
+			</HStack>
+		</Box>
+	);
+}
