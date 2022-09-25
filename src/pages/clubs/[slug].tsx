@@ -187,3 +187,50 @@ function ClubDescription() {
 		</Box>
 	);
 }
+
+function ClubFAQ() {
+	return (
+		<Box my="3rem">
+			<Heading>FAQs</Heading>
+			<Box h="2" w="100%" bg="#94BAF9" />
+			<Accordion allowToggle my="10">
+				<AccordionItem
+					border="5px solid black"
+					borderRadius="24px"
+					boxShadow="8px 8px black"
+					mb="1.4rem"
+				>
+					{({ isExpanded }) => (
+						<>
+							<AccordionButton>
+								<Box
+									flex="1"
+									textAlign="left"
+									fontFamily="Space Grotesk"
+									fontWeight="bold"
+									fontSize="22px"
+								>
+									{/* Insert FAQ here */}
+									Question #1
+								</Box>
+								<Box
+									transform={isExpanded ? "rotate(45deg)" : ""}
+									transition="transform 150ms ease"
+								>
+									<BsPlus fontSize="40" />
+								</Box>
+							</AccordionButton>
+							<AccordionPanel pb={4}>
+								{/* Insert answer here */}
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+								eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+								enim ad minim veniam, quis nostrud exercitation ullamco laboris
+								nisi ut aliquip ex ea commodo consequat.
+							</AccordionPanel>
+						</>
+					)}
+				</AccordionItem>
+			</Accordion>
+		</Box>
+	);
+}
