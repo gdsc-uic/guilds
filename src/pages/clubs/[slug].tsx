@@ -53,3 +53,52 @@ export default function ClubPage({ club }: { club: Club }) {
 		</Layout>
 	);
 }
+
+function Carousel() {
+	return (
+		<Box my="20">
+			<StyledSwiper
+				slidesPerView={2}
+				spaceBetween={30}
+				loop
+				grabCursor={true}
+				centeredSlides={true}
+				coverflowEffect={{
+					rotate: 50,
+					stretch: 0,
+					depth: 100,
+					modifier: 1,
+					slideShadows: true,
+				}}
+				autoplay={{
+					delay: 3700,
+					disableOnInteraction: false,
+				}}
+				modules={[Autoplay, EffectCoverflow]}
+			>
+				<StyledSwiperSlide>
+					<Image src="/sample_club_images/img1.jpg" alt="" objectFit="cover" />
+				</StyledSwiperSlide>
+				<StyledSwiperSlide>
+					<Image src="/sample_club_images/img2.jpg" alt="" />
+				</StyledSwiperSlide>
+			</StyledSwiper>
+		</Box>
+	);
+}
+
+const StyledSwiper = styled(Swiper)`
+	height: 450px;
+`;
+
+const StyledSwiperSlide = styled(SwiperSlide)`
+	border: 11px solid black;
+	border-radius: 28px;
+
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		border-radius: 15px;
+	}
+`;
