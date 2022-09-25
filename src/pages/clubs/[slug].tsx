@@ -1,20 +1,30 @@
 import Head from "next/head";
+import Layout from "src/components/layout";
 import { allClubs, Club } from "contentlayer/generated";
-
-export default function ClubPage({ club }: { club: Club }) {
-	return (
-		<div>
-			<Head>
-				<title>{club.name}</title>
-				<meta name="description" content={club.description?.long ?? ""} />
-			</Head>
-
-			<h1>{club.name}</h1>
-			<p>{club.description?.long ?? ""}</p>
-			<div dangerouslySetInnerHTML={{ __html: club.body.html }}></div>
-		</div>
-	);
-}
+import {
+	Box,
+	Container,
+	Flex,
+	Heading,
+	Button,
+	HStack,
+	Accordion,
+	AccordionButton,
+	AccordionItem,
+	AccordionPanel,
+	Img,
+	Image,
+	VStack,
+	Text,
+} from "@chakra-ui/react";
+import Footer from "src/components/Footer";
+import { AiOutlineHeart } from "react-icons/ai";
+import { BsFacebook, BsGithub } from "react-icons/bs";
+import { BsPlus } from "react-icons/bs";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, EffectCoverflow } from "swiper";
+import "swiper/css";
+import styled from "@emotion/styled";
 
 export async function getStaticPaths() {
 	const paths = allClubs.map((c) => c.url);
