@@ -1,11 +1,10 @@
 import { ChakraProvider } from "@chakra-ui/react";
 import { AppProps } from "next/app";
-import { extendTheme } from "@chakra-ui/react";
-import styled from "@emotion/styled";
 import "../styles/globals.css";
 import theme from "src/theme";
 import "@fontsource/space-grotesk";
-import "@fontsource/inter";
+import "@fontsource/inter/700.css";
+import "@fontsource/inter/200.css";
 import "@fontsource/montserrat";
 
 function MyApp({ Component, pageProps }: AppProps) {

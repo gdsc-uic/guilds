@@ -1,13 +1,12 @@
+import Link from "next/link";
 import Guilds from "./logos/Guilds";
 
 export default function NavigationBar() {
 	return (
-		<>
-			<nav>
-				<div>
-					<Guilds />
-				</div>
-			</nav>
-		</>
+		<Link href="/">
+			<a>
+				<Guilds />
+			</a>
+		</Link>
 	);
 }
