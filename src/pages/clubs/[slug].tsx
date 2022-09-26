@@ -16,6 +16,7 @@ import {
 	Image,
 	VStack,
 	Text,
+	useMediaQuery,
 } from "@chakra-ui/react";
 import Footer from "src/components/Footer";
 import { AiOutlineHeart } from "react-icons/ai";
@@ -117,13 +118,14 @@ function ClubBox({ club }: { club: Club }) {
 	return (
 		<Box
 			w="80%"
-			h="650"
+			flexDirection="column"
 			bg="#7DF1B9"
 			border="5px solid black"
 			borderRadius="35px"
 			boxShadow="24px 25px black"
 			mx="auto"
 		>
+			{/* Cover Photo */}
 			<Img
 				h="26rem"
 				w="100%"
@@ -135,49 +137,69 @@ function ClubBox({ club }: { club: Club }) {
 				borderBottomRadius="0"
 			/>
 
-			<Flex>
-				<Box px="40px">
-					<Img
-						mt="-7rem"
-						maxW="200px"
-						src="/club_assets/gdsc-uic2/logo.png"
-						objectFit="cover"
-						alt="gdsc-logo"
-						border="3px solid black"
-						borderRadius="50%"
-						boxShadow="5px 7px #68C89A"
-					/>
+			{/* Club Logo */}
+			<Box
+				px="40px"
+				display={["flex", "flex", "block"]}
+				justifyContent={["center", "center", "left"]}
+			>
+				<Img
+					mt="-7rem"
+					pos="absolute"
+					maxW="200px"
+					src="/club_assets/gdsc-uic2/logo.png"
+					objectFit="cover"
+					alt="gdsc-logo"
+					border="3px solid black"
+					borderRadius="50%"
+					boxShadow="5px 7px #68C89A"
+				/>
+			</Box>
+
+			{/* Club Information */}
+			<Flex
+				mt={["7", "7", "0"]}
+				ml={["0", "0", "16.3rem"]}
+				flexDir={["column", "column", "row"]}
+				alignItems={["center", "center", "flex-start"]}
+				pt={["20", "20", "6"]}
+			>
+				<Box
+					display="flex"
+					flexDir="column"
+					alignItems={["center", "center", "flex-start"]}
+				>
+					{/* Club Name & Description */}
+					<Box textAlign={["center", "center", "left"]}>
+						<Heading fontSize="40" mb="2">
+							{club.name}
+						</Heading>
+						<Text fontSize="20">{club.description?.long ?? ""}</Text>
+					</Box>
+
+					{/* Social Media Links */}
+					<HStack my="10">
+						<BsGithub size="30" />
+						<Box h="5" borderLeft="1px solid gray" />
+						<BsFacebook size="30" />
+					</HStack>
 				</Box>
 
-				<Flex mt="7">
-					<Box>
-						<Box>
-							<Heading fontSize="40" mb="2">
-								{club.name}
-							</Heading>
-							<Text fontSize="20">{club.description?.long ?? ""}</Text>
-						</Box>
-
-						<HStack>
-							<BsGithub size="30" />
-							<BsFacebook size="30" />
-						</HStack>
-					</Box>
-
-					<Box mx="10">
-						<Button
-							color="white"
-							bg="#0057FF"
-							border="1px solid black"
-							borderRadius="0"
-							leftIcon={<AiOutlineHeart color="#000" fontSize="1.2rem" />}
-							fontSize="1rem"
-							px="6"
-						>
-							Interested
-						</Button>
-					</Box>
-				</Flex>
+				{/* Interested Button */}
+				<Button
+					my={["10", "10", "0"]}
+					w={["90%", "90%", "0"]}
+					mx={[0, 0, "10"]}
+					color="white"
+					bg="#0057FF"
+					border="1px solid black"
+					borderRadius="0"
+					leftIcon={<AiOutlineHeart color="#000" fontSize="1.2rem" />}
+					fontSize="1rem"
+					px="5rem"
+				>
+					Interested
+				</Button>
 			</Flex>
 		</Box>
 	);
@@ -299,22 +321,56 @@ function ClubOfficers() {
 function InterestedBox({ club }: { club: Club }) {
 	return (
 		<Box
-			h="428"
+			// h="428"
 			bg="#A3F9B6"
 			border="5px solid black"
 			borderRadius="35px"
 			boxShadow="24px 25px black"
 			my="9rem"
 		>
-			<HStack h="100%">
-				<Flex w="50%" pl="2rem" direction="column">
+			<Flex
+				h="100%"
+				pos="relative"
+				flexDirection={["column", "column", "row"]}
+				alignItems="center"
+			>
+				<Flex
+					w={["35%", "90%", "65%"]}
+					direction="column"
+					alignItems={["center", "center", "normal"]}
+					px="2rem"
+					py={["2rem", "2rem", "0"]}
+				>
 					<Heading fontWeight="500">Interested to join in</Heading>
 					<Heading fontWeight="bold">{club.name}?</Heading>
-				</Flex>
-				<Box w="50%" h="100%" p="8">
-					<Heading fontSize="30">Connect with the club</Heading>
 					<Button
-						w="27rem"
+						mt="2rem"
+						w="10rem"
+						color="white"
+						bg="#0057FF"
+						border="1px solid black"
+						borderRadius="0"
+						leftIcon={<AiOutlineHeart color="#000" fontSize="1.2rem" />}
+						fontSize="1rem"
+						px="6"
+					>
+						Interested
+					</Button>
+				</Flex>
+				<Box
+					h={["0px", "0px", "428px"]}
+					w={["100%", "100%", "0px"]}
+					borderLeft={["0px", "10px dashed black", "10px dashed black"]}
+					borderBottom={["10px dashed black", "10px dashed black", "0px"]}
+					right="24"
+					top="24"
+				/>
+				<Box w="50%" h="100%" p="2rem">
+					<Heading fontSize="30" mb="1.3rem">
+						Connect with the club
+					</Heading>
+					<Button
+						w="100%"
 						as="a"
 						px="55px"
 						py="25px"
@@ -326,7 +382,7 @@ function InterestedBox({ club }: { club: Club }) {
 						Website
 					</Button>
 				</Box>
-			</HStack>
+			</Flex>
 		</Box>
 	);
 }
