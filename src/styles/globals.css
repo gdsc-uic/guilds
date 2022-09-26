@@ -1,22 +1,22 @@
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+	padding: 0;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+		Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 .container {
-  max-width: 80rem;
-  margin: 0 auto;
-  padding-left: 2rem;
-  padding-right: 2rem;
+	max-width: 80rem;
+	margin: 0 auto;
+	padding-left: 2rem;
+	padding-right: 2rem;
 }
 
 .page-title {
-  text-align: center;
+	text-align: center;
 }

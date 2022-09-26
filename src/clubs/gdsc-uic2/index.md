@@ -1,13 +1,13 @@
 ---
 name: GDSC-UIC2
-description: 
-    long: Google-supported developer club focusing on providing an environment for students to build solutions for their respective communities through Google technologies.
+description:
+  long: Google-supported developer club focusing on providing an environment for students to build solutions for their respective communities through Google technologies.
 tags:
-    - technology
-    - computer
+  - technology
+  - computer
 assets:
-    logo: logo.png
-    cover_photo: gdsc-uic-cover-photo.png
+  logo: logo.png
+  cover_photo: gdsc-uic-cover-photo.png
 ---
 
 # Hello
