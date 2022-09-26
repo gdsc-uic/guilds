@@ -16,11 +16,15 @@ import {
 	InputGroup,
 	InputRightElement,
 	Center,
+	Image,
 } from "@chakra-ui/react";
 import NavBar from "src/components/NavBar";
 import ClubCard from "src/components/ClubCard";
 import Footer from "src/components/Footer";
 import CurveBackground from "src/components/CurveBackground";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, EffectCoverflow } from "swiper";
+import "swiper/css";
 
 export default function Home() {
 	return (
@@ -45,7 +49,41 @@ export default function Home() {
 						<CTAButton />
 					</Flex>
 
-					<SlideShow />
+					<StyledSlideShow loop>
+						<SwiperSlide>
+							<Image
+								src="/sample_club_images/img1.jpg"
+								alt="slide 1"
+								objectFit="fill"
+								h="100%"
+								w="100%"
+							/>
+						</SwiperSlide>
+						<SwiperSlide>
+							<Image
+								src="/sample_club_images/img2.jpg"
+								alt="slide 1"
+								objectFit="cover"
+							/>
+						</SwiperSlide>
+						<SwiperSlide>
+							<Image
+								src="/sample_club_images/img3.jpg"
+								alt="slide 1"
+								objectFit="cover"
+							/>
+						</SwiperSlide>
+					</StyledSlideShow>
+
+					<Image
+						src="/girl.png"
+						pos="absolute"
+						left="0"
+						zIndex="-1"
+						alt="girl"
+						h={["100px", "400px", "700px"]}
+						top="55rem"
+					/>
 
 					<Center
 						mt="200"
@@ -55,9 +93,20 @@ export default function Home() {
 					>
 						<Heading fontSize="53">Find and join existing clubs</Heading>
 						<SearchBar />
-					</Center>
 
-					<ClubCard />
+						<Flex
+							wrap="wrap"
+							columnGap="1rem"
+							rowGap="1rem"
+							my="10rem"
+							justifyContent="center"
+						>
+							<ClubCard />
+							<ClubCard />
+							<ClubCard />
+							<ClubCard />
+						</Flex>
+					</Center>
 				</Container>
 			</Box>
 
@@ -149,3 +198,14 @@ function SlideShow() {
 		/>
 	);
 }
+
+const StyledSlideShow = styled(Swiper)`
+	height: 592px;
+	background-color: lightgray;
+	position: relative;
+	color: white;
+	border-width: 6px;
+	border-radius: 50px;
+	border-color: black;
+	box-shadow: 47px 47px #7a97ff;
+`;
