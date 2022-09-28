@@ -28,7 +28,7 @@ import "swiper/css";
 import Layout from "src/components/layout";
 import { FormEvent, FormEventHandler, useState } from "react";
 import useSWR from "swr";
-import { fetcher } from "src/utils";
+import { clubAssetURL, fetcher } from "src/utils";
 
 const CLUBS_ENDPOINT = '/api/clubs';
 
@@ -75,29 +75,17 @@ export default function Home() {
 			</Flex>
 
 			<StyledSlideShow loop>
-				<SwiperSlide>
-					<Image
-						src="/sample_club_images/img1.jpg"
-						alt="slide 1"
-						objectFit="fill"
-						h="100%"
-						w="100%"
-					/>
-				</SwiperSlide>
-				<SwiperSlide>
-					<Image
-						src="/sample_club_images/img2.jpg"
-						alt="slide 1"
-						objectFit="cover"
-					/>
-				</SwiperSlide>
-				<SwiperSlide>
-					<Image
-						src="/sample_club_images/img3.jpg"
-						alt="slide 1"
-						objectFit="cover"
-					/>
-				</SwiperSlide>
+				{clubs.map(club => (
+					<SwiperSlide key={`club_featured_${club._id}`}>
+						<Image
+							src={clubAssetURL(club, 'cover_photo')}
+							alt={club.name}
+							objectFit="cover"
+							w="full"
+							h="full"
+						/>
+					</SwiperSlide>
+				))}
 			</StyledSlideShow>
 
 			<Image
