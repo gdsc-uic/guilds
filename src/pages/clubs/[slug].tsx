@@ -173,7 +173,7 @@ function ClubBox({ club }: { club: Club }) {
 						<Heading fontSize="40" mb="2">
 							{club.name}
 						</Heading>
-						<Text fontSize="20">{club.description?.long ?? ""}</Text>
+						<Text fontSize="20">{club.description?.full ?? ""}</Text>
 					</Box>
 
 					{/* Social Media Links */}
