@@ -16,7 +16,6 @@ import {
 	Image,
 	VStack,
 	Text,
-	useMediaQuery,
 } from "@chakra-ui/react";
 import Footer from "src/components/Footer";
 import { AiOutlineHeart } from "react-icons/ai";
@@ -117,12 +116,12 @@ const StyledSwiperSlide = styled(SwiperSlide)`
 function ClubBox({ club }: { club: Club }) {
 	return (
 		<Box
-			w="80%"
+			w={["90%", "90%", "80%"]}
 			flexDirection="column"
 			bg="#7DF1B9"
 			border="5px solid black"
 			borderRadius="35px"
-			boxShadow="24px 25px black"
+			boxShadow="14px 15px black"
 			mx="auto"
 		>
 			{/* Cover Photo */}
