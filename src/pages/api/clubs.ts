@@ -1,5 +1,6 @@
 import { allClubs } from "contentlayer/generated";
 import { NextApiRequest, NextApiResponse } from "next";
+import MiniSearch from "minisearch";
 
 // type ClubSearchOptions = {
 //   query: string,
@@ -8,6 +9,14 @@ import { NextApiRequest, NextApiResponse } from "next";
 //   limit: string,
 //   page: string
 // }
+// const searchIndex = allClubs.map(c => {
+
+// });
+
+// const minisarch = new MiniSearch({
+// 	fields: ["title", "tags"],
+// 	storeFields: ["title"],
+// });
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 	if (req.method !== "GET") {

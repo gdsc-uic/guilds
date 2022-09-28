@@ -21,6 +21,7 @@
 		"framer-motion": "^7.3.6",
 		"gray-matter": "^4.0.3",
 		"markdown-it": "^13.0.1",
+		"minisearch": "^5.0.0",
 		"next": "12.2.5",
 		"next-contentlayer": "^0.2.8",
 		"react": "18.2.0",
