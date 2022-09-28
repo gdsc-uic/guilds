@@ -52,8 +52,10 @@ export default function ClubPage({ club }: { club: Club }) {
 		<Layout maxWidth="full" bgColor={club.theme.primary_color}>
 			<Head>
 				<title>{club.name}</title>
-				<meta name="description" content={club.description?.full ?? ""} />
+				<meta name="description" content={`See ${club.name} on Guilds: the official club directory website for the UIC Club Fair 2022`} />
+				{/* TODO: social media stuff */}
 			</Head>
+
 			<Container maxWidth="85rem">
 				<ClubBox club={club} />
 			</Container>
