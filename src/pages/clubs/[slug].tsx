@@ -288,7 +288,7 @@ function ClubOfficers({ club }: { club: Club }) {
 									w="10rem"
 									clipPath="circle()"
 									objectFit="cover"
-									src="/gdsc-officer.png"
+									src={clubAssetURL(club, 'officer_images', officer.photo_name)}
 								></Img>
 
 								<Box textAlign="center">
