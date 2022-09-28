@@ -13,6 +13,15 @@ export const Club = defineDocumentType(() => ({
 			description: "Name of the club",
 			required: true,
 		},
+		type: {
+			type: "enum",
+			options: ["academic", "non-academic"],
+			default: "academic",
+		},
+		links: {
+			type: "list",
+			of: { type: ClubLink },
+		},
 		description: {
 			type: "nested",
 			of: ClubDescription,
@@ -25,9 +34,21 @@ export const Club = defineDocumentType(() => ({
 			type: "nested",
 			of: ClubAssets,
 		},
-		faq: {
+		faqs: {
+			type: "list",
+			of: { type: ClubFaq },
+		},
+		theme: {
 			type: "nested",
-			of: ClubFaq,
+			of: ClubTheme,
+		},
+		registration: {
+			type: "nested",
+			of: ClubRegistration,
+		},
+		officers: {
+			type: "list",
+			of: ClubOfficer,
 		},
 	},
 	computedFields: {
@@ -41,7 +62,7 @@ export const Club = defineDocumentType(() => ({
 const ClubDescription = defineNestedType(() => ({
 	name: "ClubDescription",
 	fields: {
-		long: {
+		full: {
 			type: "string",
 			description: "Full description of the club",
 			required: true,
@@ -76,21 +97,41 @@ const ClubAssets = defineNestedType(() => ({
 			type: "list",
 			of: { type: "string" },
 		},
+		video_url: { type: "string" },
 	},
 }));
 
-const SocialMediaLinks = defineNestedType(() => ({
-	name: "SocialMediaLinks",
+const ClubLink = defineNestedType(() => ({
+	name: "ClubLink",
 	fields: {
-		social_media: {
-			type: "nested",
-			of: [
-				{ instagram: { type: "string" } },
-				{ facebook: { type: "string" } },
-				{ github: { type: "string" } },
-				{ website: { type: "string" } },
-			],
-		},
+		label: { type: "string" },
+		url: { type: "string" },
+	},
+}));
+
+const ClubTheme = defineNestedType(() => ({
+	name: "ClubTheme",
+	fields: {
+		primary_color: { type: "string" },
+		secondary_color: { type: "string" },
+	},
+}));
+
+const ClubRegistration = defineNestedType(() => ({
+	name: "ClubRegistration",
+	fields: {
+		form_url: { type: "string", required: false },
+		meeting_url: { type: "string", required: false },
+		livestream_url: { type: "string", required: false },
+	},
+}));
+
+const ClubOfficer = defineNestedType(() => ({
+	name: "ClubOfficer",
+	fields: {
+		name: { type: "string", required: true },
+		position: { type: "string", required: true },
+		photo_name: { type: "string", required: false },
 	},
 }));
 
