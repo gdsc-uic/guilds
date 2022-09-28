@@ -1,11 +1,11 @@
 export default function GuildsLogo() {
 	return (
 		<svg
-			width={210}
-			height={100}
+			width={150}
+			// height={100}
 			fill="currentColor"
 			xmlns="http://www.w3.org/2000/svg"
-			viewBox="0 0 1280 920" // changing size
+			viewBox="0 0 1400 460" // changing size
 		>
 			<circle
 				cx={161.277}
