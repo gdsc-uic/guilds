@@ -13,14 +13,14 @@ export const Club = defineDocumentType(() => ({
 			description: "Name of the club",
 			required: true,
 		},
-		type: {
+		org_type: {
 			type: "enum",
 			options: ["academic", "non-academic"],
 			default: "academic",
 		},
 		links: {
 			type: "list",
-			of: { type: ClubLink },
+			of: ClubLink,
 		},
 		description: {
 			type: "nested",
@@ -36,7 +36,8 @@ export const Club = defineDocumentType(() => ({
 		},
 		faqs: {
 			type: "list",
-			of: { type: ClubFaq },
+			of: ClubFaq,
+			required: false
 		},
 		theme: {
 			type: "nested",
@@ -45,6 +46,7 @@ export const Club = defineDocumentType(() => ({
 		registration: {
 			type: "nested",
 			of: ClubRegistration,
+			required: false
 		},
 		officers: {
 			type: "list",
