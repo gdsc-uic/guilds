@@ -284,7 +284,6 @@ function GuildsModal() {
 									borderRadius="0px"
 									bg="#F2779A"
 									color="white"
-									fontFamily="Montserrat"
 									border="3px solid black"
 								>
 									Next

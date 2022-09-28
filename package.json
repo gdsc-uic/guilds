@@ -15,7 +15,6 @@
 		"@emotion/react": "^11.10.4",
 		"@emotion/styled": "^11",
 		"@fontsource/inter": "^4.5.12",
-		"@fontsource/montserrat": "^4.5.12",
 		"@fontsource/space-grotesk": "^4.5.10",
 		"contentlayer": "^0.2.8",
 		"framer-motion": "^7.3.6",
