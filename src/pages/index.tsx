@@ -166,28 +166,28 @@ function SearchBar({ onSubmit }: { onSubmit: FormEventHandler<HTMLFormElement> }
 	return (
 		<form onSubmit={onSubmit}>
 			<InputGroup
-				width={["15rem", "28rem", "38rem", "40rem", "47rem"]}
-				size="lg"
+				width={["21rem", "28rem", "38rem", "40rem", "47rem"]}
+				size={["sm", "md", "lg"]}
 				borderColor="black"
+				borderRadius="0.5rem"
 			>
 				<Input
 					placeholder={"Search for a club"}
-					p="9"
+					p={["7", "9"]}
 					bg="white"
-					borderRadius="0"
 					borderWidth="4px"
 					boxShadow="-7px 7px black"
 					name="search_query"
 				/>
-				<InputRightElement w={["9rem", "9rem", "13rem"]} h="100%">
+				<InputRightElement w={["6.5rem", "9rem", "13rem"]} h="100%">
 					<Button
 						h="100%"
 						w="100%"
-						borderRadius="0"
 						borderWidth="4px"
 						borderColor="black"
 						bg="#0057ff"
 						color="white"
+						borderRadius="4px"
 					>
 						Search
 					</Button>
