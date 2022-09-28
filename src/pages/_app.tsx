@@ -3,9 +3,7 @@ import { AppProps } from "next/app";
 import "../styles/globals.css";
 import theme from "src/theme";
 import "@fontsource/space-grotesk";
-import "@fontsource/inter/700.css";
-import "@fontsource/inter/200.css";
-import "@fontsource/montserrat/400.css";
+import "@fontsource/inter";
 
 function MyApp({ Component, pageProps }: AppProps) {
 	return (
