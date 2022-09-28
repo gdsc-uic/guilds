@@ -130,7 +130,7 @@ function ClubResults({ clubs, error }: {clubs: Club[] | null, error?: any}) {
 			{clubs && clubs.map((club) => (
 				<Box 
 					key={club._id} 
-					width={["100%", ((1/2) * 100) + '%', ((1/4) * 100) + '%']}>
+					width={{sm: "100%", md: ((1/2) * 100) + '%', lg: ((1/4) * 100) + '%'}}>
 					<ClubCard club={club} />
 				</Box>
 			))}
