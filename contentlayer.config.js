@@ -38,6 +38,21 @@ export const Club = defineDocumentType(() => ({
 	},
 }));
 
+const ClubDescription = defineNestedType(() => ({
+	name: "ClubDescription",
+	fields: {
+		long: {
+			type: "string",
+			description: "Full description of the club",
+			required: true,
+		},
+		short: {
+			type: "string",
+			description: "Short description of the club",
+		},
+	},
+}));
+
 const ClubFaq = defineNestedType(() => ({
 	name: "ClubFaq",
 	fields: {
