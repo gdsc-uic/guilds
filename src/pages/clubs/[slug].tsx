@@ -16,8 +16,9 @@ import {
 	Image,
 	VStack,
 	Text,
+	Link,
+	Divider,
 } from "@chakra-ui/react";
-import Footer from "src/components/Footer";
 import { AiOutlineHeart } from "react-icons/ai";
 import { BsFacebook, BsGithub } from "react-icons/bs";
 import { BsPlus } from "react-icons/bs";
@@ -47,7 +48,7 @@ export async function getStaticProps({ params: { slug } }) {
 
 export default function ClubPage({ club }: { club: Club }) {
 	return (
-		<Layout maxWidth="full">
+		<Layout maxWidth="full" bgColor={club.theme.primary_color}>
 			<Head>
 				<title>{club.name}</title>
 				<meta name="description" content={club.description?.full ?? ""} />
@@ -55,20 +56,22 @@ export default function ClubPage({ club }: { club: Club }) {
 			<Container maxWidth="95rem">
 				<ClubBox club={club} />
 			</Container>
-			<Carousel />
-			<Container maxWidth="95rem">
-				<ClubDescription />
-				<ClubOfficers />
-				<ClubFAQ />
+			
+			{club.assets.slideshows && <Carousel club={club} />}
+
+			<Container maxWidth="95rem" mt="20">
+				<ClubContent club={club} />
+				<ClubOfficers club={club} />
+				{club.faqs && <ClubFAQ club={club} />}
 				<InterestedBox club={club} />
 			</Container>
 		</Layout>
 	);
 }
 
-function Carousel() {
+function Carousel({ club }: { club: Club }) {
 	return (
-		<Box my="20">
+		<Box mt="20">
 			<StyledSwiper
 				slidesPerView={2}
 				spaceBetween={30}
@@ -88,12 +91,11 @@ function Carousel() {
 				}}
 				modules={[Autoplay, EffectCoverflow]}
 			>
-				<StyledSwiperSlide>
-					<Image src="/sample_club_images/img1.jpg" alt="" objectFit="cover" />
-				</StyledSwiperSlide>
-				<StyledSwiperSlide>
-					<Image src="/sample_club_images/img2.jpg" alt="" />
-				</StyledSwiperSlide>
+				{club.assets.slideshows.map(p => (
+					<StyledSwiperSlide key={`slideshow_${p}`}>
+						<Image src={`${clubAssetURL(club, 'slideshows')}/${p}`} alt={p} objectFit="cover" />
+					</StyledSwiperSlide>
+				))}
 			</StyledSwiper>
 		</Box>
 	);
@@ -118,25 +120,22 @@ const StyledSwiperSlide = styled(SwiperSlide)`
 function ClubBox({ club }: { club: Club }) {
 	return (
 		<Box
-			w={["90%", "90%", "80%"]}
 			flexDirection="column"
-			bg="#7DF1B9"
+			bg={club.theme?.secondary_color ?? '#7DF1B9'}
 			border="5px solid black"
 			borderRadius="35px"
 			boxShadow="14px 15px black"
-			mx="auto"
 		>
+
 			{/* Cover Photo */}
-			<Img
+			<Box 
 				h="26rem"
-				w="100%"
-				alt="something"
-				borderRadius="35px"
-				src="/club_assets/gdsc-uic2/gdsc-uic-cover-photo.png"
-				objectFit="cover"
-				borderBottom="3px black solid"
-				borderBottomRadius="0"
-			/>
+				w="full"
+				backgroundImage={`url(${clubAssetURL(club, 'cover_photo')})`}
+				backgroundSize="cover"
+				backgroundPosition="center"
+				borderTopRadius="30px"
+				borderBottom="3px black solid" />
 
 			{/* Club Logo */}
 			<Box
@@ -148,12 +147,12 @@ function ClubBox({ club }: { club: Club }) {
 					mt="-7rem"
 					pos="absolute"
 					maxW="200px"
-					src="/club_assets/gdsc-uic2/logo.png"
+					src={clubAssetURL(club, 'logo')}
 					objectFit="cover"
 					alt="gdsc-logo"
 					border="3px solid black"
 					borderRadius="50%"
-					boxShadow="5px 7px #68C89A"
+					boxShadow="5px 7px rgba(0,0,0,0.3)"
 				/>
 			</Box>
 
@@ -179,11 +178,18 @@ function ClubBox({ club }: { club: Club }) {
 					</Box>
 
 					{/* Social Media Links */}
-					<HStack my="10">
-						<BsGithub size="30" />
+					{club.links && (<HStack my="10" spacing="4">
+						{/* KEEP THE ICONS FOR LATER :>> */}
+						{/* <BsGithub size="30" />
 						<Box h="5" borderLeft="1px solid gray" />
-						<BsFacebook size="30" />
-					</HStack>
+						<BsFacebook size="30" /> */}
+						{club.links.map((link, i, arr) => (
+							<>
+								<Link key={`link_${link._id}`} href={link.url} fontSize="xl">{link.label}</Link>
+								{i < arr.length - 1 && <Box h="3" borderRight="#000 1px solid" />}
+							</>
+						))}
+					</HStack>)}
 				</Box>
 
 				{/* Interested Button */}
@@ -206,28 +212,28 @@ function ClubBox({ club }: { club: Club }) {
 	);
 }
 
-function ClubDescription() {
+function ClubContent({ club }: { club: Club }) {
 	return (
-		<Box my="3rem">
-			<Heading>Description</Heading>
-			<Box h="2" w="100%" bg="#94BAF9" />
+		<VStack mt="3rem" spacing="3rem">
 			<Box>
-				Lorem ipsum dolor sit, amet consectetur adipisicing elit. In placeat
-				commodi corporis quod ratione cupiditate necessitatibus soluta iste
-				ipsa, laborum minima impedit adipisci. Quos et libero repellendus sit
-				reiciendis repudiandae?
+				<Heading>Description</Heading>
+				<Box h="2" w="100%" bg="#94BAF9" my="4" />
+				<Text fontSize="xl">{club.description.full}</Text>
 			</Box>
-		</Box>
+
+			<Box dangerouslySetInnerHTML={{ __html: club.body.html }} />
+		</VStack>
 	);
 }
 
-function ClubFAQ() {
+function ClubFAQ({ club }: { club: Club }) {
 	return (
 		<Box my="3rem">
 			<Heading>FAQs</Heading>
 			<Box h="2" w="100%" bg="#94BAF9" />
 			<Accordion allowToggle my="10">
-				<AccordionItem
+				{(club.faqs ?? []).map((faq, i) => (<AccordionItem
+					key={`faq_${club._raw.flattenedPath}_i`}
 					border="5px solid black"
 					borderRadius="24px"
 					boxShadow="8px 8px black"
@@ -243,8 +249,7 @@ function ClubFAQ() {
 									fontWeight="bold"
 									fontSize="22px"
 								>
-									{/* Insert FAQ here */}
-									Question #1
+									{faq.question ?? 'Question'}
 								</Box>
 								<Box
 									transform={isExpanded ? "rotate(45deg)" : ""}
@@ -253,67 +258,47 @@ function ClubFAQ() {
 									<BsPlus fontSize="40" />
 								</Box>
 							</AccordionButton>
-							<AccordionPanel pb={4}>
-								{/* Insert answer here */}
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-								eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-								enim ad minim veniam, quis nostrud exercitation ullamco laboris
-								nisi ut aliquip ex ea commodo consequat.
-							</AccordionPanel>
+							<AccordionPanel pb={4}>{faq.answer ?? 'Answer'}</AccordionPanel>
 						</>
 					)}
-				</AccordionItem>
+				</AccordionItem>)
+			)}
 			</Accordion>
 		</Box>
 	);
 }
 
-function ClubOfficers() {
+function ClubOfficers({ club }: { club: Club }) {
 	return (
 		<Box my="3rem">
 			<Box
-				p="8"
 				h="340"
 				bg="#FFE58A"
 				border="5px solid black"
 				borderRadius="35px"
 				boxShadow="24px 25px black"
 			>
-				<Heading mb="1rem">Officers</Heading>
-				<HStack columnGap="2rem">
-					<Box>
-						<VStack>
-							<Img
-								h="10rem"
-								w="10rem"
-								clipPath="circle()"
-								objectFit="cover"
-								src="/gdsc-officer.png"
-							></Img>
+				<Heading px="8" pt="8" mb="1rem">Officers</Heading>
+				<Flex direction="row" px="8" pb="8" overflowX={'auto'} columnGap="2rem">
+					{club.officers.map(officer => (
+						<Box flexShrink={0} width={(1/8 * 100) + '%'} key={`officer_${officer._id}`}>
+							<VStack>
+								<Img
+									h="10rem"
+									w="10rem"
+									clipPath="circle()"
+									objectFit="cover"
+									src="/gdsc-officer.png"
+								></Img>
 
-							<Box textAlign="center">
-								<Text fontWeight="bold">John Doe</Text>
-								<Text>President</Text>
-							</Box>
-						</VStack>
-					</Box>
-					<Box>
-						<VStack>
-							<Img
-								h="10rem"
-								w="10rem"
-								clipPath="circle()"
-								objectFit="cover"
-								src="/gdsc-officer.png"
-							></Img>
-
-							<Box textAlign="center">
-								<Text fontWeight="bold">John Doe</Text>
-								<Text>Vice President</Text>
-							</Box>
-						</VStack>
-					</Box>
-				</HStack>
+								<Box textAlign="center">
+									<Text fontWeight="bold">{officer.name}</Text>
+									<Text>{officer.position}</Text>
+								</Box>
+							</VStack>
+						</Box>
+					))}
+				</Flex>
 			</Box>
 		</Box>
 	);
@@ -370,18 +355,23 @@ function InterestedBox({ club }: { club: Club }) {
 					<Heading fontSize="30" mb="1.3rem">
 						Connect with the club
 					</Heading>
-					<Button
-						w="100%"
-						as="a"
-						px="55px"
-						py="25px"
-						bg="white"
-						borderWidth="4px"
-						borderColor="black"
-						borderRadius="0px"
-					>
-						Website
-					</Button>
+					<VStack spacing="10px">
+					{(club.links?.slice(0, 4) ?? []).map(link => (
+						<Button
+							key={`link_interested_${club._raw.flattenedPath}_${link.label}`}
+							w="100%"
+							as="a"
+							px="55px"
+							py="25px"
+							bg="white"
+							borderWidth="4px"
+							borderColor="black"
+							borderRadius="0px"
+						>
+							{link.label}
+						</Button>
+					))}
+					</VStack>
 				</Box>
 			</Flex>
 		</Box>
