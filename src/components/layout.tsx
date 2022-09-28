@@ -3,7 +3,7 @@ import CurveBackground from "./CurveBackground";
 import Footer from "./Footer";
 import NavBar from "./NavBar";
 
-export default function Layout({ children, maxWidth = '95rem', bgColor = '#0057FF' }) {
+export default function Layout({ children, maxWidth = '85rem', bgColor = '#0057FF' }) {
 	return (
 		<Box position="relative">
 			<Box width="full" zIndex="-1">

@@ -53,13 +53,13 @@ export default function ClubPage({ club }: { club: Club }) {
 				<title>{club.name}</title>
 				<meta name="description" content={club.description?.full ?? ""} />
 			</Head>
-			<Container maxWidth="95rem">
+			<Container maxWidth="85rem">
 				<ClubBox club={club} />
 			</Container>
 			
 			{club.assets.slideshows && <Carousel club={club} />}
 
-			<Container maxWidth="95rem" mt="20">
+			<Container maxWidth="85rem" mt="20">
 				<ClubContent club={club} />
 				<ClubOfficers club={club} />
 				{club.faqs && <ClubFAQ club={club} />}
