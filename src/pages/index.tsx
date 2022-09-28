@@ -75,7 +75,7 @@ export default function Home() {
 			</Flex>
 
 			<StyledSlideShow loop>
-				{clubs.map(club => (
+				{clubs?.map(club => (
 					<SwiperSlide key={`club_featured_${club._id}`}>
 						<Image
 							src={clubAssetURL(club, 'cover_photo')}
