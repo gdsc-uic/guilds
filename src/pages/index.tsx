@@ -31,10 +31,45 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper";
 import "swiper/css";
 import Layout from "src/components/layout";
+import { FormEvent, FormEventHandler, useState } from "react";
+import useSWR, { SWRConfig } from "swr";
+import { fetcher } from "src/utils";
 
-export default function Home() {
+const CLUBS_ENDPOINT = '/api/clubs';
+
+export async function getServerSideProps() {
+	const clubsList = await fetcher(CLUBS_ENDPOINT);
+
+	return {
+		props: {
+			fallback: {
+				[CLUBS_ENDPOINT]: clubsList
+			}
+		}
+	}
+}
+
+export default function Home({ fallback }) {
+	// TODO: use react query!!
+	const [endpointPath, setEndpointPath] = useState(CLUBS_ENDPOINT);
+	const { data: clubs, error } = useSWR<Club[]>(endpointPath, fetcher);
+
+	const handleSearchBar = (event: FormEvent<HTMLFormElement>) => {
+		event.preventDefault();
+
+		const data = new FormData(event.currentTarget);
+		let query = data.get('q');
+		if (query) {
+			query = '?q=' + query;
+		} else {
+			query = '';
+		}
+
+		setEndpointPath(CLUBS_ENDPOINT + query);
+	}
+
 	return (
-		<>
+		<SWRConfig value={{ fallback }}>
 			<Layout>
 				<Head>
 					<title>Create Next App</title>
@@ -95,92 +130,80 @@ export default function Home() {
 						top={["60rem", "68rem", "57rem", "63rem"]}
 					/>
 
+					<Center 
+						mt="200" 
+						color="#555555" 
+						fontWeight="bold" 
+						flexDirection="column">
+						<Heading fontSize={["35", "35", "53"]} mb="2rem" textAlign="center">
+							Find and join existing clubs
+						</Heading>
+						<SearchBar onSubmit={handleSearchBar} />
+					</Center>
+
 					<Center
 						mt="200"
 						color="#555555"
 						fontWeight="bold"
 						flexDirection="column"
 					>
-						<Heading fontSize={["35", "35", "53"]} mb="2rem" textAlign="center">
-							Find and join existing clubs
-						</Heading>
-						<SearchBar />
-
-						<Flex
-							wrap="wrap"
-							columnGap="1rem"
-							rowGap="1rem"
-							my="10rem"
-							justifyContent="center"
-						>
-							<ClubCard />
-							<ClubCard />
-							<ClubCard />
-							<ClubCard />
-						</Flex>
+						<ClubResults clubs={clubs} error={error} />
 					</Center>
 				</Container>
 
 				<Footer />
 			</Layout>
-		</>
+		</SWRConfig>
 	);
 }
 
-function fetchClubData(error: any, clubs: Club[]) {
+function ClubResults({ clubs, error }: {clubs: Club[] | null, error?: any}) {
 	return (
-		<div className={styles.clubs}>
-			{error && <h1>Fetch error</h1>}
-
-			{!clubs && !error && <h1>Loading</h1>}
-
-			{clubs &&
-				clubs.map((club) => (
-					<div key={club._id} className={styles.club}>
-						<Link href={club.url}>
-							<a className={styles.card}>
-								=
-								<div className={styles.card_header}>
-									=<h2>{club.name}</h2>
-									<p>{club.description?.short ?? ""}</p>
-								</div>
-							</a>
-						</Link>
-					</div>
-				))}
-		</div>
-	);
-}
-
-function SearchBar() {
-	return (
-		<InputGroup
-			width={["15rem", "28rem", "38rem", "40rem", "47rem"]}
-			size="lg"
-			borderColor="black"
+		<Flex
+			wrap="wrap"
+			columnGap="1rem"
+			rowGap="1rem"
+			my="10rem"
+			justifyContent="center"
 		>
-			<Input
-				placeholder={"Search for a club"}
-				p="9"
-				bg="white"
-				borderRadius="0"
-				borderWidth="4px"
-				boxShadow="-7px 7px black"
-			/>
-			<InputRightElement w={["9rem", "9rem", "13rem"]} h="100%">
-				<Button
-					h="100%"
-					w="100%"
+			{error && <h1>Fetch error</h1>}
+			{!clubs && !error && <h1>Loading</h1>}
+			{clubs && clubs.map((club) => <ClubCard key={club._id} />)}
+		</Flex>
+	);
+}
+
+function SearchBar({ onSubmit }: { onSubmit: FormEventHandler<HTMLFormElement> }) {
+	return (
+		<form onSubmit={onSubmit}>
+			<InputGroup
+				width={["15rem", "28rem", "38rem", "40rem", "47rem"]}
+				size="lg"
+				borderColor="black"
+			>
+				<Input
+					placeholder={"Search for a club"}
+					p="9"
+					bg="white"
 					borderRadius="0"
 					borderWidth="4px"
-					borderColor="black"
-					bg="#0057ff"
-					color="white"
-				>
-					Search
-				</Button>
-			</InputRightElement>
-		</InputGroup>
+					boxShadow="-7px 7px black"
+				/>
+				<InputRightElement w={["9rem", "9rem", "13rem"]} h="100%">
+					<Button
+						h="100%"
+						w="100%"
+						borderRadius="0"
+						borderWidth="4px"
+						borderColor="black"
+						bg="#0057ff"
+						color="white"
+					>
+						Search
+					</Button>
+				</InputRightElement>
+			</InputGroup>
+		</form>
 	);
 }
 
