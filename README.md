@@ -38,3 +38,12 @@ yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Contributors
+<a href="https://github.com/gdsc-uic/guilds/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=gdsc-uic/guilds" />
+</a>
+
+Made with [contrib.rocks](https://contrib.rocks).
+
+### (c) 2022 Google Developer Student Clubs of UIC
