@@ -37,19 +37,7 @@ import { fetcher } from "src/utils";
 
 const CLUBS_ENDPOINT = '/api/clubs';
 
-export async function getServerSideProps() {
-	const clubsList = await fetcher(CLUBS_ENDPOINT);
-
-	return {
-		props: {
-			fallback: {
-				[CLUBS_ENDPOINT]: clubsList
-			}
-		}
-	}
-}
-
-export default function Home({ fallback }) {
+export default function Home() {
 	// TODO: use react query!!
 	const [endpointPath, setEndpointPath] = useState(CLUBS_ENDPOINT);
 	const { data: clubs, error } = useSWR<Club[]>(endpointPath, fetcher);
@@ -58,18 +46,19 @@ export default function Home({ fallback }) {
 		event.preventDefault();
 
 		const data = new FormData(event.currentTarget);
-		let query = data.get('q');
+		let query = data.get('search_query');
 		if (query) {
-			query = '?q=' + query;
+			query = '?query=' + query;
 		} else {
 			query = '';
 		}
 
+		if (!query) return;
 		setEndpointPath(CLUBS_ENDPOINT + query);
 	}
 
 	return (
-		<SWRConfig value={{ fallback }}>
+		<>
 			<Layout>
 				<Head>
 					<title>Create Next App</title>
@@ -153,7 +142,7 @@ export default function Home({ fallback }) {
 
 				<Footer />
 			</Layout>
-		</SWRConfig>
+		</>
 	);
 }
 
@@ -188,6 +177,7 @@ function SearchBar({ onSubmit }: { onSubmit: FormEventHandler<HTMLFormElement> }
 					borderRadius="0"
 					borderWidth="4px"
 					boxShadow="-7px 7px black"
+					name="search_query"
 				/>
 				<InputRightElement w={["9rem", "9rem", "13rem"]} h="100%">
 					<Button
