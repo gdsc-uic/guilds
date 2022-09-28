@@ -49,7 +49,7 @@ export default function ClubPage({ club }: { club: Club }) {
 		<Layout>
 			<Head>
 				<title>{club.name}</title>
-				<meta name="description" content={club.description?.long ?? ""} />
+				<meta name="description" content={club.description?.full ?? ""} />
 			</Head>
 			<ClubBox club={club} />
 			<Carousel />
