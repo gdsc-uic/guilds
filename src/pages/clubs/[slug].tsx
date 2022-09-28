@@ -93,7 +93,7 @@ function Carousel({ club }: { club: Club }) {
 			>
 				{club.assets.slideshows.map(p => (
 					<StyledSwiperSlide key={`slideshow_${p}`}>
-						<Image src={`${clubAssetURL(club, 'slideshows')}/${p}`} alt={p} objectFit="cover" />
+						<Image src={clubAssetURL(club, 'slideshows', p)} alt={p} objectFit="cover" />
 					</StyledSwiperSlide>
 				))}
 			</StyledSwiper>
