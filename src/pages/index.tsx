@@ -21,6 +21,7 @@ import {
 	ModalFooter,
 	ModalOverlay,
 	useDisclosure,
+	Stack,
 } from "@chakra-ui/react";
 import ClubCard from "src/components/ClubCard";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -36,6 +37,9 @@ export default function Home() {
 	// TODO: use react query!!
 	const [endpointPath, setEndpointPath] = useState(CLUBS_ENDPOINT);
 	const { data: clubs, error } = useSWR<Club[]>(endpointPath, fetcher);
+
+	// TODO: change route if query changes!
+	const { data: clubTags } = useSWR(CLUBS_ENDPOINT + '/tags', fetcher);
 
 	const handleSearchBar = (event: FormEvent<HTMLFormElement>) => {
 		event.preventDefault();
@@ -109,7 +113,30 @@ export default function Home() {
 				<Heading fontSize={["35", "35", "53"]} mb="2rem" textAlign="center">
 					Find and join existing clubs
 				</Heading>
-				<SearchBar onSubmit={handleSearchBar} />
+				
+				<VStack spacing="10">
+					<SearchBar onSubmit={handleSearchBar} />
+
+					<Stack alignItems="center" direction="row" shouldWrapChildren>
+					{(clubTags ?? []).map(tag => (
+						<Button
+							key={`tag_${tag}`}
+							bg="#F2779A"
+							color="white"
+							onClick={() => setEndpointPath(CLUBS_ENDPOINT + '?q=' + tag)}
+							w="14rem"
+							py="25"
+							mt={["1rem", "1rem", "0"]}
+							borderRadius="0"
+							borderWidth="4px"
+							borderColor="black"
+							boxSizing="border-box"
+						>
+							{tag}
+						</Button>
+					))}
+					</Stack>
+				</VStack>
 			</Center>
 
 			<ClubResults clubs={clubs} error={error} />
