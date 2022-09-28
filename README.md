@@ -1,4 +1,4 @@
-<div style="text-align:center">
+<div align="center">
     <img src="./public/guilds-logo.png" alt="Guilds Logo" style="width: 40%;">
     <p style="margin-top:30px">The club directory website for the UIC Club Fair 2022</p>
     <a href="https://guilds.gdsc-uic.org">https://guilds.gdsc-uic.org</a>
