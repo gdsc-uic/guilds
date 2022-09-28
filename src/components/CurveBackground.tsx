@@ -10,7 +10,7 @@ export default function CurveBackground() {
 			_after={{
 				content: '""',
 				w: "100%",
-				h: "70%",
+				h: "62%",
 				bg: "white",
 				pos: "absolute",
 				bottom: "0",
