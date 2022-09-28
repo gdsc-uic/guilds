@@ -362,6 +362,8 @@ function InterestedBox({ club }: { club: Club }) {
 							key={`link_interested_${club._raw.flattenedPath}_${link.label}`}
 							w="100%"
 							as="a"
+							href={link.url}
+							target="_blank"
 							px="55px"
 							py="25px"
 							bg="white"
