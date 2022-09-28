@@ -20,7 +20,7 @@ const searchIndex = allClubs.map(c => {
 }).flat();
 
 const minisarch = new MiniSearch({
-	fields: ["title", "tag"],
+	fields: ["title", "tag", "org_type"],
 	storeFields: ["id"],
 });
 
