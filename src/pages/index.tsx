@@ -130,14 +130,7 @@ export default function Home() {
 						<SearchBar onSubmit={handleSearchBar} />
 					</Center>
 
-					<Center
-						mt="200"
-						color="#555555"
-						fontWeight="bold"
-						flexDirection="column"
-					>
-						<ClubResults clubs={clubs} error={error} />
-					</Center>
+					<ClubResults clubs={clubs} error={error} />
 				</Container>
 
 				<Footer />
@@ -153,11 +146,17 @@ function ClubResults({ clubs, error }: {clubs: Club[] | null, error?: any}) {
 			columnGap="1rem"
 			rowGap="1rem"
 			my="10rem"
-			justifyContent="center"
+			width="full"
 		>
 			{error && <h1>Fetch error</h1>}
 			{!clubs && !error && <h1>Loading</h1>}
-			{clubs && clubs.map((club) => <ClubCard key={club._id} />)}
+			{clubs && clubs.map((club) => (
+				<Box 
+					key={club._id} 
+					width={["100%", ((1/2) * 100) + '%', ((1/4) * 100) + '%']}>
+					<ClubCard club={club} />
+				</Box>
+			))}
 		</Flex>
 	);
 }
