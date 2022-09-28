@@ -66,74 +66,70 @@ export default function Home() {
 					<link rel="icon" href="/favicon.ico" />
 				</Head>
 
-				<Container maxWidth="95rem">
-					<Flex
-						mb="1.4rem"
-						flexDirection={["column", "column", "row"]}
-						textAlign={["center", "center", "left"]}
-						alignItems={["center", "center", "flex-start"]}
-					>
-						<Heading color="white" fontWeight="500">
-							Find your place where your
-							<Text fontWeight="bold">heart beats</Text>
-						</Heading>
-						<Spacer />
-						<GuildsModal />
-					</Flex>
+				<Flex
+					mb="1.4rem"
+					flexDirection={["column", "column", "row"]}
+					textAlign={["center", "center", "left"]}
+					alignItems={["center", "center", "flex-start"]}
+				>
+					<Heading color="white" fontWeight="500">
+						Find your place where your
+						<Text fontWeight="bold">heart beats</Text>
+					</Heading>
+					<Spacer />
+					<GuildsModal />
+				</Flex>
 
-					<StyledSlideShow loop>
-						<SwiperSlide>
-							<Image
-								src="/sample_club_images/img1.jpg"
-								alt="slide 1"
-								objectFit="fill"
-								h="100%"
-								w="100%"
-							/>
-						</SwiperSlide>
-						<SwiperSlide>
-							<Image
-								src="/sample_club_images/img2.jpg"
-								alt="slide 1"
-								objectFit="cover"
-							/>
-						</SwiperSlide>
-						<SwiperSlide>
-							<Image
-								src="/sample_club_images/img3.jpg"
-								alt="slide 1"
-								objectFit="cover"
-							/>
-						</SwiperSlide>
-					</StyledSlideShow>
+				<StyledSlideShow loop>
+					<SwiperSlide>
+						<Image
+							src="/sample_club_images/img1.jpg"
+							alt="slide 1"
+							objectFit="fill"
+							h="100%"
+							w="100%"
+						/>
+					</SwiperSlide>
+					<SwiperSlide>
+						<Image
+							src="/sample_club_images/img2.jpg"
+							alt="slide 1"
+							objectFit="cover"
+						/>
+					</SwiperSlide>
+					<SwiperSlide>
+						<Image
+							src="/sample_club_images/img3.jpg"
+							alt="slide 1"
+							objectFit="cover"
+						/>
+					</SwiperSlide>
+				</StyledSlideShow>
 
-					<Image
-						src="/girl.png"
-						pos="absolute"
-						display={["none", "block", "block", "block"]}
-						left="0"
-						zIndex="-1"
-						alt="girl"
-						h={[null, "350px", "500px", "700px"]}
-						ml="-5"
-						top={["60rem", "68rem", "57rem", "63rem"]}
-					/>
+				<Image
+					src="/girl.png"
+					pos="absolute"
+					display={["none", "block", "block", "block"]}
+					left="0"
+					zIndex="-1"
+					alt="girl"
+					h={[null, "350px", "500px", "700px"]}
+					ml="-5"
+					top={["60rem", "68rem", "57rem", "63rem"]}
+				/>
 
-					<Center 
-						mt="200" 
-						color="#555555" 
-						fontWeight="bold" 
-						flexDirection="column">
-						<Heading fontSize={["35", "35", "53"]} mb="2rem" textAlign="center">
-							Find and join existing clubs
-						</Heading>
-						<SearchBar onSubmit={handleSearchBar} />
-					</Center>
+				<Center 
+					mt="200" 
+					color="#555555" 
+					fontWeight="bold" 
+					flexDirection="column">
+					<Heading fontSize={["35", "35", "53"]} mb="2rem" textAlign="center">
+						Find and join existing clubs
+					</Heading>
+					<SearchBar onSubmit={handleSearchBar} />
+				</Center>
 
-					<ClubResults clubs={clubs} error={error} />
-				</Container>
-
-				<Footer />
+				<ClubResults clubs={clubs} error={error} />
 			</Layout>
 		</>
 	);

@@ -25,6 +25,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectCoverflow } from "swiper";
 import "swiper/css";
 import styled from "@emotion/styled";
+import { clubAssetURL } from "src/utils";
 
 export async function getStaticPaths() {
 	const paths = allClubs.map((c) => c.url);
@@ -46,20 +47,21 @@ export async function getStaticProps({ params: { slug } }) {
 
 export default function ClubPage({ club }: { club: Club }) {
 	return (
-		<Layout>
+		<Layout maxWidth="full">
 			<Head>
 				<title>{club.name}</title>
 				<meta name="description" content={club.description?.full ?? ""} />
 			</Head>
-			<ClubBox club={club} />
+			<Container maxWidth="95rem">
+				<ClubBox club={club} />
+			</Container>
 			<Carousel />
-			<Container maxW="70rem" px="2rem" my="8rem">
+			<Container maxWidth="95rem">
 				<ClubDescription />
 				<ClubOfficers />
 				<ClubFAQ />
 				<InterestedBox club={club} />
 			</Container>
-			<Footer />
 		</Layout>
 	);
 }
