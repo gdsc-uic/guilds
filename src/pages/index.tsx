@@ -119,16 +119,12 @@ export default function Home() {
 						top={["60rem", "68rem", "57rem", "63rem"]}
 					/>
 
-					<Center 
-						mt="200" 
-						color="#555555" 
-						fontWeight="bold" 
-						flexDirection="column">
+					<VStack mt="200" color="#555555" fontWeight="bold">
 						<Heading fontSize={["35", "35", "53"]} mb="2rem" textAlign="center">
 							Find and join existing clubs
 						</Heading>
 						<SearchBar onSubmit={handleSearchBar} />
-					</Center>
+					</VStack>
 
 					<Center
 						mt="200"
