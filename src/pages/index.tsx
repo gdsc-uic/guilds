@@ -22,16 +22,13 @@ import {
 	ModalContent,
 	VStack,
 	ModalFooter,
-	ModalHeader,
 	ModalOverlay,
 	useDisclosure,
 } from "@chakra-ui/react";
-import NavBar from "src/components/NavBar";
 import ClubCard from "src/components/ClubCard";
 import Footer from "src/components/Footer";
-import CurveBackground from "src/components/CurveBackground";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, EffectCoverflow } from "swiper";
+import { Autoplay } from "swiper";
 import "swiper/css";
 import Layout from "src/components/layout";
 
@@ -46,7 +43,12 @@ export default function Home() {
 				</Head>
 
 				<Container maxWidth="95rem">
-					<Flex mb="1.4rem">
+					<Flex
+						mb="1.4rem"
+						flexDirection={["column", "column", "row"]}
+						textAlign={["center", "center", "left"]}
+						alignItems={["center", "center", "flex-start"]}
+					>
 						<Heading color="white" fontWeight="500">
 							Find your place where your
 							<Text fontWeight="bold">heart beats</Text>
@@ -84,11 +86,13 @@ export default function Home() {
 					<Image
 						src="/girl.png"
 						pos="absolute"
+						display={["none", "block", "block", "block"]}
 						left="0"
 						zIndex="-1"
 						alt="girl"
-						h={["100px", "400px", "700px"]}
-						top="55rem"
+						h={[null, "350px", "500px", "700px"]}
+						ml="-5"
+						top={["60rem", "68rem", "57rem", "63rem"]}
 					/>
 
 					<Center
@@ -97,7 +101,9 @@ export default function Home() {
 						fontWeight="bold"
 						flexDirection="column"
 					>
-						<Heading fontSize="53">Find and join existing clubs</Heading>
+						<Heading fontSize={["35", "35", "53"]} mb="2rem" textAlign="center">
+							Find and join existing clubs
+						</Heading>
 						<SearchBar />
 
 						<Flex
@@ -148,15 +154,20 @@ function fetchClubData(error: any, clubs: Club[]) {
 
 function SearchBar() {
 	return (
-		<InputGroup width="47rem" size="lg" borderColor="black">
+		<InputGroup
+			width={["15rem", "28rem", "38rem", "40rem", "47rem"]}
+			size="lg"
+			borderColor="black"
+		>
 			<Input
 				placeholder={"Search for a club"}
 				p="9"
+				bg="white"
 				borderRadius="0"
 				borderWidth="4px"
 				boxShadow="-7px 7px black"
 			/>
-			<InputRightElement w="13rem" h="100%">
+			<InputRightElement w={["9rem", "9rem", "13rem"]} h="100%">
 				<Button
 					h="100%"
 					w="100%"
@@ -173,30 +184,20 @@ function SearchBar() {
 	);
 }
 
-function SlideShow() {
-	return (
-		<Box
-			h="592px"
-			bg="lightgray"
-			pos="relative"
-			color="white"
-			borderWidth="6px"
-			borderRadius="50px"
-			borderColor="black"
-			shadow="47px 47px #7a97ff"
-		/>
-	);
-}
-
 const StyledSlideShow = styled(Swiper)`
-	height: 592px;
+	height: 420px;
 	background-color: lightgray;
 	position: relative;
 	color: white;
 	border-width: 6px;
 	border-radius: 50px;
 	border-color: black;
-	box-shadow: 47px 47px #7a97ff;
+	box-shadow: 11px 11px #7a97ff;
+
+	@media (min-width: 62em) {
+		box-shadow: 37px 37px #7a97ff;
+		height: 592px;
+	}
 `;
 
 function GuildsModal() {
@@ -206,8 +207,10 @@ function GuildsModal() {
 			<Button
 				bg="#F2779A"
 				color="white"
-				px="55"
+				// px="55"
+				w="14rem"
 				py="25"
+				mt={["1rem", "1rem", "0"]}
 				borderRadius="0"
 				borderWidth="4px"
 				borderColor="black"
