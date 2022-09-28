@@ -106,7 +106,7 @@ export default function Home() {
 			/>
 
 			<Center 
-				mt="200" 
+				mt={{sm: "20", md: "200"}} 
 				color="#555555" 
 				fontWeight="bold" 
 				flexDirection="column">
@@ -117,7 +117,12 @@ export default function Home() {
 				<VStack spacing="10">
 					<SearchBar onSubmit={handleSearchBar} />
 
-					<Stack alignItems="center" direction="row" shouldWrapChildren>
+					<Stack 
+						alignItems="center" 
+						direction="row" 
+						wrap="wrap" 
+						justifyContent="center" 
+						shouldWrapChildren>
 					{(clubTags ?? []).map(tag => (
 						<Button
 							key={`tag_${tag}`}
