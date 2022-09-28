@@ -34,7 +34,7 @@ export default function ClubCard({ club }: { club: Club }) {
 
 
 			{/* logo and club info */}
-			<Box mt={["-15rem", "-15rem", "-4rem"]}>
+			<Box mt={["-15rem", "-4rem"]}>
 				<Center>
 					<Img
 						src={clubAssetURL(club, 'logo')}
