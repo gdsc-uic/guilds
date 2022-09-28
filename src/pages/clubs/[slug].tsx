@@ -27,6 +27,7 @@ import { Autoplay, EffectCoverflow } from "swiper";
 import "swiper/css";
 import styled from "@emotion/styled";
 import { clubAssetURL } from "src/utils";
+import { Fragment } from "react";
 
 export async function getStaticPaths() {
 	const paths = allClubs.map((c) => c.url);
@@ -184,10 +185,10 @@ function ClubBox({ club }: { club: Club }) {
 						<Box h="5" borderLeft="1px solid gray" />
 						<BsFacebook size="30" /> */}
 						{club.links.map((link, i, arr) => (
-							<>
+							<Fragment key={`link_top_${link._id}`}>
 								<Link key={`link_${link._id}`} href={link.url} fontSize="xl">{link.label}</Link>
 								{i < arr.length - 1 && <Box h="3" borderRight="#000 1px solid" />}
-							</>
+							</Fragment>
 						))}
 					</HStack>)}
 				</Box>
