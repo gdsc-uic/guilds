@@ -43,8 +43,6 @@ export default function Home() {
 	});
 
 	const { data: clubTags } = useQuery<String[]>([CLUBS_ENDPOINT + '/tags'], () => fetcher(CLUBS_ENDPOINT + '/tags'));
-
-	// TODO: change route if query changes!
 	const handleSearchBar = (event: FormEvent<HTMLFormElement>) => {
 		event.preventDefault();
 		const data = new FormData(event.currentTarget);
@@ -65,13 +63,19 @@ export default function Home() {
 		refetch();
 	}, [router.query]);
 
+	const getUrl = (path: string): string => {
+		return router.basePath + path;
+	}
+
 	return (
 		<Layout isHome>
 			<Head>
 				<title>Guilds - UIC Club Fair 2022 Directory Website</title>
 				<meta name="description" content="Find a place where your heart beats. The official club directory website for the UIC Club Fair 2022" />
 				<link rel="icon" href="/favicon.ico" />
-				{/* TODO: social media stuff */}
+				<meta property="og:type" content="website" />
+				<meta property="og:image" content={getUrl('/guilds-default-cover.png')} />
+				<meta name="twitter:card" content="summary_large_image" />
 			</Head>
 
 			<Flex

@@ -28,6 +28,7 @@ import "swiper/css";
 import styled from "@emotion/styled";
 import { clubAssetURL } from "src/utils";
 import { Fragment } from "react";
+import { useRouter } from "next/router";
 
 export async function getStaticPaths() {
 	const paths = allClubs.map((c) => c.url);
@@ -48,12 +49,19 @@ export async function getStaticProps({ params: { slug } }) {
 }
 
 export default function ClubPage({ club }: { club: Club }) {
+	const router = useRouter();
+	const getUrl = (path: string): string => {
+		return router.basePath + path;
+	}
+
 	return (
 		<Layout maxWidth="full" bgColor={club.theme.primary_color}>
 			<Head>
-				<title>{club.name}</title>
-				<meta name="description" content={`See ${club.name} on Guilds: the official club directory website for the UIC Club Fair 2022`} />
-				{/* TODO: social media stuff */}
+				<title>{club.name} - Guilds</title>
+				<meta name="description" content={`Join ${club.name} on Guilds: the official club directory website for the UIC Club Fair 2022`} />
+				<meta property="og:type" content="website" />
+				<meta property="og:image" content={getUrl(clubAssetURL(club, 'cover_photo'))} />
+				<meta name="twitter:card" content="summary_large_image" />
 			</Head>
 
 			<Container maxWidth="85rem">
