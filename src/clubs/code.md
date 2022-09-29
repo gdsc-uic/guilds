@@ -6,7 +6,7 @@ links:
     url: https://www.facebook.com/UICCODE
 description:
   full: Communicator’s Organization for Development and Excellence or otherwise referred to as CODE. It is a non-partisan and non-political, academic campus-wide alliance composed of all undergraduate Communication Majors students taking up Bachelor of Arts in Communication under College of Arts and Humanities of the University of the Immaculate Conception. The club is committed to provide activities and opportunities that will harness the potentials of Communication students, be able to create linkages within the media and corporate industry, different member schools and other sectors of society.
-  short: CODE is an academic club of all bonafide Communication Arts students of the University of the Immaculate Conception.
+  short: An academic club of all bonafide Communication Arts students of the University of the Immaculate Conception.
 tags:
   - communication
   - media
