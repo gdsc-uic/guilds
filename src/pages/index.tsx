@@ -60,7 +60,7 @@ export default function Home() {
 		<Layout isHome>
 			<Head>
 				<title>Guilds - UIC Club Fair 2022 Directory Website</title>
-				<meta name="description" content="Find your place where your heart beats. The official club directory website for the UIC Club Fair 2022" />
+				<meta name="description" content="Find a place where your heart beats. The official club directory website for the UIC Club Fair 2022" />
 				<link rel="icon" href="/favicon.ico" />
 				{/* TODO: social media stuff */}
 			</Head>
@@ -72,7 +72,7 @@ export default function Home() {
 				alignItems={["center", "center", "flex-start"]}
 			>
 				<Heading color="white" fontWeight="500">
-					Find your place where your
+					Find a place where your
 					<Text fontWeight="bold">heart beats</Text>
 				</Heading>
 				<Spacer />
@@ -223,6 +223,7 @@ const StyledSlideShow = styled(Swiper)`
 `;
 
 function GuildsModal() {
+	// TODO: show modal on first time visit
 	const { isOpen, onOpen, onClose } = useDisclosure();
 	return (
 		<>
