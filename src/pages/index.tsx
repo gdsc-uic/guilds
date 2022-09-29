@@ -122,6 +122,8 @@ export default function Home() {
 						alignItems="center" 
 						direction="row" 
 						wrap="wrap" 
+						columnGap="0.25rem"
+						rowGap="0.5rem"
 						justifyContent="center" 
 						shouldWrapChildren>
 					{(clubTags ?? []).map(tag => (
@@ -154,8 +156,6 @@ function ClubResults({ clubs, error }: {clubs: Club[] | null, error?: any}) {
 	return (
 		<Flex
 			wrap="wrap"
-			columnGap="1rem"
-			rowGap="1rem"
 			my="10rem"
 			width="full"
 		>
@@ -164,6 +164,7 @@ function ClubResults({ clubs, error }: {clubs: Club[] | null, error?: any}) {
 			{clubs && clubs.map((club) => (
 				<Box 
 					key={club._id} 
+					p="0.5rem"
 					width={{sm: "100%", md: ((1/2) * 100) + '%', lg: ((1/4) * 100) + '%'}}>
 					<ClubCard club={club} />
 				</Box>
