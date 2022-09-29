@@ -7,14 +7,14 @@ links:
   - label: Gmail
     url: soulsclubuic@gmail.com
 description:
-  full: We aim to strengthen students' academic English language skills by involving them in activities that are relevant to real-world interactions in the university and workplace, such as listening, speaking, reading, writing, and grammar study. Aside from language education,the department teaches students how to understand human creativity and culture's processes and effects. The goal of this club is to encourage students to develop as artists who can express themselves through any medium they choose. This organization instills in the minds of everybody that the English language is an integral part of society and works hand-in-hand. To promote understanding of culture reflected in different languages through the conduct of activities such as immersion and to welcome external opportunities for linkages in terms of language development and studies.
+  full: The Society of United Language Students aims to strengthen students' academic English language skills by involving them in activities that are relevant to real-world interactions in the university and workplace, such as listening, speaking, reading, writing, and grammar study. Aside from language education,the department teaches students how to understand human creativity and culture's processes and effects. The goal of this club is to encourage students to develop as artists who can express themselves through any medium they choose. This organization instills in the minds of everybody that the English language is an integral part of society and works hand-in-hand. To promote understanding of culture reflected in different languages through the conduct of activities such as immersion and to welcome external opportunities for linkages in terms of language development and studies.
   short: Exclusive to all Bachelor of Arts in English Language Studies students of the University of Immaculate Conception.
 tags:
   - english
   - literary
 assets:
-  logo: logo.jpg
-  cover_photo: cover_photo.jpg
+  logo: logo.png
+  cover_photo: cover_photo.png
   slideshows:
     - 1.jpg
     - 2.jpg

@@ -10,7 +10,7 @@ description:
 tags:
   - health
 assets:
-  logo: logo.jpg
+  logo: logo.png
 theme:
   primary_color: "#f476b4"
   secondary_color: "#daf5e6"
