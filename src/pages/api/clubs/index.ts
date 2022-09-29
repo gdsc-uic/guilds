@@ -3,7 +3,7 @@ import { NextApiRequest, NextApiResponse } from "next";
 import MiniSearch from "minisearch";
 
 type ClubSearchOptions = {
-  query: string,
+  q: string,
   type: 'non-academic' | 'academic',
   tags: string[],
   limit: string,
@@ -14,7 +14,6 @@ const searchIndex = allClubs.map(c => {
 	return c.tags?.map((tag) => ({
 		id: c._id,
 		name: c.name,
-		description: c.description,
 		tag,
 	})) ?? [];
 }).flat();
@@ -34,10 +33,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 	const params: Partial<ClubSearchOptions> = req.query;
 	let results = allClubs;
 
-	if (params.query) {
-		const resultsFromSearch = Array.from(new Set(minisarch.search(params.query).map(result => result.id)));
+	if (params.q) {
+		const resultsFromSearch = Array.from(new Set(minisarch.search(params.q).map(result => result.id)));
 		results = resultsFromSearch.map(id => results.find(r => r._id === id));
 	}
 
-	res.status(200).json(allClubs);
+	res.status(200).json(results);
 }
