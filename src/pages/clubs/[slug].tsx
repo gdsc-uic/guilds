@@ -17,6 +17,7 @@ import {
 	VStack,
 	Text,
 	Link,
+	Stack,
 } from "@chakra-ui/react";
 import { AiOutlineHeart } from "react-icons/ai";
 import { BsFacebook, BsGithub } from "react-icons/bs";
@@ -338,19 +339,52 @@ function InterestedBox({ club }: { club: Club }) {
 					fontWeight="500">
 						Interested to join in <b>{club.name}</b>?
 				</Heading>
-				<Button
-					mt="2rem"
-					w="10rem"
+				<Stack direction={{sm: "column", md: "row"}} width={{sm: "full", md: "auto"}} mt="2rem">
+				{club.registration.form_url && <Button
+					as="a"
+					href={club.registration.form_url}
+					target="_blank"
+					w={{sm: "full", md: "auto"}}
 					color="white"
 					bg="#0057FF"
 					border="1px solid black"
 					borderRadius="0"
-					leftIcon={<AiOutlineHeart color="#000" fontSize="1.2rem" />}
-					fontSize="1rem"
+					fontSize="15"
 					px="6"
 				>
-					Interested
-				</Button>
+					Register
+				</Button>}
+
+				{club.registration.livestream_url && <Button
+					as="a"
+					href={club.registration.livestream_url}
+					target="_blank"
+					w={{sm: "full", md: "auto"}}
+					color="white"
+					bg="#0057FF"
+					border="1px solid black"
+					borderRadius="0"
+					fontSize="15"
+					px="6"
+				>
+					Livestream
+				</Button>}
+
+				{club.registration.meeting_url && <Button
+					as="a"
+					href={club.registration.meeting_url}
+					target="_blank"
+					w={{sm: "full", md: "auto"}}
+					color="white"
+					bg="#0057FF"
+					border="1px solid black"
+					borderRadius="0"
+					fontSize="15"
+					px="6"
+				>
+					Join Event
+				</Button>}
+				</Stack>
 			</Flex>
 			{(club.links && club.registration) && <Box
 				h={["0px", "0px", "428px"]}
