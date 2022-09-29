@@ -298,7 +298,7 @@ function GuildsModal({ isOpen, onClose }) {
 							<Text fontSize="20">
 								Guilds is the official club directory website for the UIC Club Fair 2022. 
 								You can search and browse all the clubs and organizations the university has to offer. 
-								Search your interests and find the best place where your beats!
+								Search your interests and find the best place where your heart beats!
 							</Text>
 						</ModalBody>
 						<ModalFooter justifyContent="center">
