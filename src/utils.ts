@@ -2,7 +2,7 @@ import { Club, ClubAssets } from "contentlayer/generated";
 
 export function clubAssetURL(club: Club, name: keyof ClubAssets | 'officer_images', filename?: string): string {
 	let key = name;
-	if (key !== 'slideshows') {
+	if (!['slideshows', 'officer_images'].includes(name)) {
 		key = club.assets[name];
 	}
 

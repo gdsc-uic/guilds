@@ -286,15 +286,17 @@ function ClubOfficers({ club }: { club: Club }) {
 				<Heading px="8" pt="8" mb="1rem">Officers</Heading>
 				<Flex direction="row" px="8" pb="8" overflowX={'auto'} columnGap="2rem">
 					{club.officers.map(officer => (
-						<Box flexShrink={0} width={{sm: (1/3 * 100) + '%', md: (1/6 * 100) + '%', lg: (1/8 * 100) + '%'}} key={`officer_${officer._id}`}>
+						<Box flexShrink={0} width={{sm: (1/3 * 100) + '%', md: (1/6 * 100) + '%', lg: (1/8 * 100) + '%'}} key={`officer_${officer.name}`}>
 							<VStack>
-								<Img
+								<Image
 									h="10rem"
 									w="10rem"
 									clipPath="circle()"
 									objectFit="cover"
+									alt={officer.name}
+									fallbackSrc="/blank-profile.webp"
 									src={clubAssetURL(club, 'officer_images', officer.photo_name)}
-								></Img>
+								></Image>
 
 								<Box textAlign="center">
 									<Text fontWeight="bold">{officer.name}</Text>
