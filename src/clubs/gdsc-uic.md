@@ -70,5 +70,11 @@ officers:
   
 faqs:
   - question: What is GDSC?
-    answer: Answer 1
+    answer: GDSC / Google Developer Student Clubs are community developer clubs supported by Google. GDSC provides platforms for students when it comes to building solutions through communities.
+  - question: Do I need to have knowledge in programming?
+    answer: Not necessary! We welcome everyone with or without knowledge about programming and technology.
+  - question: Can I join even if I'm not a CS/IT student?
+    answer: Yes you can!
+  - question: Are there any fees to pay in order to join GDSC-UIC?
+    answer: There are no fees to pay when joining the club. However, we will be requiring members and participants payment for our in-person activities.
 ---
