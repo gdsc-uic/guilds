@@ -175,7 +175,7 @@ function ClubBox({ club }: { club: Club }) {
 					alignItems={["center", "center", "flex-start"]}
 				>
 					{/* Club Name & Description */}
-					<Box textAlign={["center", "center", "left"]} px={{sm: "8", md: 0}}>
+					<Box textAlign={["center", "center", "left"]} px={{sm: "8", md: 0}} pb={8}>
 						<Heading fontSize={{sm: 30, lg: 40}} mb="2">
 							{club.name}
 						</Heading>
