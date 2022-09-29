@@ -193,14 +193,16 @@ function ClubBox({ club }: { club: Club }) {
 					</Box>
 
 					{/* Social Media Links */}
-					{club.links && (<HStack my="10" spacing="4">
+					{club.links && (<HStack my="10" spacing="4" wrap="wrap" px={{sm: 8, md: 0}} justifyContent="center">
 						{/* KEEP THE ICONS FOR LATER :>> */}
 						{/* <BsGithub size="30" />
 						<Box h="5" borderLeft="1px solid gray" />
 						<BsFacebook size="30" /> */}
 						{club.links.map((link, i, arr) => (
 							<Fragment key={`link_top_${link._id}`}>
-								<Link key={`link_${link._id}`} href={link.url} fontSize="xl">{link.label}</Link>
+								{link.label !== 'Contact Number' ? 
+									<Link key={`link_${link._id}`} href={link.url} fontSize="xl">{link.label}</Link> :
+									<Text textAlign="center" fontSize="xl">{link.label}: {link.url}</Text>}
 								{i < arr.length - 1 && <Box h="3" borderRight="#000 1px solid" />}
 							</Fragment>
 						))}
@@ -409,7 +411,22 @@ function InterestedBox({ club }: { club: Club }) {
 					Connect with the club
 				</Heading>
 				<VStack spacing="10px" width={"full"}>
-				{(club.links?.slice(0, 4) ?? []).map(link => (
+				{(club.links?.slice(0, 4) ?? []).map(link => link.label === 'Contact Number' ? (
+					<Button
+						key={`link_interested_${club._raw.flattenedPath}_${link.label}`}
+						as="p"
+						px="55px"
+						py="25px"
+						bg="white"
+						borderWidth="4px"
+						borderColor="black"
+						borderRadius="0px"
+						textAlign="center"
+						width="full"
+					>
+						{link.label}: {link.url}
+					</Button>
+				) : (
 					<Button
 						key={`link_interested_${club._raw.flattenedPath}_${link.label}`}
 						as="a"
