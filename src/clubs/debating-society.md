@@ -26,13 +26,13 @@ registration:
 officers:
   - name: Jaya Mae R. Sarte
     position: Mayor
-    photo_name: blank_pic.webp
+    photo_name: Sarte - Mayor.jpg
   - name: Karl Kirby Z. Costales
     position: Vice Mayor - Internal
-    photo_name: blank_pic.webp
+    photo_name: Costales.gif
   - name: Joel Augustin Generoso Jr.
     position: Vice Mayor - External
-    photo_name: blank_pic.webp
+    photo_name: Generoso.JPG
   - name: Al Ryan Ibañez
     position: Secretary
     photo_name: blank_pic.webp
@@ -41,10 +41,10 @@ officers:
     photo_name: blank_pic.webp
   - name: Khyle Montebon
     position: Logistics
-    photo_name: blank_pic.webp
+    photo_name: Montebon.png
   - name: Diana Flores
     position: Treasurer
-    photo_name: blank_pic.webp
+    photo_name: Flores.jpg
   - name: Den Wesly Balboa
     position: Creatives
     photo_name: blank_pic.webp
