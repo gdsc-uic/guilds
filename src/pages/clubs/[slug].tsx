@@ -17,7 +17,6 @@ import {
 	VStack,
 	Text,
 	Link,
-	Divider,
 } from "@chakra-ui/react";
 import { AiOutlineHeart } from "react-icons/ai";
 import { BsFacebook, BsGithub } from "react-icons/bs";
@@ -92,7 +91,7 @@ function Carousel({ club }: { club: Club }) {
 					delay: 3700,
 					disableOnInteraction: false,
 				}}
-				modules={[Autoplay, EffectCoverflow]}
+				modules={[EffectCoverflow]}
 			>
 				{club.assets.slideshows.map(p => (
 					<StyledSwiperSlide key={`slideshow_${p}`}>
@@ -105,7 +104,11 @@ function Carousel({ club }: { club: Club }) {
 }
 
 const StyledSwiper = styled(Swiper)`
-	height: 450px;
+	min-height: 450px;
+
+	.swiper-wrapper {
+		align-items: center;
+	}
 `;
 
 const StyledSwiperSlide = styled(SwiperSlide)`
@@ -114,7 +117,6 @@ const StyledSwiperSlide = styled(SwiperSlide)`
 
 	img {
 		width: 100%;
-		height: 100%;
 		object-fit: cover;
 		border-radius: 15px;
 	}
