@@ -18,9 +18,9 @@ registration:
   form_url: https://forms.gle/kYGhLCievSPujR3LA
   meeting_url: https://meet.google.com/pfx-idks-dft
 officers:
-  - name: Angelica Falco
+  - name: Shean Airesh C. Dela Cuadra
     position: Mayor
-    photo_name: ANGELICA FALCO.png
+    photo_name: SHEAN AIRESH DELA CUADRA.JPG
   - name: Sheena May S. Cañada
     position: Vice Mayor
     photo_name: SHEENA MAY CAÑADA.PNG
@@ -58,10 +58,6 @@ component of MINA. And to shape the future nurses of the global by maximizing th
 We are looking forward to:
 A more vigorous association where everyone doesn't hold back at participating and assessing everyone with their attained knowledge to be applied in real life
 medic-demanding situations; A better association than what it ever come far before; A congenial association that doesn't stop desiring for their personal transcends; An interactive organization abounded by consolidated ideas from cooperative organizations; and an association that incepts a family between the students with varying endeavors, but with one goal of providing the best.
-
-
-[MINA-Calendar-of-Activities]()
-
 
 **ACTIVITY FOR THIS YEAR:**
 
