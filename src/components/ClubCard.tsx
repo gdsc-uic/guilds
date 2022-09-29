@@ -62,15 +62,18 @@ export default function ClubCard({ club }: { club: Club }) {
 				fontFamily="body"
 				fontWeight="bold"
 			>
-				<Button
-					textColor="white"
-					borderRadius="20"
-					p="7"
-					backgroundColor="#0057FF"
-					border="2px solid black"
-				>
-					Interested
-				</Button>
+				{(club.org_type === 'non-academic' && club.registration) && <Link href={club.url + '#interested'}>
+					<Button
+						as="a"
+						textColor="white"
+						borderRadius="20"
+						p="7"
+						backgroundColor="#0057FF"
+						border="2px solid black"
+					>
+						Interested
+					</Button>
+				</Link>}
 				<Link href={club.url}>
 					<Button
 						borderRadius="20"

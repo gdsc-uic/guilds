@@ -167,6 +167,7 @@ function ClubBox({ club }: { club: Club }) {
 				ml={["0", "0", "16.3rem"]}
 				flexDir={["column", "column", "row"]}
 				alignItems={["center", "center", "flex-start"]}
+				justifyContent={"space-between"}
 				pt={["20", "20", "6"]}
 			>
 				<Box
@@ -175,11 +176,11 @@ function ClubBox({ club }: { club: Club }) {
 					alignItems={["center", "center", "flex-start"]}
 				>
 					{/* Club Name & Description */}
-					<Box textAlign={["center", "center", "left"]} px={{sm: "8", md: 0}} pb={8}>
+					<Box textAlign={["center", "center", "left"]} px={{sm: "8", md: 0}} pb={8} pr={club.org_type == 'academic' ? {sm: 8, lg: 28} : 0}>
 						<Heading fontSize={{sm: 30, lg: 40}} mb="2">
 							{club.name}
 						</Heading>
-						<Text fontSize={{sm: 18, lg: 20}}>{club.description?.full ?? ""}</Text>
+						<Text fontSize={{sm: 18, lg: 20}}>{club.description?.short ?? ""}</Text>
 					</Box>
 
 					{/* Social Media Links */}
@@ -198,7 +199,7 @@ function ClubBox({ club }: { club: Club }) {
 				</Box>
 
 				{/* Interested Button */}
-				<Button
+				{(club.org_type === 'non-academic' && club.registration) && <Button
 					my={["10", "10", "0"]}
 					w={["90%", "90%", "0"]}
 					mx={[0, 0, "10"]}
@@ -211,7 +212,7 @@ function ClubBox({ club }: { club: Club }) {
 					px="5rem"
 				>
 					Interested
-				</Button>
+				</Button>}
 			</Flex>
 		</Box>
 	);
@@ -314,6 +315,7 @@ function ClubOfficers({ club }: { club: Club }) {
 function InterestedBox({ club }: { club: Club }) {
 	return (
 		<Flex
+			id="interested"
 			// h="428"
 			bg="#A3F9B6"
 			border="5px solid black"
