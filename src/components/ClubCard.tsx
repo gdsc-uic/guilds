@@ -71,7 +71,9 @@ export default function ClubCard({ club }: { club: Club }) {
 					p="7"
 					backgroundColor="#0057FF"
 					border="2px solid black"
-					leftIcon={isHovered ? <AiFillHeart /> : <AiOutlineHeart />}
+					leftIcon={
+						isHovered ? <AiFillHeart color="red" /> : <AiOutlineHeart />
+					}
 					onMouseEnter={() => setIsHovered(true)}
 					onMouseLeave={() => setIsHovered(false)}
 					_hover={{
