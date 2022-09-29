@@ -337,7 +337,7 @@ function InterestedBox({ club }: { club: Club }) {
 			flexDirection={["column", "column", "row"]}
 			alignItems="center"
 		>
-			<Flex
+			{club.registration && <Flex
 				w={club.links && club.registration ? ["35%", "90%", "65%"] : "100%"}
 				direction="column"
 				alignItems={["center", "center", club.links && club.registration ? "normal" : "center"]}
@@ -350,52 +350,52 @@ function InterestedBox({ club }: { club: Club }) {
 						Interested to join in <b>{club.name}</b>?
 				</Heading>
 				<Stack direction={{sm: "column", md: "row"}} width={{sm: "full", md: "auto"}} mt="2rem">
-				{club.registration.form_url && <Button
-					as="a"
-					href={club.registration.form_url}
-					target="_blank"
-					w={{sm: "full", md: "auto"}}
-					color="white"
-					bg="#0057FF"
-					border="1px solid black"
-					borderRadius="0"
-					fontSize="15"
-					px="6"
-				>
-					Register
-				</Button>}
+					{club.registration.form_url && <Button
+						as="a"
+						href={club.registration.form_url}
+						target="_blank"
+						w={{sm: "full", md: "auto"}}
+						color="white"
+						bg="#0057FF"
+						border="1px solid black"
+						borderRadius="0"
+						fontSize="15"
+						px="6"
+					>
+						Register
+					</Button>}
 
-				{club.registration.livestream_url && <Button
-					as="a"
-					href={club.registration.livestream_url}
-					target="_blank"
-					w={{sm: "full", md: "auto"}}
-					color="white"
-					bg="#0057FF"
-					border="1px solid black"
-					borderRadius="0"
-					fontSize="15"
-					px="6"
-				>
-					Livestream
-				</Button>}
+					{club.registration.livestream_url && <Button
+						as="a"
+						href={club.registration.livestream_url}
+						target="_blank"
+						w={{sm: "full", md: "auto"}}
+						color="white"
+						bg="#0057FF"
+						border="1px solid black"
+						borderRadius="0"
+						fontSize="15"
+						px="6"
+					>
+						Livestream
+					</Button>}
 
-				{club.registration.meeting_url && <Button
-					as="a"
-					href={club.registration.meeting_url}
-					target="_blank"
-					w={{sm: "full", md: "auto"}}
-					color="white"
-					bg="#0057FF"
-					border="1px solid black"
-					borderRadius="0"
-					fontSize="15"
-					px="6"
-				>
-					Join Event
-				</Button>}
+					{club.registration.meeting_url && <Button
+						as="a"
+						href={club.registration.meeting_url}
+						target="_blank"
+						w={{sm: "full", md: "auto"}}
+						color="white"
+						bg="#0057FF"
+						border="1px solid black"
+						borderRadius="0"
+						fontSize="15"
+						px="6"
+					>
+						Join Event
+					</Button>}
 				</Stack>
-			</Flex>
+			</Flex>}
 			{(club.links && club.registration) && <Box
 				h={["0px", "0px", "428px"]}
 				w={["100%", "100%", "0px"]}
@@ -404,8 +404,8 @@ function InterestedBox({ club }: { club: Club }) {
 				right="24"
 				top="24"
 			/>}
-			{club.links && <Box w={{base: "100%", md: "50%"}} h="100%" p="2rem">
-				<Heading fontSize="30" mb="1.3rem" textAlign={{sm: "center", md: "left"}}>
+			{club.links && <Box w={{base: "100%", md: "50%"}} mx={club.registration ? 0 : "auto"} h="100%" p="2rem">
+				<Heading fontSize="30" mb="1.3rem" textAlign={club.registration ? {sm: "center", md: "left"} : "center"}>
 					Connect with the club
 				</Heading>
 				<VStack spacing="10px" width={"full"}>
