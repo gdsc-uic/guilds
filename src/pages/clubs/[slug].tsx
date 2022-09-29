@@ -66,7 +66,7 @@ export default function ClubPage({ club }: { club: Club }) {
 				<ClubContent club={club} />
 				<ClubOfficers club={club} />
 				{club.faqs && <ClubFAQ club={club} />}
-				<InterestedBox club={club} />
+				{(club.registration || club.links) && <InterestedBox club={club} />}
 			</Container>
 		</Layout>
 	);
@@ -333,7 +333,7 @@ function InterestedBox({ club }: { club: Club }) {
 					<Heading 
 						textAlign={{sm: "center", md: "left"}} 
 						fontWeight="500">
-							Interested to join in  <b>{club.name}</b>?
+							Interested to join in <b>{club.name}</b>?
 					</Heading>
 					<Button
 						mt="2rem"
