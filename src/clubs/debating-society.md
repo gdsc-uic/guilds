@@ -3,7 +3,7 @@ name: UIC Debating Society
 org_type: non-academic
 description:
   full: UIC Debating Society improves the intellectual and academic capabilities of its members by helping develop multiple aspects of their personality and increasing their ability to speak eloquently. More than that, the club promotes critical thinking and advances awareness of political and social issues that affect the status quo.
-  short: The UIC Debating Society is the official non-academic club of the University of the Immaculate Conception for public speaking and debate-related activities.
+  short: The official non-academic club of the University of the Immaculate Conception for public speaking and debate-related activities.
 tags:
   - debate
   - public speaking
