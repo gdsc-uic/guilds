@@ -166,7 +166,7 @@ export default function Home() {
 							bg="#F2779A"
 							color="white"
 							onClick={() => router.push(`/?q=${tag}`, undefined, { shallow: true })}
-							w="14rem"
+							minW={{sm: "auto", md: "10rem", lg:"14rem"}}
 							py="25"
 							mt={["1rem", "1rem", "0"]}
 							borderRadius="0"
