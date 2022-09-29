@@ -23,16 +23,52 @@ theme:
   secondary_color: "#7DF1B9"
 registration:
   form_url: https://form.google.com
-  meeting_url: https://meet.google.com
+  meeting_url: https://meet.google.com//gqn-fqjp-enh
 officers:
   - name: Ned Palacios
     position: Lead
     photo_name: palacios.png
+  - name: Al Gabriel Orig
+    position: Chief Operations Officer
+    photo_name: orig.jpeg
+  - name: Jericho Opsima
+    position: Chief Technology Officer
+    photo_name: opsima.webp
+  - name: Jenny Babe Cano
+    position: Cheif Finance Officer
+    photo_name: cano.webp
+  - name: Adrian Cinchez
+    position: Chief Community Development Officer
+    photo_name: cinchez.jpeg
+  - name: James Autor
+    position: Chief Marketing Officer
+    photo_name: autor.webp
+  - name: Muslimin Ontong
+    position: UI / UX Lead
+    photo_name: ontong.webp
+  - name: Janine Ariate
+    position: Auditor
+    photo_name: ariate.webp
+  - name: Rafael Delloson
+    position: ComDev - Internal Officer
+    photo_name: delloson.jpeg
+  - name: June Rian Bation
+    position: ComDev - External Officer
+    photo_name: bation.png
+  - name: Jessie Calvo
+    position: Graphics and Video Lead
+    photo_name: calvo.jpg
+  - name: Ellis Rey Miranda
+    position: Social Media Manager
+    photo_name: miranda.webp
+  - name: Andre Jose Ruiz
+    position: Documentation Lead
+    photo_name: ruiz.jpg
+  - name: Cris John David Manero
+    position: Club Moderator
+    photo_name: manero.webp
+  
 faqs:
-  - question: Question 1
+  - question: What is GDSC?
     answer: Answer 1
 ---
-
-# Hello
-
-Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab aliquam amet itaque quaerat obcaecati sit ut quisquam non culpa nemo quibusdam, animi ducimus eius pariatur illo aperiam eos harum dolore.
