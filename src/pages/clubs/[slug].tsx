@@ -209,6 +209,8 @@ function ClubBox({ club }: { club: Club }) {
 
 				{/* Interested Button */}
 				{(club.org_type === 'non-academic' && club.registration) && <Button
+					as="a"
+					href="#interested"
 					my={["10", "10", "0"]}
 					w={["90%", "90%", "0"]}
 					mx={[0, 0, "10"]}
