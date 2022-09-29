@@ -13,7 +13,7 @@ export default function Layout({ children, maxWidth = '90rem', bgColor = '#0057F
 				position="absolute" 
 				top="0" 
 				width="full" 
-				height="98rem" 
+				height="105rem" 
 				zIndex="-2" 
 				bgColor="#FFF6EA" />}
 			<Box>

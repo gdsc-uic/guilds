@@ -23,6 +23,7 @@ import {
 	ModalOverlay,
 	useDisclosure,
 	Stack,
+	AspectRatio,
 } from "@chakra-ui/react";
 import ClubCard from "src/components/ClubCard";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -110,19 +111,22 @@ export default function Home() {
 					onClose={onClose} />
 			</Flex>
 
-			<StyledSlideShow loop>
-				{clubs?.map(club => (
-					<SwiperSlide key={`club_featured_${club._id}`}>
-						<Image
-							src={clubAssetURL(club, 'cover_photo')}
-							alt={club.name}
-							objectFit="cover"
-							w="full"
-							h="full"
-						/>
-					</SwiperSlide>
-				))}
-			</StyledSlideShow>
+
+			<AspectRatio ratio={{sm: 1330/760, md: 1330/560}}>
+				<StyledSlideShow loop>
+					{clubs?.map(club => (
+						<SwiperSlide key={`club_featured_${club._id}`}>
+							<Image
+								src={clubAssetURL(club, 'cover_photo')}
+								alt={club.name}
+								objectFit="cover"
+								w="full"
+								h="full"
+							/>
+						</SwiperSlide>
+					))}
+				</StyledSlideShow>
+			</AspectRatio>
 
 			<Image
 				src="/girl.png"
@@ -137,7 +141,7 @@ export default function Home() {
 			/>
 
 			<Center 
-				mt={{sm: "20", md: "200"}} 
+				mt={{sm: "20", md: "100"}} 
 				color="#555555" 
 				fontWeight="bold" 
 				flexDirection="column">
@@ -239,7 +243,7 @@ function SearchBar({ onSubmit }: { onSubmit: FormEventHandler<HTMLFormElement> }
 }
 
 const StyledSlideShow = styled(Swiper)`
-	height: 420px;
+	max-height: 420px;
 	background-color: lightgray;
 	position: relative;
 	color: white;
@@ -250,7 +254,7 @@ const StyledSlideShow = styled(Swiper)`
 
 	@media (min-width: 62em) {
 		box-shadow: 37px 37px #7a97ff;
-		height: 592px;
+		max-height: 592px;
 	}
 `;
 
