@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { Club } from "contentlayer/generated";
 import styled from "@emotion/styled";
+import { stringify } from "qs";
 import {
 	Text,
 	Heading,
@@ -27,34 +28,34 @@ import ClubCard from "src/components/ClubCard";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import Layout from "src/components/layout";
-import { FormEvent, FormEventHandler, useState } from "react";
-import useSWR from "swr";
+import { FormEvent, FormEventHandler, useEffect } from "react";
 import { clubAssetURL, fetcher } from "src/utils";
+import { useQuery } from "@tanstack/react-query";
+import { useRouter } from "next/router";
 
 const CLUBS_ENDPOINT = '/api/clubs';
 
 export default function Home() {
-	// TODO: use react query!!
-	const [endpointPath, setEndpointPath] = useState(CLUBS_ENDPOINT);
-	const { data: clubs, error } = useSWR<Club[]>(endpointPath, fetcher);
+	const router = useRouter();
+	const { data: clubs, error, refetch } = useQuery<Club[]>([CLUBS_ENDPOINT, router.query], ({ queryKey }) => {
+		const [_, queryParams] = queryKey;
+		return fetcher(CLUBS_ENDPOINT + `/?${stringify(queryParams)}`);
+	});
+
+	const { data: clubTags } = useQuery<String[]>([CLUBS_ENDPOINT + '/tags'], () => fetcher(CLUBS_ENDPOINT + '/tags'));
 
 	// TODO: change route if query changes!
-	const { data: clubTags } = useSWR(CLUBS_ENDPOINT + '/tags', fetcher);
-
 	const handleSearchBar = (event: FormEvent<HTMLFormElement>) => {
 		event.preventDefault();
-
 		const data = new FormData(event.currentTarget);
-		let query = data.get('search_query');
-		if (query) {
-			query = '?query=' + query;
-		} else {
-			query = '';
-		}
-
+		const query = data.get('search_query');
 		if (!query) return;
-		setEndpointPath(CLUBS_ENDPOINT + query);
+		router.push(`/?q=${query}`, undefined, { shallow: true });
 	}
+
+	useEffect(() => {
+		refetch();
+	}, [router.query]);
 
 	return (
 		<Layout isHome>
@@ -128,7 +129,7 @@ export default function Home() {
 							key={`tag_${tag}`}
 							bg="#F2779A"
 							color="white"
-							onClick={() => setEndpointPath(CLUBS_ENDPOINT + '?q=' + tag)}
+							onClick={() => router.push(`/?q=${tag}`, undefined, { shallow: true })}
 							w="14rem"
 							py="25"
 							mt={["1rem", "1rem", "0"]}
