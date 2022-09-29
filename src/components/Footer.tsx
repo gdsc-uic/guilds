@@ -5,6 +5,7 @@ import Usg from "./logos/Usg";
 export default function Footer() {
 	return (
 		<Box bg={"#0057FF"} color={"white"} fontFamily="Inter">
+			{/* TODO: improve footer */}
 			<Container maxW="6xl" py="10">
 				<Center>
 					<VStack>
