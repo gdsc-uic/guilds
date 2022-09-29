@@ -311,79 +311,75 @@ function ClubOfficers({ club }: { club: Club }) {
 
 function InterestedBox({ club }: { club: Club }) {
 	return (
-		<Box
+		<Flex
 			// h="428"
 			bg="#A3F9B6"
 			border="5px solid black"
 			borderRadius="35px"
 			boxShadow="24px 25px black"
 			my="9rem"
+			minH={["0px", "0px", "428px"]}
+			flexDirection={["column", "column", "row"]}
+			alignItems="center"
 		>
 			<Flex
-				h="100%"
-				pos="relative"
-				flexDirection={["column", "column", "row"]}
-				alignItems="center"
+				w={club.links && club.registration ? ["35%", "90%", "65%"] : "100%"}
+				direction="column"
+				alignItems={["center", "center", club.links && club.registration ? "normal" : "center"]}
+				px="2rem"
+				py={["2rem", "2rem", "0"]}
 			>
-				<Flex
-					w={["35%", "90%", "65%"]}
-					direction="column"
-					alignItems={["center", "center", "normal"]}
-					px="2rem"
-					py={["2rem", "2rem", "0"]}
+				<Heading 
+					textAlign={{sm: "center", md: !club.links ? "center" : "left"}} 
+					fontWeight="500">
+						Interested to join in <b>{club.name}</b>?
+				</Heading>
+				<Button
+					mt="2rem"
+					w="10rem"
+					color="white"
+					bg="#0057FF"
+					border="1px solid black"
+					borderRadius="0"
+					leftIcon={<AiOutlineHeart color="#000" fontSize="1.2rem" />}
+					fontSize="1rem"
+					px="6"
 				>
-					<Heading 
-						textAlign={{sm: "center", md: "left"}} 
-						fontWeight="500">
-							Interested to join in <b>{club.name}</b>?
-					</Heading>
-					<Button
-						mt="2rem"
-						w="10rem"
-						color="white"
-						bg="#0057FF"
-						border="1px solid black"
-						borderRadius="0"
-						leftIcon={<AiOutlineHeart color="#000" fontSize="1.2rem" />}
-						fontSize="1rem"
-						px="6"
-					>
-						Interested
-					</Button>
-				</Flex>
-				<Box
-					h={["0px", "0px", "428px"]}
-					w={["100%", "100%", "0px"]}
-					borderLeft={["0px", "10px dashed black", "10px dashed black"]}
-					borderBottom={["10px dashed black", "10px dashed black", "0px"]}
-					right="24"
-					top="24"
-				/>
-				<Box w={{base: "100%", md: "50%"}} h="100%" p="2rem">
-					<Heading fontSize="30" mb="1.3rem" textAlign={{sm: "center", md: "left"}}>
-						Connect with the club
-					</Heading>
-					<VStack spacing="10px" width={"full"}>
-					{(club.links?.slice(0, 4) ?? []).map(link => (
-						<Button
-							key={`link_interested_${club._raw.flattenedPath}_${link.label}`}
-							as="a"
-							href={link.url}
-							target="_blank"
-							px="55px"
-							py="25px"
-							bg="white"
-							borderWidth="4px"
-							borderColor="black"
-							borderRadius="0px"
-							width="full"
-						>
-							{link.label}
-						</Button>
-					))}
-					</VStack>
-				</Box>
+					Interested
+				</Button>
 			</Flex>
-		</Box>
+			{(club.links && club.registration) && <Box
+				h={["0px", "0px", "428px"]}
+				w={["100%", "100%", "0px"]}
+				borderLeft={["0px", "10px dashed black", "10px dashed black"]}
+				borderBottom={["10px dashed black", "10px dashed black", "0px"]}
+				right="24"
+				top="24"
+			/>}
+			{club.links && <Box w={{base: "100%", md: "50%"}} h="100%" p="2rem">
+				<Heading fontSize="30" mb="1.3rem" textAlign={{sm: "center", md: "left"}}>
+					Connect with the club
+				</Heading>
+				<VStack spacing="10px" width={"full"}>
+				{(club.links?.slice(0, 4) ?? []).map(link => (
+					<Button
+						key={`link_interested_${club._raw.flattenedPath}_${link.label}`}
+						as="a"
+						href={link.url}
+						target="_blank"
+						px="55px"
+						py="25px"
+						bg="white"
+						borderWidth="4px"
+						borderColor="black"
+						borderRadius="0px"
+						width="full"
+					>
+						{link.label}
+					</Button>
+				))}
+				</VStack>
+			</Box>}
+		</Flex>
 	);
 }
