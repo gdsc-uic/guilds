@@ -1,12 +1,15 @@
 ---
-name: UIC Debating Society
-org_type: non-academic
+name: Communicators’ Organization for Development and Excellence (CODE)
+org_type: academic
+links:
+  - label: Facebook
+    url: https://www.facebook.com/UICCODE
 description:
-  full: UIC Debating Society improves the intellectual and academic capabilities of its members by helping develop multiple aspects of their personality and increasing their ability to speak eloquently. More than that, the club promotes critical thinking and advances awareness of political and social issues that affect the status quo.
-  short: The UIC Debating Society is the official non-academic club of the University of the Immaculate Conception for public speaking and debate-related activities.
+  full: Communicator’s Organization for Development and Excellence or otherwise referred to as CODE. It is a non-partisan and non-political, academic campus-wide alliance composed of all undergraduate Communication Majors students taking up Bachelor of Arts in Communication under College of Arts and Humanities of the University of the Immaculate Conception. The club is committed to provide activities and opportunities that will harness the potentials of Communication students, be able to create linkages within the media and corporate industry, different member schools and other sectors of society.
+  short: CODE is an academic club of all bonafide Communication Arts students of the University of the Immaculate Conception.
 tags:
-  - debate
-  - public speaking
+  - communication
+  - media
 assets:
   logo: logo.jpg
   cover_photo: cover_photo.jpg
