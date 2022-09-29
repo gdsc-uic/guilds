@@ -49,7 +49,7 @@ export default function Home() {
 		event.preventDefault();
 		const data = new FormData(event.currentTarget);
 		const query = data.get('search_query');
-		if (!query) return;
+		if (!query) return router.push(`/`, undefined, { shallow: true });
 		router.push(`/?q=${query}`, undefined, { shallow: true });
 	}
 
