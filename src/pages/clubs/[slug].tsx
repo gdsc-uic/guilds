@@ -132,7 +132,7 @@ function ClubBox({ club }: { club: Club }) {
 
 			{/* Cover Photo */}
 			<Box 
-				h="26rem"
+				h={{sm: "18rem", md: "26rem"}}
 				w="full"
 				backgroundImage={`url(${clubAssetURL(club, 'cover_photo')})`}
 				backgroundSize="cover"
@@ -173,11 +173,11 @@ function ClubBox({ club }: { club: Club }) {
 					alignItems={["center", "center", "flex-start"]}
 				>
 					{/* Club Name & Description */}
-					<Box textAlign={["center", "center", "left"]}>
-						<Heading fontSize="40" mb="2">
+					<Box textAlign={["center", "center", "left"]} px={{sm: "8", md: 0}}>
+						<Heading fontSize={{sm: 30, lg: 40}} mb="2">
 							{club.name}
 						</Heading>
-						<Text fontSize="20">{club.description?.full ?? ""}</Text>
+						<Text fontSize={{sm: 18, lg: 20}}>{club.description?.full ?? ""}</Text>
 					</Box>
 
 					{/* Social Media Links */}
@@ -284,7 +284,7 @@ function ClubOfficers({ club }: { club: Club }) {
 				<Heading px="8" pt="8" mb="1rem">Officers</Heading>
 				<Flex direction="row" px="8" pb="8" overflowX={'auto'} columnGap="2rem">
 					{club.officers.map(officer => (
-						<Box flexShrink={0} width={(1/8 * 100) + '%'} key={`officer_${officer._id}`}>
+						<Box flexShrink={0} width={{sm: (1/3 * 100) + '%', md: (1/6 * 100) + '%', lg: (1/8 * 100) + '%'}} key={`officer_${officer._id}`}>
 							<VStack>
 								<Img
 									h="10rem"
@@ -330,8 +330,11 @@ function InterestedBox({ club }: { club: Club }) {
 					px="2rem"
 					py={["2rem", "2rem", "0"]}
 				>
-					<Heading fontWeight="500">Interested to join in</Heading>
-					<Heading fontWeight="bold">{club.name}?</Heading>
+					<Heading 
+						textAlign={{sm: "center", md: "left"}} 
+						fontWeight="500">
+							Interested to join in  <b>{club.name}</b>?
+					</Heading>
 					<Button
 						mt="2rem"
 						w="10rem"
@@ -354,15 +357,14 @@ function InterestedBox({ club }: { club: Club }) {
 					right="24"
 					top="24"
 				/>
-				<Box w="50%" h="100%" p="2rem">
-					<Heading fontSize="30" mb="1.3rem">
+				<Box w={{base: "100%", md: "50%"}} h="100%" p="2rem">
+					<Heading fontSize="30" mb="1.3rem" textAlign={{sm: "center", md: "left"}}>
 						Connect with the club
 					</Heading>
-					<VStack spacing="10px">
+					<VStack spacing="10px" width={"full"}>
 					{(club.links?.slice(0, 4) ?? []).map(link => (
 						<Button
 							key={`link_interested_${club._raw.flattenedPath}_${link.label}`}
-							w="100%"
 							as="a"
 							href={link.url}
 							target="_blank"
@@ -372,6 +374,7 @@ function InterestedBox({ club }: { club: Club }) {
 							borderWidth="4px"
 							borderColor="black"
 							borderRadius="0px"
+							width="full"
 						>
 							{link.label}
 						</Button>
