@@ -10,8 +10,12 @@ import {
 import { Club } from "contentlayer/generated";
 import Link from "next/link";
 import { clubAssetURL } from "src/utils";
+import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
+import { useState } from "react";
 
 export default function ClubCard({ club }: { club: Club }) {
+	const [isInterested, setIsInterested] = useState(false);
+	const [isHovered, setIsHovered] = useState(false);
 	return (
 		<Box
 			borderWidth="5px"
@@ -22,10 +26,9 @@ export default function ClubCard({ club }: { club: Club }) {
 			flexDirection="column"
 			justifyContent="space-between"
 		>
-			
 			{/* Cover Photo */}
-			<Box 
-				borderTopRadius="15" 
+			<Box
+				borderTopRadius="15"
 				backgroundImage={`url(${clubAssetURL(club, 'cover_photo')})`}
 				backgroundPosition="center"
 				backgroundSize="cover"
@@ -68,6 +71,13 @@ export default function ClubCard({ club }: { club: Club }) {
 					p="7"
 					backgroundColor="#0057FF"
 					border="2px solid black"
+					leftIcon={isHovered ? <AiFillHeart /> : <AiOutlineHeart />}
+					onMouseEnter={() => setIsHovered(true)}
+					onMouseLeave={() => setIsHovered(false)}
+					_hover={{
+						backgroundColor: "blue",
+					}}
+					onClick={() => setIsInterested(!isInterested)}
 				>
 					Interested
 				</Button>
