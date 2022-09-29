@@ -28,7 +28,7 @@ import ClubCard from "src/components/ClubCard";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import Layout from "src/components/layout";
-import { FormEvent, FormEventHandler, useEffect } from "react";
+import { FormEvent, FormEventHandler, useEffect, useState } from "react";
 import { clubAssetURL, fetcher } from "src/utils";
 import { useQuery } from "@tanstack/react-query";
 import { useRouter } from "next/router";
@@ -52,6 +52,14 @@ export default function Home() {
 		if (!query) return;
 		router.push(`/?q=${query}`, undefined, { shallow: true });
 	}
+
+	const { isOpen, onOpen: onModalOpen, onClose } = useDisclosure();
+	useEffect(() => {
+		if (!localStorage.getItem('__guilds_first')) {
+			onModalOpen();
+			localStorage.setItem('__guilds_first', '1');
+		}
+	}, []);
 
 	useEffect(() => {
 		refetch();
@@ -77,7 +85,25 @@ export default function Home() {
 					<Text fontWeight="bold">heart beats</Text>
 				</Heading>
 				<Spacer />
-				<GuildsModal />
+				<Button
+					bg="#F2779A"
+					color="white"
+					// px="55"
+					w="14rem"
+					py="25"
+					mt={["1rem", "1rem", "0"]}
+					borderRadius="0"
+					borderWidth="4px"
+					borderColor="black"
+					boxSizing="border-box"
+					onClick={onModalOpen}
+				>
+					What is Guilds
+				</Button>
+
+				<GuildsModal 
+					isOpen={isOpen} 
+					onClose={onClose} />
 			</Flex>
 
 			<StyledSlideShow loop>
@@ -224,88 +250,67 @@ const StyledSlideShow = styled(Swiper)`
 	}
 `;
 
-function GuildsModal() {
-	// TODO: show modal on first time visit
-	const { isOpen, onOpen, onClose } = useDisclosure();
+function GuildsModal({ isOpen, onClose }) {
 	return (
-		<>
-			<Button
-				bg="#F2779A"
-				color="white"
-				// px="55"
-				w="14rem"
-				py="25"
-				mt={["1rem", "1rem", "0"]}
-				borderRadius="0"
-				borderWidth="4px"
-				borderColor="black"
-				boxSizing="border-box"
-				onClick={onOpen}
+		<Modal isOpen={isOpen} onClose={onClose}>
+			<ModalOverlay />
+			<ModalContent
+				border="10px solid black"
+				borderRadius="50px"
+				p="10"
+				maxW="60rem"
+				bg="#FFECEC"
 			>
-				What is Guilds
-			</Button>
-
-			<Modal isOpen={isOpen} onClose={onClose}>
-				<ModalOverlay />
-				<ModalContent
-					border="10px solid black"
-					borderRadius="50px"
-					p="10"
-					maxW="60rem"
-					bg="#FFECEC"
-				>
-					<ModalCloseButton
-						_hover={{
-							background: "red",
-							color: "white",
-							borderRadius: "50%",
-						}}
-						borderRadius="50%"
-						fontSize="15px"
-						m="1rem"
-					/>
-					<Flex>
-						<Box
-							h="30rem"
-							w="30rem"
-							boxShadow="10px 10px 0px black"
-							borderRadius="50px"
-							border="10px solid black"
-							bg="#0057ff"
-						></Box>
-
-						<VStack alignItems="flex-end">
-							<ModalBody ml="3rem">
-								<Heading fontWeight="500" fontSize="30">
-									What is Guilds?
-								</Heading>
-								<Text
-									fontFamily="Space Grotesk"
-									fontSize="50"
-									fontWeight="bold"
-								>
-									Discover your Interests
-								</Text>
-								lorem ipsum dolor sit amet
-							</ModalBody>
-							<ModalFooter>
-								<Button
-									// p="1.2rem"
-									px="7rem"
-									py="2rem"
-									boxShadow="5px 5px 0px black"
-									borderRadius="0px"
-									bg="#F2779A"
-									color="white"
-									border="3px solid black"
-								>
-									Next
-								</Button>
-							</ModalFooter>
-						</VStack>
-					</Flex>
-				</ModalContent>
-			</Modal>
-		</>
+				<ModalCloseButton
+					_hover={{
+						background: "red",
+						color: "white",
+						borderRadius: "50%",
+					}}
+					borderRadius="50%"
+					fontSize="15px"
+					m="1rem"
+				/>
+				<Flex>
+					<VStack alignItems="center">
+						<ModalBody textAlign="center">
+							<Image 
+								src="/guilds-emblem.png" 
+								alt="Guilds" 
+								width="40%" 
+								mx="auto"
+								mb="4rem" />
+							<Text
+								fontFamily="Space Grotesk"
+								fontSize="50"
+								fontWeight="bold"
+							>
+								Welcome to Guilds!
+							</Text>
+							<Text fontSize="20">
+								Guilds is the official club directory website for the UIC Club Fair 2022. 
+								You can search and browse all the clubs and organizations the university has to offer. 
+								Search your interests and find the best place where your beats!
+							</Text>
+						</ModalBody>
+						<ModalFooter justifyContent="center">
+							<Button
+								// p="1.2rem"
+								px="7rem"
+								py="2rem"
+								boxShadow="5px 5px 0px black"
+								borderRadius="0px"
+								bg="#F2779A"
+								color="white"
+								border="3px solid black"
+								onClick={onClose}
+							>
+								Get Started!
+							</Button>
+						</ModalFooter>
+					</VStack>
+				</Flex>
+			</ModalContent>
+		</Modal>
 	);
 }
