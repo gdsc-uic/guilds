@@ -91,7 +91,7 @@ function Carousel({ club }: { club: Club }) {
 					delay: 3700,
 					disableOnInteraction: false,
 				}}
-				modules={[EffectCoverflow]}
+				modules={[Autoplay, EffectCoverflow]}
 			>
 				{club.assets.slideshows.map(p => (
 					<StyledSwiperSlide key={`slideshow_${p}`}>
