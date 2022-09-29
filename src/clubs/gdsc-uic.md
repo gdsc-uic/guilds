@@ -23,11 +23,47 @@ theme:
   secondary_color: "#7DF1B9"
 registration:
   form_url: https://form.google.com
-  meeting_url: https://meet.google.com
+  meeting_url: https://meet.google.com/gqn-fqjp-enh
 officers:
   - name: Ned Palacios
     position: Lead
     photo_name: palacios.png
+  - name: Al Gabriel Orig
+    position: Chief Operations Officer
+    photo_name: orig.jpeg
+  - name: Jericho Opsima
+    position: Chief Technology Officer
+    photo_name: opsima.jpeg
+  - name: Jenny Babe Cano
+    position: Cheif Finance Officer
+    photo_name: cano.jpeg
+  - name: Adrian Cinchez
+    position: Chief Community Development Officer
+    photo_name: cinchez.jpeg
+  - name: Joshua James Autor
+    position: Chief Marketing Officer
+    photo_name: autor.jpeg
+  - name: Muslimin Ontong
+    position: Technology Department - UI / UX Lead
+    photo_name: ontong.jpeg
+  - name: Janine Monique Ariate
+    position: Finance Department - Auditor
+    photo_name: ariate.jpeg
+  - name: Rafael Delloson
+    position: Community Development Dept. - Internal Officer
+    photo_name: delloson.jpeg
+  - name: June Rian Bation
+    position: Community Development Dept. - External Officer
+    photo_name: bation.jpeg
+  - name: Jessie James Calvo
+    position: Marketing Department - Graphics and Video Lead
+    photo_name: calvo.jpeg
+  - name: Ellis Rey Miranda
+    position: Marketing Officer - Social Media Manager
+    photo_name: miranda.jpeg
+  - name: Andre Jose Ruiz
+    position: Marketing Department - Documentation Lead
+    photo_name: ruiz.jpeg
 faqs:
   - question: Question 1
     answer: Answer 1
