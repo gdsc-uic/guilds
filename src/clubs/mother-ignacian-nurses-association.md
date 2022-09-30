@@ -14,9 +14,6 @@ assets:
 theme:
   primary_color: "#f476b4"
   secondary_color: "#daf5e6"
-registration:
-  form_url: https://forms.gle/kYGhLCievSPujR3LA
-  meeting_url: https://meet.google.com/pfx-idks-dft
 officers:
   - name: Shean Airesh C. Dela Cuadra
     position: Mayor

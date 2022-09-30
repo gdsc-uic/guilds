@@ -344,7 +344,7 @@ function InterestedBox({ club }: { club: Club }) {
 			flexDirection={["column", "column", "row"]}
 			alignItems="center"
 		>
-			{club.registration && <Flex
+			{(club.org_type == 'non-academic' && club.registration) && <Flex
 				w={club.links && club.registration ? ["35%", "90%", "65%"] : "100%"}
 				direction="column"
 				alignItems={["center", "center", club.links && club.registration ? "normal" : "center"]}
