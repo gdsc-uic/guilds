@@ -291,7 +291,7 @@ function ClubOfficers({ club }: { club: Club }) {
 	return (
 		<Box my="3rem">
 			<Box
-				h="340"
+				minH="340"
 				bg="#FFE58A"
 				border="5px solid black"
 				borderRadius="35px"
