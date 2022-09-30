@@ -165,9 +165,8 @@ function ClubBox({ club }: { club: Club }) {
 					src={clubAssetURL(club, 'logo')}
 					objectFit="cover"
 					alt="gdsc-logo"
-					border="3px solid black"
 					borderRadius="50%"
-					boxShadow="5px 7px rgba(0,0,0,0.3)"
+					filter={"drop-shadow(3px 3px 0 black) drop-shadow(-3px 3px 0 black) drop-shadow(3px -3px 0 black) drop-shadow(-3px -3px 0 black) drop-shadow(5px 7px 0 rgba(0,0,0,0.3))"}
 				/>
 			</Box>
 
