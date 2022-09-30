@@ -20,9 +20,6 @@ assets:
 theme:
   primary_color: "#94BAF9"
   secondary_color: "#7DF1B9"
-registration:
-  form_url:
-  meeting_url:
 officers:
   - name: Jelian Dessareyn B. Pugahan
     position: President
@@ -57,9 +54,6 @@ officers:
   - name: JOice Bernett Fuentes
     position: Program Head
     photo_name: blank_pic.webp
-faqs:
-  - question:
-    answer:
 ---
 # Activities for this Year:
 - Team Building / Acquitance Party
