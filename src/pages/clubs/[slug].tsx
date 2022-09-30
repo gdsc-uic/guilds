@@ -29,6 +29,7 @@ import styled from "@emotion/styled";
 import { clubAssetURL } from "src/utils";
 import { Fragment } from "react";
 import { useRouter } from "next/router";
+import Content from "src/components/Content";
 
 export async function getStaticPaths() {
 	const paths = allClubs.map((c) => c.url);
@@ -240,7 +241,9 @@ function ClubContent({ club }: { club: Club }) {
 				<Text fontSize="2xl">{club.description.full}</Text>
 			</Box>
 
-			<Box dangerouslySetInnerHTML={{ __html: club.body.html }} />
+			<Box w="full">
+				<Content content={club.body.raw} />
+			</Box>
 		</VStack>
 	);
 }
