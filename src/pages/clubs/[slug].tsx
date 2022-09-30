@@ -237,7 +237,7 @@ function ClubContent({ club }: { club: Club }) {
 			<Box>
 				<Heading>Description</Heading>
 				<Box h="2" w="100%" bg="#94BAF9" my="4" />
-				<Text fontSize="xl">{club.description.full}</Text>
+				<Text fontSize="2xl">{club.description.full}</Text>
 			</Box>
 
 			<Box dangerouslySetInnerHTML={{ __html: club.body.html }} />

@@ -10,6 +10,7 @@ links:
     url: 09669719929 | 09056688327
 description:
   full: The Bibliophile club functions as a voice for all students who are interested in information sources. The Bibliophile club promotes the value of printed and non-printed reliable library collections, as well as encourages student readership as the primary source of vast knowledge. The club also provides discussion on the selection of library resources as needed by students, with the proviso that students shall not debate regulations or partisans.
+  short: Ad Meliora “Toward Better Things”
 tags:
   - books
   - ad meliora
