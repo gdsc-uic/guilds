@@ -31,7 +31,6 @@ assets:
     - 6.jpg
     - 7.jpg
     - 8.jpg
-    - 9.jpg
 theme:
   primary_color: "#9A031E"
   secondary_color: "#FB8B24"
