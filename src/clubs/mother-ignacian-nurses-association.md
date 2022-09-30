@@ -3,7 +3,7 @@ name: Mother Ignacian Nurses Association
 org_type: academic
 links:
   - label: Facebook
-  - url: https://www.facebook.com/UICNRSNG
+    url: https://www.facebook.com/UICNRSNG
 description:
   full: Mother Ignacian Nurses Association promotes awareness of important nursing issues, encourages participation in initiatives aimed at improving community health, and organizes nursing students to have an impact on public policy. The purpose of this support is to provide the student nurse with assistance while she works toward earning a degree in professional nursing. For the objective of teaching the institution and the community that surrounds it about current health concerns by means of a variety of events that are relevant to the profession that are conducted every month.
   short: The Mother Ignacian Nursing Association is made up of nursing majors and others who are just fascinated about the field.
@@ -14,9 +14,6 @@ assets:
 theme:
   primary_color: "#f476b4"
   secondary_color: "#daf5e6"
-registration:
-  form_url: https://forms.gle/kYGhLCievSPujR3LA
-  meeting_url: https://meet.google.com/pfx-idks-dft
 officers:
   - name: Shean Airesh C. Dela Cuadra
     position: Mayor
