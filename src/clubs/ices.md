@@ -12,17 +12,13 @@ tags:
   - engineering
   - future builders
 assets:
-  logo: ICES LOGO.png
-  cover_photo: ICES BACKGROUND PHOTO.png
+  logo: ICES_LOGO.png
+  cover_photo: ICES_BACKGROUND_PHOTO.png
   slideshows:
     - ANNOUNCEMENT 1.jpeg
-
 theme:
   primary_color: "#ff6700"
   secondary_color: "00ffff"
-registration:
-  form_url: 
-  meeting_url:
 officers:
   - name: Rosel Abrahan
     position: President
@@ -95,12 +91,13 @@ faqs:
   - question: How much is the membership fee?
     answer: ICES membership is free. However, there is a club fee which can be seen as a miscellaneous fee on the financial record of every Civil Engineering student.
   - question: What is the purpose of the club fee?
-    answer: The club fee is explained as follows...
-    It is a unit in which a fee will be used to provide or support the financial needs of the said organization.
+    answer: | 
+      The club fee is explained as follows...
+      It is a unit in which a fee will be used to provide or support the financial needs of the said organization.
+      
+      The ICES fee is determined by the respective office of the University of the Immaculate Conception and is a part of the miscellaneous fee collected from students. The ICES does not possess the right to collect from its members directly.
+      
+      Acquisition of the fee, intended for a particular affair or purpose, shall comply with the rules and regulations of the finance departments and offices of the university.
     
-    The ICES fee is determined by the respective office of the University of the Immaculate Conception and is a part of the miscellaneous fee collected from students. The ICES does not possess the right to collect from its members directly.
-    
-    Acquisition of the fee, intended for a particular affair or purpose, shall comply with the rules and regulations of the finance departments and offices of the university.
-    
-    The breakdown of the ICES fee shall be submitted to the Dean of the College of Engineering and Architecture for approval, specifically on the amount allocation per pre-determined purpose.
+      The breakdown of the ICES fee shall be submitted to the Dean of the College of Engineering and Architecture for approval, specifically on the amount allocation per pre-determined purpose.
 ---
