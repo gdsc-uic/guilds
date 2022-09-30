@@ -62,7 +62,7 @@ export default function ClubCard({ club }: { club: Club }) {
 				fontFamily="body"
 				fontWeight="bold"
 			>
-				{(club.org_type === 'non-academic' && club.registration) && <Link href={club.url + '#interested'}>
+				{/* {(club.org_type === 'non-academic' && club.registration) && <Link href={club.url + '#interested'}>
 					<Button
 						as="a"
 						textColor="white"
@@ -73,7 +73,7 @@ export default function ClubCard({ club }: { club: Club }) {
 					>
 						Interested
 					</Button>
-				</Link>}
+				</Link>} */}
 				<Link href={club.url}>
 					<Button
 						borderRadius="20"
