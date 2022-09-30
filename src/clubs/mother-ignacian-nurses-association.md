@@ -11,9 +11,10 @@ tags:
   - health
 assets:
   logo: logo.png
+  cover_photo: coverphoto.png
 theme:
-  primary_color: "#f476b4"
-  secondary_color: "#daf5e6"
+  primary_color: "#EBCECF"
+  secondary_color: "#E3D4CC"
 officers:
   - name: Shean Airesh C. Dela Cuadra
     position: Mayor

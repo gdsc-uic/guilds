@@ -29,6 +29,7 @@ import styled from "@emotion/styled";
 import { clubAssetURL } from "src/utils";
 import { Fragment } from "react";
 import { useRouter } from "next/router";
+import Content from "src/components/Content";
 
 export async function getStaticPaths() {
 	const paths = allClubs.map((c) => c.url);
@@ -164,9 +165,8 @@ function ClubBox({ club }: { club: Club }) {
 					src={clubAssetURL(club, 'logo')}
 					objectFit="cover"
 					alt="gdsc-logo"
-					border="3px solid black"
 					borderRadius="50%"
-					boxShadow="5px 7px rgba(0,0,0,0.3)"
+					filter={"drop-shadow(3px 3px 0 black) drop-shadow(-3px 3px 0 black) drop-shadow(3px -3px 0 black) drop-shadow(-3px -3px 0 black) drop-shadow(5px 7px 0 rgba(0,0,0,0.3))"}
 				/>
 			</Box>
 
@@ -240,7 +240,9 @@ function ClubContent({ club }: { club: Club }) {
 				<Text fontSize="2xl">{club.description.full}</Text>
 			</Box>
 
-			<Box dangerouslySetInnerHTML={{ __html: club.body.html }} />
+			<Box w="full">
+				<Content content={club.body.raw} />
+			</Box>
 		</VStack>
 	);
 }
@@ -291,7 +293,7 @@ function ClubOfficers({ club }: { club: Club }) {
 	return (
 		<Box my="3rem">
 			<Box
-				h="340"
+				minH="340"
 				bg="#FFE58A"
 				border="5px solid black"
 				borderRadius="35px"

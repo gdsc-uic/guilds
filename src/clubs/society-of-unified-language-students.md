@@ -43,10 +43,10 @@ officers:
     photo_name: GALLOSA.png
 ---
 
-![a.jpg](/club_assets/society-of-unified-language-students/content_images/a.jpg)
+![a.png](/club_assets/society-of-unified-language-students/content_images/a.png)
 This event will be held to commemorate the end of the year, connect with the members, and develop relationships amongst SoULS members by encouraging the sharing of personal experiences. By showing their abilities, they would gain confidence and grow more knowledgeable and enthusiastic about the BA ELS program.
 
-![b.jpg](/club_assets/society-of-unified-language-students/content_images/b.jpg)
+![b.png](/club_assets/society-of-unified-language-students/content_images/b.png)
 A webinar event conducted by the Society of United Language Students, it is an open two-part session of learning about the languages of Mandarin and Japanese. At the event, we are also open to discussing the lecturers' experiences from learning the language to teaching the language themselves to students who are eager to learn. During the session, we are encouraging the audience to take the opportunity to experience what the lecturers’ experiences were, such as: taking foreign language classes, traveling to another country, and taking the experience of the culture.
 
 ![c.jpg](/club_assets/society-of-unified-language-students/content_images/c.jpg)

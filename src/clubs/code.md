@@ -78,8 +78,6 @@ Caption: Annually, the Communicators’ Organization for Development and Excelle
 
 
 ### MisCOMMception - Bachelor of Arts in Communication
-Video Filename – EPISODE 01 - MisCOMMceptions.mp4
-
 <iframe src="https://drive.google.com/file/d/1sTlbrZJ2l3ca3v8O7IAp6m5HJ8IY3ycm/preview"></iframe>
 
 ## Best Club of the Year (SY: 2021-2022)
