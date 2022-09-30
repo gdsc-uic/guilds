@@ -12,17 +12,13 @@ tags:
   - engineering
   - future builders
 assets:
-  logo: ICES LOGO.png
-  cover_photo: ICES BACKGROUND PHOTO.png
+  logo: ICES_LOGO.png
+  cover_photo: ICES_BACKGROUND_PHOTO.png
   slideshows:
     - ANNOUNCEMENT 1.jpeg
-
 theme:
   primary_color: "#ff6700"
   secondary_color: "00ffff"
-registration:
-  form_url: 
-  meeting_url:
 officers:
   - name: Rosel Abrahan
     position: President
