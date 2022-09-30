@@ -10,7 +10,7 @@ description:
 tags:
   - health
 assets:
-  logo: logo.jpg
+  logo: logo.png
 theme:
   primary_color: "#f476b4"
   secondary_color: "#daf5e6"
@@ -50,16 +50,16 @@ officers:
     photo_name: EDZRAFIL PENDUMA.png
 ---
 
-**MISSION:**
+# MISSION:
 To be the pillar of faith, excellence, and service with unbounded willpower to set the bar of the standard of the fellows in the Department of Nursing for the Academic year 2022-2023 at its highest height, with regards to socio-civic interactive leadership. For them to learn from the student leaders of good integrity and principle the right being of a
 component of MINA. And to shape the future nurses of the global by maximizing their full skill-driven potential in extending aid to the weary.
 
-**VISION:**
+# VISION:
 We are looking forward to:
 A more vigorous association where everyone doesn't hold back at participating and assessing everyone with their attained knowledge to be applied in real life
 medic-demanding situations; A better association than what it ever come far before; A congenial association that doesn't stop desiring for their personal transcends; An interactive organization abounded by consolidated ideas from cooperative organizations; and an association that incepts a family between the students with varying endeavors, but with one goal of providing the best.
 
-**ACTIVITY FOR THIS YEAR:**
+# ACTIVITY FOR THIS YEAR: 
 
 1. World Suicide Prevention Day
 2. Drug Abuse Prevention and Control Week
