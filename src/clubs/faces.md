@@ -21,7 +21,7 @@ tags:
   - art
 assets:
   logo: F.A.C.E.S.png
-  cover_photo: cover photo.png
+  cover_photo: cover_photo.png
   slideshows:
     - 1.jpg
     - 2.jpg
