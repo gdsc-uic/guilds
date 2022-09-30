@@ -11,17 +11,17 @@ description:
 tags:
   - soaring diversity
 assets:
-  logo: EAGLES_Logo.png
-  cover_photo: EAGLES_Cover.png
+  logo: logo.png
+  cover_photo: cover_photo.png
   slideshows:
-    - e1.png
-    - e2.png
-    - e3.png
-    - e4.png
-    - e5.png
-    - e6.png
-    - e7.png
-    - e8.png
+    - 1.png
+    - 2.png
+    - 3.png
+    - 4.png
+    - 5.png
+    - 6.png
+    - 7.png
+    - 8.png
 theme:
   primary_color: "#003399"
   secondary_color: "#9CBDFF"
