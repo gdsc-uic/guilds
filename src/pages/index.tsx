@@ -150,7 +150,9 @@ export default function Home() {
 				</Heading>
 				
 				<VStack spacing="10">
-					<SearchBar onSubmit={handleSearchBar} />
+					<SearchBar 
+						query={router.query['q']?.toString() ?? ''} 
+						onSubmit={handleSearchBar} />
 
 					<Stack 
 						alignItems="center" 
@@ -207,7 +209,7 @@ function ClubResults({ clubs, error }: {clubs: Club[] | null, error?: any}) {
 	);
 }
 
-function SearchBar({ onSubmit }: { onSubmit: FormEventHandler<HTMLFormElement> }) {
+function SearchBar({ query, onSubmit }: { query: string, onSubmit: FormEventHandler<HTMLFormElement> }) {
 	return (
 		<form onSubmit={onSubmit}>
 			<InputGroup
@@ -219,6 +221,7 @@ function SearchBar({ onSubmit }: { onSubmit: FormEventHandler<HTMLFormElement> }
 					placeholder={"Search for a club"}
 					p="9"
 					bg="white"
+					defaultValue={query}
 					borderRadius="0"
 					borderWidth="4px"
 					boxShadow="-7px 7px black"
