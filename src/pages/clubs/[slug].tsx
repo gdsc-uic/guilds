@@ -237,10 +237,15 @@ function ClubContent({ club }: { club: Club }) {
 			<Box>
 				<Heading>Description</Heading>
 				<Box h="2" w="100%" bg="#94BAF9" my="4" />
-				<Text fontSize="2xl">{club.description.full}</Text>
+				<Text fontSize={["1.1rem", "1.15rem", "1.2rem"]}>
+					{club.description.full}
+				</Text>
 			</Box>
 
-			<Box dangerouslySetInnerHTML={{ __html: club.body.html }} />
+			<Box
+				dangerouslySetInnerHTML={{ __html: club.body.html }}
+				fontSize={["1.1rem", "1.15rem", "1.2rem"]}
+			/>
 		</VStack>
 	);
 }
