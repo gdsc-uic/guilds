@@ -11,8 +11,8 @@ description:
 tags:
   - soaring diversity
 assets:
-  logo: logo.jpg
-  cover_photo: cover_photo.jpg
+  logo: logo.png
+  cover_photo: cover_photo.png
   slideshows:
     - 1.png
     - 2.png
