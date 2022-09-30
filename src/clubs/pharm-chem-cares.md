@@ -14,6 +14,8 @@ tags:
 assets:
   logo: logo.png
   cover_photo: cover_photo.png
+  slideshows:
+    - 1.png
 theme:
   primary_color: "#602E9E"
   secondary_color: "#FFFFFF"
