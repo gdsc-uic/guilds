@@ -1,5 +1,5 @@
 ---
-name: UIC Volunteer Catechists
+name: Bibliophile Club
 org_type: non-academic
 links:
   - label: Facebook
@@ -21,8 +21,8 @@ theme:
   primary_color: "#94BAF9"
   secondary_color: "#7DF1B9"
 registration:
-  form_url: https://forms.gle/kYGhLCievSPujR3LA
-  meeting_url: https://meet.google.com/pfx-idks-dft
+  form_url:
+  meeting_url:
 officers:
   - name: Jelian Dessareyn B. Pugahan
     position: President
@@ -33,7 +33,38 @@ officers:
   - name: Jesieca M. Playda
     position: Secretary
     photo_name: blank_pic.webp
+  - name: Briyette Phaye Neroza
+    position: Treasurer
+    photo_name: blank_pic.webp
+  - name: Ma. Lourdes Zapanta
+    position: Auditor
+    photo_name: blank_pic.webp
+  - name: Nelfe Navales
+    position: PIO
+    photo_name: blank_pic.webp
+  - name: Nicole Verdon Villenueva
+    position: Creative Head
+    photo_name: blank_pic.webp
+  - name: Phoebe Pauline Corda
+    position: Documentation Head
+    photo_name: blank_pic.webp
+  - name: Trisha Marie Magellen
+    position: Food / Social Media Head
+    photo_name: blank_pic.webp
+  - name: Aira Mae Entera
+    position: Program Head
+    photo_name: blank_pic.webp 
+  - name: JOice Bernett Fuentes
+    position: Program Head
+    photo_name: blank_pic.webp
 faqs:
-  - question: What is the fundamental task of the church?
-    answer: Catechesis
+  - question:
+    answer:
 ---
+# Activities for this Year:
+- Team Building / Acquitance Party
+- Date with a book
+- Book Face
+- National Book Week / Month Celebration
+- Book Mobile (Outreach Program)
+- Book Donation Dropbox
