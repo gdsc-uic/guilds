@@ -22,7 +22,7 @@ theme:
   secondary_color: "#daf5e6"
 registration:
   form_url: https://forms.gle/kYGhLCievSPujR3LA
-  meeting_url: https://meet.google.com/pfx-idks-dft
+  meeting_url: https://us06web.zoom.us/j/83254555213?pwd=VU55YVY4a1U5cElFNXk5MHZ0OSt4Zz09
 officers:
   - name: Jaya Mae R. Sarte
     position: Mayor
@@ -55,3 +55,9 @@ faqs:
   - question: Do we need to have experience in debate or any public speaking activities to join the club?
     answer: Anyone can join as long as you are willing to dedicate your time for training and other activities of the club.
 ---
+
+## Zoom Meeting
+To join the Zoom meeting you may visit: [https://us06web.zoom.us/j/83254555213?pwd=VU55YVY4a1U5cElFNXk5MHZ0OSt4Zz09](https://us06web.zoom.us/j/83254555213?pwd=VU55YVY4a1U5cElFNXk5MHZ0OSt4Zz09)
+
+Meeting ID: 832 5455 5213
+Passcode: DEBSOC

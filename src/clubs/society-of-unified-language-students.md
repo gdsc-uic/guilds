@@ -43,15 +43,14 @@ officers:
     photo_name: GALLOSA.png
 ---
 
-Photo File name -1.png
-○ Caption - This event will be held to commemorate the end of the year, connect with the members, and develop relationships amongst SoULS members by encouraging the sharing of personal experiences. By showing their abilities, they would gain confidence and grow more knowledgeable and enthusiastic about the BA ELS program.
+![a.jpg](/club_assets/society-of-unified-language-students/content_images/a.jpg)
+This event will be held to commemorate the end of the year, connect with the members, and develop relationships amongst SoULS members by encouraging the sharing of personal experiences. By showing their abilities, they would gain confidence and grow more knowledgeable and enthusiastic about the BA ELS program.
 
-Photo File name -2.png
-○ Caption - A webinar event conducted by the Society of United Language Students, it is an open two-part session of learning about the languages of Mandarin and Japanese. At the event, we are also open to discussing the lecturers' experiences from learning the language to teaching the language themselves to students who are eager to learn. During the session, we are encouraging the audience to take the opportunity to experience what the lecturers’ experiences were, such as: taking foreign language classes, traveling to another country, and taking the experience of the culture.
+![b.jpg](/club_assets/society-of-unified-language-students/content_images/b.jpg)
+A webinar event conducted by the Society of United Language Students, it is an open two-part session of learning about the languages of Mandarin and Japanese. At the event, we are also open to discussing the lecturers' experiences from learning the language to teaching the language themselves to students who are eager to learn. During the session, we are encouraging the audience to take the opportunity to experience what the lecturers’ experiences were, such as: taking foreign language classes, traveling to another country, and taking the experience of the culture.
 
-Photo File name - 3.jpg
-○ Caption - A general assembly of SoULS members We firmly discuss the students' whereabouts during the pandemic, events in and outside the university from the previous school year to the present via online, and upcoming events this school year within the university, college, and course. The club members also discussed the reports in terms of the course performance and furthered the activities for the said events.
+![c.jpg](/club_assets/society-of-unified-language-students/content_images/c.jpg)
+A general assembly of SoULS members We firmly discuss the students' whereabouts during the pandemic, events in and outside the university from the previous school year to the present via online, and upcoming events this school year within the university, college, and course. The club members also discussed the reports in terms of the course performance and furthered the activities for the said events.
 
-Bachelor of Arts in English Language Studies
-(Video is in the Content Assets Folder)
-File name: Souls-Video Introduction.Mp4
+## Bachelor of Arts in English Language Studies
+<iframe src="https://drive.google.com/file/d/186O30lOlx2dRFm2WUWZqF1FKs19NsWz0/preview"></iframe>

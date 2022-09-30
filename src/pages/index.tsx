@@ -114,7 +114,7 @@ export default function Home() {
 
 			<AspectRatio ratio={{sm: 1330/760, md: 1330/560}}>
 				<StyledSlideShow loop>
-					{clubs?.map(club => (
+					{clubs?.filter(club => !!club.assets.cover_photo).map(club => (
 						<SwiperSlide key={`club_featured_${club._id}`}>
 							<Image
 								src={clubAssetURL(club, 'cover_photo')}
@@ -150,7 +150,9 @@ export default function Home() {
 				</Heading>
 				
 				<VStack spacing="10">
-					<SearchBar onSubmit={handleSearchBar} />
+					<SearchBar 
+						query={router.query['q']?.toString() ?? ''} 
+						onSubmit={handleSearchBar} />
 
 					<Stack 
 						alignItems="center" 
@@ -207,7 +209,7 @@ function ClubResults({ clubs, error }: {clubs: Club[] | null, error?: any}) {
 	);
 }
 
-function SearchBar({ onSubmit }: { onSubmit: FormEventHandler<HTMLFormElement> }) {
+function SearchBar({ query, onSubmit }: { query: string, onSubmit: FormEventHandler<HTMLFormElement> }) {
 	return (
 		<form onSubmit={onSubmit}>
 			<InputGroup
@@ -219,6 +221,7 @@ function SearchBar({ onSubmit }: { onSubmit: FormEventHandler<HTMLFormElement> }
 					placeholder={"Search for a club"}
 					p="9"
 					bg="white"
+					defaultValue={query}
 					borderRadius="0"
 					borderWidth="4px"
 					boxShadow="-7px 7px black"

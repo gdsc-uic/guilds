@@ -75,7 +75,7 @@ faqs:
     answer: Our office is located at UIC- Bonifacio Campus
 ---
 
-VISION:
+## VISION:
 
 The Collegiate Immaculate envisions to provide the student body a voice in all news and current affairs.
 
@@ -85,11 +85,11 @@ Through our voice, we promote journalism as a powerful tool to bring transparenc
 
 We seek to embody a beacon of truth to the University through responsible inquiry, thus influence the student body to be purveyors of truth and responsibly use information on-hand.
 
-MISSION:
+## MISSION:
 
 The Collegiate Immaculate is dedicated to emblazon responsible journalism and deliver efficient, truthful, and accurate news and current affairs to the University with confidence and integrity. We seek to prevent the spread of fake news and saturate transparency and veracity through writing. We move forward, together with the student body, to a world of free press.
 
-ACTIVITIES FOR THIS YEAR:
+## ACTIVITIES FOR THIS YEAR:
 
 1. TCI Campus Journalism Workshop 2022
 2. TCI Lens Photo contest

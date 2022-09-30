@@ -24,21 +24,21 @@ export default function ClubCard({ club }: { club: Club }) {
 		>
 			
 			{/* Cover Photo */}
-			<Box 
+			{club.assets.cover_photo && <Box 
 				borderTopRadius="15" 
 				backgroundImage={`url(${clubAssetURL(club, 'cover_photo')})`}
 				backgroundPosition="center"
 				backgroundSize="cover"
 				h={["250", "250", "200"]}>
-			</Box>
+			</Box>}
 
 
 			{/* logo and club info */}
-			<Box mt={["-15rem", "-4rem"]}>
+			<Box mt={club.assets.cover_photo ? ["-15rem", "-4rem"] : "3rem"}>
 				<Center>
 					<Img
 						src={clubAssetURL(club, 'logo')}
-						alt="gdsc-logo"
+						alt={club.name}
 						objectFit="cover"
 						h="130"
 						borderRadius="50%"
