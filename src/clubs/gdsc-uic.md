@@ -22,7 +22,7 @@ theme:
   primary_color: "#94BAF9"
   secondary_color: "#7DF1B9"
 registration:
-  form_url: https://form.google.com
+  form_url: https://shorturl.at/dKQV8
   meeting_url: https://meet.google.com//gqn-fqjp-enh
 officers:
   - name: Ned Palacios
