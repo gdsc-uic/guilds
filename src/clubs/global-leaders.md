@@ -73,8 +73,8 @@ faqs:
   - question: What are the activities in the UIC Global Leaders Club?
     answer: All activities of the UIC Global Leaders Club are set on a national or international scale, with some in collaboration with both local and international partner universities. With the onset of the pandemic, these activities are held through online platforms such as Zoom Meetings. Moreover, they are targeted towards training its members to be globally competitive, 21st century student leaders who are empowered and change-resistant.
   - question: How can you be an official member of the uic Global Leaders Club?
+    answer: Being part of the UIC Global Leaders Club gives you different opportunities in both national and international. You'll be able to meet interesting people from different countries in Asia and around the world, understand their culture and values, and see the similarities and differences. You can also share your ideas and resolutions on the sustaintable development goals (SDGs) issues around the ASEAN community, and other communities. Finally, share your own culture as a Filipino and become ambassadors and delegates who represents UIC and Davao City.
     answer: Interested students must register through the Google Forms provided to be considered an applicant for the club. To be an official member of the club, he/she must join local and international events under the club and show enthusiasm in being a global leader.
-  - question: What are the benefits of being part of this club?
   - question: What is the role of being a member of UIC Global Leader? 
     answer: The role of a UIC Global Leaders Club member is to attend and be a delegate on local and international events referred to by the club moderator Sir Rene Babiera II.
 ---
