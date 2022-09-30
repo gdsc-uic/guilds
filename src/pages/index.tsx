@@ -114,7 +114,7 @@ export default function Home() {
 
 			<AspectRatio ratio={{sm: 1330/760, md: 1330/560}}>
 				<StyledSlideShow loop>
-					{clubs?.map(club => (
+					{clubs?.filter(club => !!club.assets.cover_photo).map(club => (
 						<SwiperSlide key={`club_featured_${club._id}`}>
 							<Image
 								src={clubAssetURL(club, 'cover_photo')}
