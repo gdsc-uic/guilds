@@ -20,6 +20,9 @@ assets:
 theme:
   primary_color: "#94BAF9"
   secondary_color: "#7DF1B9"
+registration:
+  form_url: https://forms.gle/K3UgV3QxBn3yWTN97
+  meeting_url: https://meet.google.com/iyn-mhpk-pac
 officers:
   - name: Jelian Dessareyn B. Pugahan
     position: President
