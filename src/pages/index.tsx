@@ -38,6 +38,8 @@ const CLUBS_ENDPOINT = '/api/clubs';
 
 export default function Home() {
 	const router = useRouter();
+
+	const { data: featuredClubs } = useQuery<Club[]>([CLUBS_ENDPOINT, 'all'], () => fetcher(CLUBS_ENDPOINT));
 	const { data: clubs, error, refetch } = useQuery<Club[]>([CLUBS_ENDPOINT, router.query], ({ queryKey }) => {
 		const [_, queryParams] = queryKey;
 		return fetcher(CLUBS_ENDPOINT + `/?${stringify(queryParams)}`);
@@ -114,7 +116,7 @@ export default function Home() {
 
 			<AspectRatio ratio={{sm: 1330/760, md: 1330/560}}>
 				<StyledSlideShow loop>
-					{clubs?.filter(club => !!club.assets.cover_photo).map(club => (
+					{featuredClubs?.filter(club => !!club.assets.cover_photo).map(club => (
 						<SwiperSlide key={`club_featured_${club._id}`}>
 							<Image
 								src={clubAssetURL(club, 'cover_photo')}
