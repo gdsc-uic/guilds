@@ -241,7 +241,7 @@ function ClubContent({ club }: { club: Club }) {
 			</Box>
 
 			<Box w="full">
-				<Content content={club.body.raw} />
+				<Content content={club.body.raw} club={club} />
 			</Box>
 		</VStack>
 	);
