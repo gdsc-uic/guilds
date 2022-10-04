@@ -27,7 +27,7 @@ officers:
     photo_name: Al Modjib Hassan (Chief Executive Director _Internal_).jpg
   - name: Al-Imran Ali
     position: Chief Executive Director (External)
-    photo_name: Alfarsi Mama (Head of Organization).jpg
+    photo_name: blank-profile.webp
   - name: Norhaimah A. Bimitika
     position: Delegated Assistant (Main)
     photo_name: Norhaimah Binitaka.webp

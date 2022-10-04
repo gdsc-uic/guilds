@@ -15,7 +15,7 @@ assets:
   logo: ICES_LOGO.png
   cover_photo: ICES_BACKGROUND_PHOTO.png
   slideshows:
-    - ANNOUNCEMENT 1.jpeg
+    - 1.jpeg
 theme:
   primary_color: "#ff6700"
   secondary_color: "00ffff"
