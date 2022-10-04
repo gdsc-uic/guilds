@@ -43,13 +43,13 @@ officers:
     photo_name: GALLOSA.png
 ---
 
-![a.png](/club_assets/society-of-unified-language-students/content_images/a.png)
+![a.png](a.png)
 This event will be held to commemorate the end of the year, connect with the members, and develop relationships amongst SoULS members by encouraging the sharing of personal experiences. By showing their abilities, they would gain confidence and grow more knowledgeable and enthusiastic about the BA ELS program.
 
-![b.png](/club_assets/society-of-unified-language-students/content_images/b.png)
+![b.png](b.png)
 A webinar event conducted by the Society of United Language Students, it is an open two-part session of learning about the languages of Mandarin and Japanese. At the event, we are also open to discussing the lecturers' experiences from learning the language to teaching the language themselves to students who are eager to learn. During the session, we are encouraging the audience to take the opportunity to experience what the lecturers’ experiences were, such as: taking foreign language classes, traveling to another country, and taking the experience of the culture.
 
-![c.jpg](/club_assets/society-of-unified-language-students/content_images/c.jpg)
+![c.jpg](c.jpg)
 A general assembly of SoULS members We firmly discuss the students' whereabouts during the pandemic, events in and outside the university from the previous school year to the present via online, and upcoming events this school year within the university, college, and course. The club members also discussed the reports in terms of the course performance and furthered the activities for the said events.
 
 ## Bachelor of Arts in English Language Studies
