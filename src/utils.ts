@@ -1,8 +1,8 @@
 import { Club, ClubAssets } from "contentlayer/generated";
 
-export function clubAssetURL(club: Club, name: keyof ClubAssets | 'officer_images', filename?: string): string {
+export function clubAssetURL(club: Club, name: keyof ClubAssets | 'officer_images' | 'content_images', filename?: string): string {
 	let key = name;
-	if (!['slideshows', 'officer_images'].includes(name)) {
+	if (!['slideshows', 'officer_images', 'content_images'].includes(name)) {
 		key = club.assets[name];
 	}
 
