@@ -13,8 +13,8 @@ tags:
   - FAVOREDBRAVED
   - religious
 assets:
-  logo: logo.jpg
-  cover_photo: cover_photo.jpg
+  logo:   logo.png
+  cover_photo: cover_photo.png
 theme:
   primary_color: "#FFC9ED"
   secondary_color: "#f0b892"
