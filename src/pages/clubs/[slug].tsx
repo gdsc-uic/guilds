@@ -58,7 +58,7 @@ export default function ClubPage({ club }: { club: Club }) {
 	return (
 		<Layout maxWidth="full" bgColor={club.theme.primary_color}>
 			<Head>
-				<title>{club.name} - Guilds</title>
+				<title>{`${club.name} - Guilds`}</title>
 				<meta name="description" content={`Join ${club.name} on Guilds: the official club directory website for the UIC Club Fair 2022`} />
 				<meta property="og:type" content="website" />
 				<meta property="og:image" content={getUrl(clubAssetURL(club, 'cover_photo'))} />
