@@ -74,18 +74,18 @@ export default function ClubCard({ club }: { club: Club }) {
 						Interested
 					</Button>
 				</Link>} */}
-				<Link href={club.url}>
-					<Button
-						borderRadius="20"
-						p="7"
-						borderWidth="2px"
-						borderColor="#0057FF"
-						textColor="#0057FF"
-						backgroundColor="transparent"
-					>
-						View Club
-					</Button>
-				</Link>
+				<Button
+					as={Link}
+					href={club.url}
+					borderRadius="20"
+					p="7"
+					borderWidth="2px"
+					borderColor="#0057FF"
+					textColor="#0057FF"
+					backgroundColor="transparent"
+				>
+					View Club
+				</Button>
 			</Flex>
 		</Box>
 	);
