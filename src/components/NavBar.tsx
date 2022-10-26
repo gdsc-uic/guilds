@@ -11,9 +11,7 @@ export default function NavigationBar() {
 			pb={["1.4rem", "1.4rem", "3rem"]}
 		>
 			<Link href="/">
-				<a>
-					<Guilds />
-				</a>
+				<Guilds />
 			</Link>
 		</Flex>
 	);
