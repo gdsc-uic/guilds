@@ -10,15 +10,15 @@ export default function Footer() {
 				<Center>
 					<VStack>
 						<Box fontWeight="bold" textAlign={"center"}>
-							<Text>2022</Text>
+							<Text>2024</Text>
 							<Text fontSize="32">Club Fair: Guilds</Text>
 						</Box>
-						<HStack alignItems="center" columnGap="5">
+						<HStack alignItems="center"  columnGap="5">
 							<Usg />
 							<Gdsc />
 						</HStack>
 						<Box fontSize="15" textAlign={"center"} opacity="60%">
-							<Text pt="10">© 2022 GDSC-UIC</Text>
+							<Text pt="10">© 2024 GDSC-UIC</Text>
 							<Text pt="2">
 								Developed by Google Developer Student Clubs - UIC
 							</Text>

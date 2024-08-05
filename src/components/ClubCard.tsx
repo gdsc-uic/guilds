@@ -21,30 +21,35 @@ export default function ClubCard({ club }: { club: Club }) {
 			display="flex"
 			flexDirection="column"
 			justifyContent="space-between"
+			minHeight={{ base: "300px", md: "400px" }} // Set minHeight for different screen sizes
+			p="4"
+			w="100%"
 		>
-			
 			{/* Cover Photo */}
-			{club.assets.cover_photo && <Box 
-				borderTopRadius="15" 
-				backgroundImage={`url(${clubAssetURL(club, 'cover_photo')})`}
-				backgroundPosition="center"
-				backgroundSize="cover"
-				h={["250", "250", "200"]}>
-			</Box>}
-
+			{club.assets.cover_photo && (
+				<Box
+					borderRadius="15"
+					backgroundImage={`url(${clubAssetURL(club, 'cover_photo')})`}
+					backgroundPosition="center"
+					backgroundSize="cover"
+					h={{ base: "200px" }} // Adjust height for different screen sizes
+				></Box>
+			)}
 
 			{/* logo and club info */}
-			<Box mt={club.assets.cover_photo ? ["-15rem", "-4rem"] : "3rem"}>
+			<Box mt={club.assets.cover_photo ? { base: "-4rem" } : "3rem"}>
+				{/* CLUB NAME */}
 				<Center>
 					<Img
 						src={clubAssetURL(club, 'logo')}
 						alt={club.name}
 						objectFit="cover"
-						h="130"
+						h="140px"
 						borderRadius="50%"
+						
 					/>
 				</Center>
-
+				{/* CLUB DESCRIPTION */}
 				<Box textAlign="center" p="6" color="black">
 					<Heading fontSize="1.7rem">{club.name}</Heading>
 					{club.description.short && (
@@ -61,19 +66,8 @@ export default function ClubCard({ club }: { club: Club }) {
 				p="6"
 				fontFamily="body"
 				fontWeight="bold"
+				flex="1" // Allow Flex to grow and fill available space
 			>
-				{/* {(club.org_type === 'non-academic' && club.registration) && <Link href={club.url + '#interested'}>
-					<Button
-						as="a"
-						textColor="white"
-						borderRadius="20"
-						p="7"
-						backgroundColor="#0057FF"
-						border="2px solid black"
-					>
-						Interested
-					</Button>
-				</Link>} */}
 				<Button
 					as={Link}
 					href={club.url}
