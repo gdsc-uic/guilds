@@ -9,12 +9,12 @@ export default function Layout({ children, maxWidth = '90rem', bgColor = '#0057F
 			<Box width="full" zIndex="-1">
 				<CurveBackground fill={bgColor} />
 			</Box>
-			{isHome && <Box 
-				position="absolute" 
-				top="0" 
-				width="full" 
-				height="105rem" 
-				zIndex="-2" 
+			{isHome && <Box
+				position="absolute"
+				top="0"
+				width="full"
+				height="full"
+				zIndex="-2"
 				bgColor="#FFF6EA" />}
 			<Box>
 				<NavBar />
@@ -23,7 +23,7 @@ export default function Layout({ children, maxWidth = '90rem', bgColor = '#0057F
 				</Box>
 
 				<Box position="sticky" bottom={0} insetX={0} bgColor="#FFE58A" zIndex={999}>
-					<HStack justifyContent={"center"} borderTop={"8px #000 solid"} py="4">
+					<HStack justifyContent={"center"}  paddingX={'16px'} borderTop={"8px #000 solid"} py="4">
 						<Text fontFamily={"Space Grotesk"} fontSize="20" fontWeight={"bold"}>
 							Guilds is still in beta. Help us make it better!
 						</Text>
@@ -37,7 +37,7 @@ export default function Layout({ children, maxWidth = '90rem', bgColor = '#0057F
 							// px="55"
 							w="8rem"
 							py="4"
-							borderRadius="0"
+							borderRadius="15"
 							borderWidth="4px"
 							borderColor="black"
 							boxSizing="border-box"

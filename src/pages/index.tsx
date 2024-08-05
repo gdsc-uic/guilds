@@ -73,8 +73,8 @@ export default function Home() {
 	return (
 		<Layout isHome>
 			<Head>
-				<title>Guilds - UIC Club Fair 2022 Directory Website</title>
-				<meta name="description" content="Find a place where your heart beats. The official club directory website for the UIC Club Fair 2022" />
+				<title>Guilds - UIC Club Fair 2024 Directory Website</title>
+				<meta name="description" content="Find a place where your heart beats. The official club directory website for the UIC Club Fair 2024" />
 				<link rel="icon" href="/favicon.ico" />
 				<meta property="og:type" content="website" />
 				<meta property="og:image" content={getUrl('/guilds-default-cover.png')} />
@@ -99,13 +99,13 @@ export default function Home() {
 					w="14rem"
 					py="25"
 					mt={["1rem", "1rem", "0"]}
-					borderRadius="0"
+					borderRadius="15"
 					borderWidth="4px"
 					borderColor="black"
 					boxSizing="border-box"
 					onClick={onModalOpen}
 				>
-					What is Guilds
+					What is Guilds ?
 				</Button>
 
 				<GuildsModal 
@@ -113,9 +113,9 @@ export default function Home() {
 					onClose={onClose} />
 			</Flex>
 
-
-			<AspectRatio ratio={{sm: 1330/760, md: 1330/560}}>
-				<StyledSlideShow loop>
+			{/* {sm: 1330/760, md: 1330/560} */}
+			<AspectRatio ratio={[1000 / 500, 1330 / 760, 1330 / 560]}>
+				<StyledSlideShow loop autoplay={{ delay: 1200 }}> {/* Adjust delay as needed */}
 					{featuredClubs?.filter(club => !!club.assets.cover_photo).map(club => (
 						<SwiperSlide key={`club_featured_${club._id}`}>
 							<Image
@@ -143,8 +143,8 @@ export default function Home() {
 			/>
 
 			<Center 
-				mt={{sm: "20", md: "100"}} 
-				color="#555555" 
+				mt={["20" ,"50", "100"]} 
+				color="#000000" 
 				fontWeight="bold" 
 				flexDirection="column">
 				<Heading fontSize={["35", "35", "53"]} mb="2rem" textAlign="center">
@@ -160,10 +160,14 @@ export default function Home() {
 						alignItems="center" 
 						direction="row" 
 						wrap="wrap" 
-						columnGap="0.25rem"
+						m={'0px'}
+						// columnGap="1rem"
 						rowGap="0.5rem"
 						justifyContent="center" 
-						shouldWrapChildren>
+						// shouldWrapChildren
+						// px="1rem"
+						// spacing="1rem"
+						>
 					{(clubTags ?? []).map(tag => (
 						<Button
 							key={`tag_${tag}`}
@@ -172,8 +176,9 @@ export default function Home() {
 							onClick={() => router.push(`/?q=${tag}`, undefined, { shallow: true })}
 							minW={{sm: "auto", md: "10rem", lg:"14rem"}}
 							py="25"
-							mt={["1rem", "1rem", "0"]}
-							borderRadius="0"
+							// mt={["1rem", "1rem", "0"]}
+							marginLeft={"8px"}
+							borderRadius="15px"
 							borderWidth="4px"
 							borderColor="black"
 							boxSizing="border-box"
@@ -200,10 +205,12 @@ function ClubResults({ clubs, error }: {clubs: Club[] | null, error?: any}) {
 			{error && <h1>Fetch error</h1>}
 			{!clubs && !error && <h1>Loading</h1>}
 			{clubs && clubs.map((club) => (
-				<Box 
-					key={club._id} 
+				<Box
+					key={club._id}
 					p="0.5rem"
-					width={{sm: "100%", md: ((1/2) * 100) + '%', lg: ((1/4) * 100) + '%'}}>
+					width={{ base: "100%", sm: "100%", md: "50%", lg: "25%" }} 
+					minWidth="300px" 
+				>
 					<ClubCard club={club} />
 				</Box>
 			))}
@@ -215,13 +222,15 @@ function SearchBar({ query, onSubmit }: { query: string, onSubmit: FormEventHand
 	return (
 		<form onSubmit={onSubmit}>
 			<InputGroup
-				width={["15rem", "28rem", "38rem", "40rem", "47rem"]}
+				width="clamp(23rem, 90vw, 47rem)"
+				height={["4rem", "5rem"]}
 				size="lg"
 				borderColor="black"
 			>
 				<Input
 					placeholder={"Search for a club"}
-					p="9"
+					p="2"
+					h="100%"
 					bg="white"
 					defaultValue={query}
 					borderRadius="0"
@@ -229,7 +238,10 @@ function SearchBar({ query, onSubmit }: { query: string, onSubmit: FormEventHand
 					boxShadow="-7px 7px black"
 					name="search_query"
 				/>
-				<InputRightElement w={["9rem", "9rem", "13rem"]} h="100%">
+				<InputRightElement 
+				w={["9rem", "9rem", "13rem"]} 
+				h="100%"
+				>
 					<Button
 						h="100%"
 						w="100%"
@@ -253,12 +265,11 @@ const StyledSlideShow = styled(Swiper)`
 	position: relative;
 	color: white;
 	border-width: 6px;
-	border-radius: 50px;
+	border-radius: 25px;
 	border-color: black;
-	box-shadow: 11px 11px #7a97ff;
+	
 
 	@media (min-width: 62em) {
-		box-shadow: 37px 37px #7a97ff;
 		max-height: 592px;
 	}
 `;
@@ -271,7 +282,7 @@ function GuildsModal({ isOpen, onClose }) {
 				border="10px solid black"
 				borderRadius="50px"
 				p="10"
-				maxW="60rem"
+				maxW={["90%", "60rem"]}
 				bg="#FFECEC"
 			>
 				<ModalCloseButton
@@ -287,30 +298,30 @@ function GuildsModal({ isOpen, onClose }) {
 				<Flex>
 					<VStack alignItems="center">
 						<ModalBody textAlign="center">
-							<Image 
-								src="/guilds-emblem.png" 
-								alt="Guilds" 
-								width="40%" 
+							<Image
+								src="/guilds-emblem.png"
+								alt="Guilds"
+								width={["60%", "40%"]}
 								mx="auto"
-								mb="4rem" />
+								mb="4rem"
+							/>
 							<Text
 								fontFamily="Space Grotesk"
-								fontSize="50"
+								fontSize={["20px", "30px", "50px", "70px"]}
 								fontWeight="bold"
 							>
 								Welcome to Guilds!
 							</Text>
-							<Text fontSize="20">
-								Guilds is the official club directory website for the UIC Club Fair 2022. 
-								You can search and browse all the clubs and organizations the university has to offer. 
+							<Text fontSize={["16px", "20px"]}>
+								Guilds is the official club directory website for the UIC Club Fair 2024.
+								You can search and browse all the clubs and organizations the university has to offer.
 								Search your interests and find the best place where your heart beats!
 							</Text>
 						</ModalBody>
 						<ModalFooter justifyContent="center">
 							<Button
-								// p="1.2rem"
-								px="7rem"
-								py="2rem"
+								px={["2rem", "7rem"]}
+								py={["1rem", "2rem"]}
 								boxShadow="5px 5px 0px black"
 								borderRadius="0px"
 								bg="#F2779A"

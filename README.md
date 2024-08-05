@@ -1,6 +1,6 @@
 <div align="center">
     <img src="./public/guilds-logo.png" alt="Guilds Logo" style="width: 40%;">
-    <p style="margin-top:30px">The club directory website for the UIC Club Fair 2022</p>
+    <p style="margin-top:30px">The club directory website for the UIC Club Fair 2024</p>
     <a href="https://guilds.gdscuic.org">https://guilds.gdscuic.org</a>
 </div>
 

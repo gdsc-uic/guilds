@@ -85,7 +85,7 @@ function Carousel({ club }: { club: Club }) {
 	return (
 		<Box mt="20">
 			<StyledSwiper
-				slidesPerView={2}
+				slidesPerView={1} // Default to 1 slide per view
 				spaceBetween={30}
 				loop
 				grabCursor={true}
@@ -98,8 +98,19 @@ function Carousel({ club }: { club: Club }) {
 					slideShadows: true,
 				}}
 				autoplay={{
-					delay: 3700,
+					delay: 1200,
 					disableOnInteraction: false,
+				}}
+				breakpoints={{
+					640: {
+						slidesPerView: 1, // 1 slide per view for screens >= 640px
+					},
+					768: {
+						slidesPerView: 2, // 2 slides per view for screens >= 768px
+					},
+					1024: {
+						slidesPerView: 2, // 2 slides per view for screens >= 1024px
+					},
 				}}
 				modules={[Autoplay, EffectCoverflow]}
 			>
@@ -114,19 +125,17 @@ function Carousel({ club }: { club: Club }) {
 }
 
 const StyledSwiper = styled(Swiper)`
-	min-height: 450px;
-
 	.swiper-wrapper {
 		align-items: center;
 	}
 `;
 
 const StyledSwiperSlide = styled(SwiperSlide)`
-	border: 11px solid black;
 	border-radius: 28px;
-
-	img {
-		width: 100%;
+	padding: 0 1rem;
+	img {	
+		border: 5px solid black;
+		width: 100%; // Adjust to fit container
 		object-fit: cover;
 		border-radius: 15px;
 	}
@@ -139,12 +148,13 @@ function ClubBox({ club }: { club: Club }) {
 			bg={club.theme?.secondary_color ?? '#7DF1B9'}
 			border="5px solid black"
 			borderRadius="35px"
-			boxShadow="14px 15px black"
+			boxShadow="5px 10px black"
 		>
 
 			{/* Cover Photo */}
 			<Box 
-				h={{sm: "18rem", md: "26rem"}}
+				// {sm: "18rem", md: "26rem"}
+				h={["14rem","18rem","26rem"]}
 				w="full"
 				backgroundImage={`url(${clubAssetURL(club, 'cover_photo')})`}
 				backgroundSize="cover"
@@ -161,7 +171,7 @@ function ClubBox({ club }: { club: Club }) {
 				<Img
 					mt="-7rem"
 					pos="absolute"
-					maxW="200px"
+					w = {['150px','200px']}
 					src={clubAssetURL(club, 'logo')}
 					objectFit="cover"
 					alt="gdsc-logo"
@@ -172,12 +182,12 @@ function ClubBox({ club }: { club: Club }) {
 
 			{/* Club Information */}
 			<Flex
-				mt={["7", "7", "0"]}
+				mt={["4", "7", "0"]}
 				ml={["0", "0", "16.3rem"]}
 				flexDir={["column", "column", "row"]}
 				alignItems={["center", "center", "flex-start"]}
 				justifyContent={"space-between"}
-				pt={["20", "20", "6"]}
+				pt={["10", "20", "6"]}
 			>
 				<Box
 					display="flex"
@@ -186,10 +196,10 @@ function ClubBox({ club }: { club: Club }) {
 				>
 					{/* Club Name & Description */}
 					<Box textAlign={["center", "center", "left"]} px={{sm: "8", md: 0}} pb={8} pr={club.org_type == 'academic' ? {sm: 8, lg: 28} : 0}>
-						<Heading fontSize={{sm: 30, lg: 40}} mb="2">
+						<Heading fontSize={['25','30','40']} mb="2">
 							{club.name}
 						</Heading>
-						<Text fontSize={{sm: 18, lg: 20}}>{club.description?.short ?? ""}</Text>
+						<Text fontSize={{sm: 18, lg: 20}} textAlign={"center"} paddingX={["3","2","0"]}>{club.description?.short ?? ""}</Text>
 					</Box>
 
 					{/* Social Media Links */}
@@ -198,6 +208,7 @@ function ClubBox({ club }: { club: Club }) {
 						{/* <BsGithub size="30" />
 						<Box h="5" borderLeft="1px solid gray" />
 						<BsFacebook size="30" /> */}
+						<Text fontSize="xl">Follow us on:</Text>
 						{club.links.map((link, i, arr) => (
 							<Fragment key={`link_top_${link._id}`}>
 								{link.label !== 'Contact Number' ? 
@@ -237,7 +248,7 @@ function ClubContent({ club }: { club: Club }) {
 			<Box>
 				<Heading>Description</Heading>
 				<Box h="2" w="100%" bg="#94BAF9" my="4" />
-				<Text fontSize="2xl">{club.description.full}</Text>
+				<Text fontSize={["20", "25"]}>{club.description.full}</Text>
 			</Box>
 
 			<Box w="full">
@@ -297,7 +308,7 @@ function ClubOfficers({ club }: { club: Club }) {
 				bg="#FFE58A"
 				border="5px solid black"
 				borderRadius="35px"
-				boxShadow="24px 25px black"
+				boxShadow="10px 10px black"
 			>
 				<Heading px="8" pt="8" mb="1rem">Officers</Heading>
 				<Flex direction="row" px="8" pb="8" overflowX={'auto'} columnGap="2rem">
@@ -335,7 +346,7 @@ function InterestedBox({ club }: { club: Club }) {
 			bg="#A3F9B6"
 			border="5px solid black"
 			borderRadius="35px"
-			boxShadow="24px 25px black"
+			boxShadow="10px 10px black"
 			my="9rem"
 			minH={["0px", "0px", "428px"]}
 			flexDirection={["column", "column", "row"]}
