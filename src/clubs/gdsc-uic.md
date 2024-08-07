@@ -16,57 +16,48 @@ tags:
   - computer
   - google
 assets:
-  logo: logo.png
-  cover_photo: gdsc-uic-cover-photo.png
+  logo: gdsc_logo.png
+  cover_photo: gdsc_cover.png
 theme:
   primary_color: "#94BAF9"
   secondary_color: "#7DF1B9"
-registration:
-  form_url: https://forms.gle/if58uEXj7uqduQmK7
-  meeting_url: https://meet.google.com//gqn-fqjp-enh
 officers:
-  - name: Ned Palacios
+  - name: Lucas Carlo Castro
+    position: Moderator
+    photo_name: Castro_Moderator.tif
+  - name: Ralph Kris Enrique
     position: Lead
-    photo_name: palacios.png
-  - name: Al Gabriel Orig
+    photo_name: Enrique_Lead.jpg
+  - name: Rince Vergel Abas
     position: Chief Operations Officer
-    photo_name: orig.jpeg
-  - name: Jericho Opsima
+    photo_name: ABAS_COO.jpg
+  - name: Yuichi Canete
     position: Chief Technology Officer
-    photo_name: opsima.webp
-  - name: Jenny Babe Cano
-    position: Cheif Finance Officer
-    photo_name: cano.webp
-  - name: Adrian Cinchez
-    position: Chief Community Development Officer
-    photo_name: cinchez.jpeg
-  - name: James Autor
+    photo_name: Canete_CTO.jpg
+  - name: Janine Monique Ariate 
+    position: Chief Finance Officer
+    photo_name: Ariate_CFO.jpg
+  - name: Ronnalyn Gonzales 
     position: Chief Marketing Officer
-    photo_name: autor.webp
-  - name: Muslimin Ontong
-    position: UI / UX Lead
-    photo_name: ontong.webp
-  - name: Janine Ariate
-    position: Auditor
-    photo_name: ariate.webp
-  - name: Rafael Delloson
-    position: ComDev - Internal Officer
-    photo_name: delloson.jpeg
-  - name: June Rian Bation
-    position: ComDev - External Officer
-    photo_name: bation.png
-  - name: Jessie Calvo
-    position: Graphics and Video Lead
-    photo_name: calvo.jpg
-  - name: Ellis Rey Miranda
+    photo_name: Gonzales_CMO.jpg
+  - name: Quisha Marie Latiban
+    position: Chief Community Development Officer
+    photo_name: Latiban_CCDO.jpg
+  - name: Christine Joyce Punay
+    position: Secretary
+    photo_name: Punay_Secretary.jpg
+  - name: Elyssa Reahna Veloz
+    position: Events Lead
+    photo_name: Veloz_Events Lead.jpg
+  - name: Earl Cedric Coronado 
+    position: Graphics & Video Lead
+    photo_name: Coronado_Graphics&VideoLead.jpg
+  - name: Gabrielle Angela Indino
     position: Social Media Manager
-    photo_name: miranda.webp
-  - name: Andre Jose Ruiz
+    photo_name: Indino_Social Media Manager_.jpg
+  - name: Ashantie Key Mikee Marquez  
     position: Documentation Lead
-    photo_name: ruiz.jpg
-  - name: Cris John David Manero
-    position: Club Moderator
-    photo_name: manero.webp
+    photo_name: MARQUEZ_DOCULEAD.jpg
   
 faqs:
   - question: What is GDSC?

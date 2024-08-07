@@ -2,62 +2,58 @@
 name: UIC Debating Society
 org_type: non-academic
 description:
-  full: UIC Debating Society improves the intellectual and academic capabilities of its members by helping develop multiple aspects of their personality and increasing their ability to speak eloquently. More than that, the club promotes critical thinking and advances awareness of political and social issues that affect the status quo.
-  short: The official non-academic club of the University of the Immaculate Conception for public speaking and debate-related activities.
+  full: The UIC Debating Society is the official non-academic club of the University of the Immaculate Conception for public speaking and debate-related activities. It is an organization that is dedicated to honing the skills of its student members while ensuring that they grow as socially aware individuals in society.
+  short: The UIC Debating Society is the official non-academic club of the University of the Immaculate Conception for public speaking and debate-related activities.
+links:
+  - label: Gmail
+    url: debsoc@uic.edu.phuniversity-of-the-immaculate-conception
+  - label: Facebook
+    url: https://www.facebook.com/uicdebatingsociety/
+  - label: X (Twitter)
+    url: https://x.com/uicdebsoc?lang=en&lang=en
 tags:
-  - debate
-  - public speaking
-assets:
-  logo: logo.jpg
-  cover_photo: cover_photo.jpg
-  slideshows:
-    - 1.jpg
-    - 2.jpg
-    - 3.jpg
-    - 4.jpg
-    - 5.jpg
-    - 6.jpg
-theme:
-  primary_color: "#f476b4"
-  secondary_color: "#daf5e6"
+  - Debate
+  - Public Speaking
+
 registration:
-  form_url: https://forms.gle/kYGhLCievSPujR3LA
-  meeting_url: https://us06web.zoom.us/j/83254555213?pwd=VU55YVY4a1U5cElFNXk5MHZ0OSt4Zz09
+    form_link: https://docs.google.com/forms/d/1yCjL7hum-NI6Ox3u2qBF9C--TJrzJki4gQq7KKcACvI/editm 
+
+assets:
+  logo: logo.png
+  cover_photo: cover.png
+theme:
+  primary_color: "#dd576d"
+  secondary_color: "#fffff2"
 officers:
-  - name: Jaya Mae R. Sarte
+  - name: Valerie Acorda
     position: Mayor
-    photo_name: Sarte - Mayor.jpg
-  - name: Karl Kirby Z. Costales
+    photo_name: ACORDA.heic
+  - name: Kurt Artillo
     position: Vice Mayor - Internal
-    photo_name: Costales.gif
-  - name: Joel Augustin Generoso Jr.
+    photo_name: blank.webp
+  - name: Jaya Sarte
     position: Vice Mayor - External
-    photo_name: Generoso.JPG
-  - name: Al Ryan Ibañez
+    photo_name: SARTE.JPEG
+  - name: Mykhael Venarao
     position: Secretary
-    photo_name: blank_pic.webp
-  - name: Athena Sabellano
-    position: Assistant Secretary
-    photo_name: blank_pic.webp
-  - name: Khyle Montebon
-    position: Logistics
-    photo_name: Montebon.png
-  - name: Diana Flores
+    photo_name: VENARAO.JPG
+  - name: Elle Butaslac
     position: Treasurer
-    photo_name: Flores.jpg
-  - name: Den Wesly Balboa
-    position: Creatives
-    photo_name: blank_pic.webp
-  - name: Mara Dollyrie Ras
+    photo_name: BUTASLAC.png
+  - name: Marienne Lastimosa
+    position: Auditor
+    photo_name: LASTIMOSA.jpg
+  - name: Haneikah Loveres
     position: PIO
-    photo_name: blank_pic.webp
+    photo_name: LOVERES.jpeg
+  
 faqs:
-  - question: Do we need to have experience in debate or any public speaking activities to join the club?
-    answer: Anyone can join as long as you are willing to dedicate your time for training and other activities of the club.
+  - question: What is GDSC?
+    answer: GDSC / Google Developer Student Clubs are community developer clubs supported by Google. GDSC provides platforms for students when it comes to building solutions through communities.
+  - question: Do I need to have knowledge in programming?
+    answer: Not necessary! We welcome everyone with or without knowledge about programming and technology.
+  - question: Can I join even if I'm not a CS/IT student?
+    answer: Yes you can!
+  - question: Are there any fees to pay in order to join GDSC-UIC?
+    answer: There are no fees to pay when joining the club. However, we will be requiring members and participants payment for our in-person activities.
 ---
-
-## Zoom Meeting
-To join the Zoom meeting you may visit: [https://us06web.zoom.us/j/83254555213?pwd=VU55YVY4a1U5cElFNXk5MHZ0OSt4Zz09](https://us06web.zoom.us/j/83254555213?pwd=VU55YVY4a1U5cElFNXk5MHZ0OSt4Zz09)
-
-Meeting ID: 832 5455 5213
-Passcode: DEBSOC
