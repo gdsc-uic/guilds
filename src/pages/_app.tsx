@@ -17,15 +17,15 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <>
-      <ReactLenis root>
-        <QueryClientProvider client={queryClient}>
-          <ChakraProvider theme={theme}>
-            <Script
-              strategy="afterInteractive"
-              src={`https://www.googletagmanager.com/gtag/js?id=${process.env.MEASUREMENT_ID}`}
-            />
-            <Script id="ga-analytics">
-              {`
+
+      <QueryClientProvider client={queryClient}>
+        <ChakraProvider theme={theme}>
+          <Script
+            strategy="afterInteractive"
+            src={`https://www.googletagmanager.com/gtag/js?id=${process.env.MEASUREMENT_ID}`}
+          />
+          <Script id="ga-analytics">
+            {`
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
@@ -34,11 +34,11 @@ function MyApp({ Component, pageProps }: AppProps) {
                   page_path: window.location.pathname,
                 });
               `}
-            </Script>
-            <Component {...pageProps} />
-          </ChakraProvider>
-        </QueryClientProvider>
-      </ReactLenis>
+          </Script>
+          <Component {...pageProps} />
+        </ChakraProvider>
+      </QueryClientProvider>
+
     </>
   );
 }
