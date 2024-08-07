@@ -48,12 +48,10 @@ officers:
     photo_name: LOVERES.jpeg
   
 faqs:
-  - question: What is GDSC?
-    answer: GDSC / Google Developer Student Clubs are community developer clubs supported by Google. GDSC provides platforms for students when it comes to building solutions through communities.
-  - question: Do I need to have knowledge in programming?
-    answer: Not necessary! We welcome everyone with or without knowledge about programming and technology.
-  - question: Can I join even if I'm not a CS/IT student?
-    answer: Yes you can!
-  - question: Are there any fees to pay in order to join GDSC-UIC?
-    answer: There are no fees to pay when joining the club. However, we will be requiring members and participants payment for our in-person activities.
+  - question: Do we need to have experience to join the club?
+    answer: No, the UIC Debating Society will be having workshops and training that would train you to be competition-ready, as well as enhance your debating/adjudicating skills.`
+  - question: How does a member get picked to compete in a competition?
+    answer: The officers usually pick the members who are consistently participating in training and different activities that the club proposes.
+  - question: Does the club join local, regional, or international competitions?
+    answer: Yes, the UIC debating society competes in different competitions that are either held online or face-to-face. This helps the members to enhance their skills and gain more experience in debating/adjudicating. 
 ---
