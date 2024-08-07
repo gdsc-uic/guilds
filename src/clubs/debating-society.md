@@ -27,10 +27,10 @@ theme:
 officers:
   - name: Valerie Acorda
     position: Mayor
-    photo_name: ACORDA.heic
+    photo_name: ACORDA.jpg
   - name: Kurt Artillo
     position: Vice Mayor - Internal
-    photo_name: blank.webp
+    photo_name: ARTILLO.jpg
   - name: Jaya Sarte
     position: Vice Mayor - External
     photo_name: SARTE.JPEG

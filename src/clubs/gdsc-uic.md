@@ -24,7 +24,7 @@ theme:
 officers:
   - name: Lucas Carlo Castro
     position: Moderator
-    photo_name: Castro_Moderator.tif
+    photo_name: Castro_Moderator.jpg
   - name: Ralph Kris Enrique
     position: Lead
     photo_name: Enrique_Lead.jpg

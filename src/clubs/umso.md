@@ -41,7 +41,7 @@ officers:
     photo_name: ELIAS.PNG
   - name: Roselyn Macar Mangilay
     position: Auditor
-    photo_name: MANGILAY
+    photo_name: MANGILAY.jpg
   - name: Hissam Moro
     position: Technical Head
     photo_name: MORO,H.png

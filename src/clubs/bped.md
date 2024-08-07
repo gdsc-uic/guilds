@@ -23,13 +23,13 @@ theme:
 officers:
   - name: Pombo, Ralf Miguel F.
     position: Mayor
-    photo_name: PRESIDENT.HEIC
+    photo_name: PRESIDENT.jpg
   - name: Sacay, Ahron
     position: Vice Mayor
     photo_name: VICE PRESIDENT.JPG
   - name: Getigan, Rizza
     position: Secretary
-    photo_name: SECRETARY.HEIC
+    photo_name: SECRETARY.jpg
   - name: Jotoy, Hazel
     position: Treasurer
     photo_name: JOTOY_TREASURER.JPG
@@ -38,7 +38,7 @@ officers:
     photo_name: BAYOD.jpg
   - name: Pilapil, Pinky
     position: PIO
-    photo_name: P.I.O.HEIC
+    photo_name: P.I.O.jpg
   - name: Maguinisay, Apple Jean
     position: 1st-year representative
     photo_name: FIRST YEAR REP.jpg
@@ -47,10 +47,10 @@ officers:
     photo_name: 2ND YEAR REP.jpeg
   - name: Vincullado, Jinwhill
     position: 3rd-year representative
-    photo_name: 3RD YEAR REP.HEIC
+    photo_name: 3RD YEAR REP.jpg
   - name: Abenoja, Izzy
     position: 4th-year representative
-    photo_name: 4TH YEAR REP.HEIC
+    photo_name: 4TH YEAR REP.jpg
 
 faqs:
   - question: How can we join this club?
