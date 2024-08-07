@@ -37,7 +37,7 @@ officers:
     photo_name: LIBRES, GENEN.jpg
   - name: Ahron Joshua Sacay
     position: Auditor
-    photo_name: SACAY, AHRON JOSHUA.jpg
+    photo_name: SACAY, AHRON.jpg
   - name: Pinky Pilapil
     position: P.I.O
     photo_name: PILAPIL, PINKY.jpg

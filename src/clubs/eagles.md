@@ -24,37 +24,37 @@ theme:
 officers:
   - name: Marielle Anne B Castardo
     position: Mayor
-    photo_name: CASTARDO, MARIELLE ANNE.jpg
+    photo_name: CASTARDO,MARIELLEANNE.jpg
   - name: Sandara Rhyne Quiñal 
     position: Vice Mayor
-    photo_name: QUIÑAL, SANDARA RHYNE.jpg
+    photo_name: QUINAL,SANDARARHYNE.jpg
   - name: Katherine Rolet Logronio
     position: Secretary
-    photo_name: LOGRONIO, KATHERINE ROLET.jpg
+    photo_name: LOGRONIO,KATHERINEROLET.jpg
   - name: Nathania Gabrielle Delos Reyes
     position: Assistant Secretary
-    photo_name: DELOS REYES, NATHANIA GABRIELLE.jpg
+    photo_name: DELOSREYES,NATHANIA.jpg
   - name: Krystel Mae Batucan
     position: Treasurer
-    photo_name: BATUCAN, KRYSTEL MAE.jpg
+    photo_name: BATUCAN,KRYSTEL.png
   - name: Eunice Irish Gargar
     position: Auditor
-    photo_name: GARGAR, EUNICE IRISH.jpg
+    photo_name: GARGAR,EUNICEIRISH.jpg
   - name: Stefani El Joy Lasay
     position: P.I.O
-    photo_name: LASAY, STEFANI EL JOY.jpg
+    photo_name: LASAY,STEFANIELJOY.jpg
   - name: Carl Brixter Ygonia
     position: Business Manager
-    photo_name: YGONIA, CARL BRIXTER.jpg
+    photo_name: YGONIA,CARLBRIXTER.jpeg
   - name: Cristel Anne Tañedo 
     position: First Year Representative
-    photo_name: TAÑEDO, CRISTEL ANNE.jpg
+    photo_name: TAÑEGA,CRISTELANNE .jpg
   - name: Princess Angel Nieves
     position: Second Year Representative
-    photo_name: NIEVES, PRINCESS ANGEL.jpg
+    photo_name: NIEVES,PRINCESSANGEL.jpeg
   - name: Elona Lagradante
     position: Third Year Representative
-    photo_name: LAGRADANTE, ELONA.jpg
+    photo_name: LAGRADANTE,ELONA.jpg
 
   
 faqs:
