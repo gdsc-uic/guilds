@@ -27,46 +27,46 @@ registration:
 officers:
   - name: Jevilyn Odog
     position: President
-    photo_name: ODOG_Picture
+    photo_name: blank-profile.webp
   - name: Abby Rio Liguid
     position: Vice President Internal
-    photo_name: LIGUID_Picture.png
+    photo_name: LIGUID_PICTURE.png
   - name: Myriel May Modelo
     position: Vice President External
-    photo_name: MODELO_Picture.png
+    photo_name: MODELO_PICTURE.png
   - name: Orquilla Oloris
     position: Secretary
     photo_name: OLORIS_Picture.png
   - name: Edje Colipano
     position: Assistant Secretary
-    photo_name: COLIPANO_Picture.png
+    photo_name: COLIPANO_PICTURE.png
   - name: Kryzelle Dane Jamboy
     position: Finance Head
-    photo_name: JAMBOY_Picture.jpeg
+    photo_name: JAMBOY_PICTURE.jpeg
   - name: Kisha Grafia
     position: Logistics Head
-    photo_name: GRAFIA_Picture.jpeg
+    photo_name: GRAFIA_PICTURE.jpeg
   - name: Rosel Abrahan
     position: Public Information Officer
-    photo_name: ABRAHAN_Picture.jpg
+    photo_name: ABRAHAN_PICTURE.jpg
   - name: Jovynilla Dingal
     position: Public Information Officer
-    photo_name: DINGAL_Picture.jpg
+    photo_name: DINGAL_PICTURE.jpg
   - name: Jianne Rabacal
     position: Creatives Head
-    photo_name: RABACAL_Picture.png
+    photo_name: RABACAL_PICTURE.png
   - name: Cristel Anne Tañega
     position: Creative Committee
-    photo_name: TANEGA_Picture.jpg
+    photo_name: TANEGA_PICTURE.jpg
   - name: Tresha Lane Diangalon
     position: Program Head
-    photo_name: DIANGALON_Picture.png
+    photo_name: blank-profile.webp
   - name: Joshua Ller C. Requilme
     position: Program Committee
-    photo_name: REQUILME_Picture.JPG
+    photo_name: REQUILME_PICTURE.JPG
   - name: Jenny D. Villona
     position: Program Committee
-    photo_name: VILLONA_Picture.png
+    photo_name: VILLONA_PICTURE.png
   - name: Glenah Fatima Paras
     position: MODERATOR
     photo_name: Moderator_picture.jpg
