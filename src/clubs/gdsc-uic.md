@@ -30,7 +30,7 @@ officers:
     photo_name: Enrique_Lead.jpg
   - name: Rince Vergel Abas
     position: Chief Operations Officer
-    photo_name: ABAS_COO.jpg
+    photo_name: Abas_COO.jpg
   - name: Yuichi Canete
     position: Chief Technology Officer
     photo_name: Canete_CTO.jpg
