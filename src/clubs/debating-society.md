@@ -4,6 +4,7 @@ org_type: non-academic
 description:
   full: The UIC Debating Society is the official non-academic club of the University of the Immaculate Conception for public speaking and debate-related activities. It is an organization that is dedicated to honing the skills of its student members while ensuring that they grow as socially aware individuals in society.
   short: The UIC Debating Society is the official non-academic club of the University of the Immaculate Conception for public speaking and debate-related activities.
+  
 links:
   - label: Gmail
     url: debsoc@uic.edu.phuniversity-of-the-immaculate-conception
@@ -14,9 +15,6 @@ links:
 tags:
   - Debate
   - Public Speaking
-
-registration:
-    form_link: https://docs.google.com/forms/d/1yCjL7hum-NI6Ox3u2qBF9C--TJrzJki4gQq7KKcACvI/editm 
 
 assets:
   logo: logo.png
