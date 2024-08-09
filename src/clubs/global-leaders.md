@@ -2,7 +2,7 @@
 name: UIC Global Leaders
 org_type: non-academic
 description:
-  full: The UIC Global Leaders Club, also referred to as the UIC Global, is one of the non-academic/institutional clubs of the collegiate organizations in the University of the Immaculate Conception. The club is under the International Affairs and Linkages Office that adheres to the university's vision, mission, goal, and quality objectives, which is to develop an empowered and proactive life-long learner by offering a top-notch educational experience to help them become globally competitive and change-resistant. All bona fide college students of the Institution can join the UIC Global who have a chance to become a Student Leader, SDGs Advocate and an UIC Ambassador. This club is a democratic non-academic club, and therefore upholds a democratic system. The UIC Global Leaders Club aims to adhere student and other academic concerns imploring integrity, honesty, and humility, to apply the values of unity in the community by coordinating each of the stakeholders in order to achieve student excellence, to create an environment that allows healthy student-teacher relationship manifesting diversity, inclusivity, and harmonious rapport, to build an organization that would establish constant update, concerns, and necessary announcement for the student’s welfare and advantage, to learn with the community through dialogue between the student’s parent and faculty aiming for continuous development for student success and to train as future leaders of the nation, bringing the vision of 21st century leaders and transformation.
+  full: The UIC Global Leaders Club is a student-led organization at the University of the Immaculate Conception, affiliated with the External Relations and Internalization Center (ERIC). Committed to the university's mission of cultivating globally competitive and resilient graduates, the club fosters leadership development, community engagement, and advocacy for sustainable development goals. Through democratic principles, the club aims to enhance student life, bridge communication between students, faculty, and parents, and prepare students for active roles in society.
   short: We aim to adhere to student and academic concerns with integrity, honesty, and humility, to apply the values of unity in the community.
 tags:
   - leaders
@@ -11,64 +11,55 @@ assets:
   cover_photo: cover_photo.jpg
   slideshows:
     - 1.jpg 
-    - 2.png
-    - 3.png
+    - 2.jpg
+    - 3.jpg
     - 4.jpg
     - 5.jpg
     - 6.jpg
-    - 7.png
-    - 8.jpg
 theme:
   primary_color: "#fa5790"
   secondary_color: "#3ff7252"
-registration:
-  form_url: https://forms.gle/vHKRgrc6ZMzQF2hA9
+
 officers:
-  - name: Engiela Gecali
+  - name: Pyae Sone Chan Thar Aung
     position: President
-    photo_name: MAYOR - ENGIELA GECALI.webp
-  - name: Anne Therese Gravino
-    position: Vice - President Internal
-    photo_name: VM INTERNAL - ANNE THERESE M. GRAVINO.jpg
-  - name: Sahar Mae Mustapha
-    position: Vice - President External
-    photo_name: VM EXTERNAL - SAHAR MAE MUSTAPHA.PNG
-  - name: Trichelle Diana Flores
-    position: Secretary
-    photo_name: flores.png
-  - name: Charmy Lei Aportadera
-    position: Assistant Secretary
-    photo_name: ASST.SECRETARY-CHARMY LEI.jpg
-  - name: Excelsis Deo Chang
-    position: Treasurer
-    photo_name: TREASURER-EXCELSIS DEO CHANG.jpg
-  - name: Marylorie Anne Sacay
-    position: Auditor
-    photo_name: AUDITOR - MARYLORIE ANNE SACAY_.jpg
+    photo_name: aung.JPG
   - name: Febe Quenyht Angeles
-    position: PIO
+    position: Vice - President Internal
     photo_name: angeles.png
-  - name: Bridgette Modo
-    position: Research and Logistics
-    photo_name: RESEARCH_LOGISTICS-MODO.jpg
-  - name: Cristian Mig Cameros
-    position: Research and Logistics
-    photo_name: RESEARCH_LOGISTICS-CAMEROS.jpg
-  - name: Kyrous Masangya
-    position: Creative Officers
-    photo_name: CREATIVE HEAD_KYROUS M. MASANGYA.jpg
-  - name: Jenny Lou Romerde
-    position: Creative Officers
-    photo_name: CREATIVE OFFICER_JENNY LOU P. ROMERDE.png
+  - name: Reuelle Kesha Margate
+    position: Vice - President External
+    photo_name: margate.jpeg
+  - name: Stefani El Joy Lasay
+    position: Secretary
+    photo_name: lasay.jpg
+  - name: Valerie Joy Tano
+    position: Asst. Secretary
+    photo_name: tano.jpeg
+  - name: Sophia Bianca Ehira
+    position: Treasurer
+    photo_name: ehira.png
+  - name: Diane Quijano
+    position: Auditor
+    photo_name: quijano.png
+  - name: Lance Dela Torre
+    position: PIO
+    photo_name: dela_torre.png
+  - name: Rysel Mae Cuyong
+    position: Creatives Head
+    photo_name: cuyong.png
+  - name: Ivy Niera Rubillar
+    position: Documentation Head
+    photo_name: rubillar.jpg
   - name: Al Gabriel Orig
-    position: Creative Officers
-    photo_name: TECHNICAL TEAM_AL GABRIEL ORIG.jpg
-  - name: Dex Chauncey Ybañez
-    position: Creative Officers
-    photo_name: dex.png
-  - name: John Frankie Tongo
-    position: Creative Officers
-    photo_name: DOCUMENTATION HEAD_TONGO.jpg
+    position: Technical Head
+    photo_name: orig.jpg
+  - name: Charles Andre Franco Nieves
+    position: Moderator
+    photo_name: nieves.jpg
+  - name: Rene Barbiera, II
+    position: Adviser
+    photo_name: barbiera.jpg
 faqs:
   - question: What are the activities in the UIC Global Leaders Club?
     answer: All activities of the UIC Global Leaders Club are set on a national or international scale, with some in collaboration with both local and international partner universities. With the onset of the pandemic, these activities are held through online platforms such as Zoom Meetings. Moreover, they are targeted towards training its members to be globally competitive, 21st century student leaders who are empowered and change-resistant.
@@ -77,5 +68,5 @@ faqs:
   - question: What are the benefits of being part of this club?
     answer: Being part of the UIC Global Leaders Club gives you different opportunities in both national and international. You'll be able to meet interesting people from different countries in Asia and around the world, understand their culture and values, and see the similarities and differences. You can also share your ideas and resolutions on the sustaintable development goals (SDGs) issues around the ASEAN community, and other communities. Finally, share your own culture as a Filipino and become ambassadors and delegates who represents UIC and Davao City.
   - question: What is the role of being a member of UIC Global Leader? 
-    answer: The role of a UIC Global Leaders Club member is to attend and be a delegate on local and international events referred to by the club moderator Sir Rene Babiera II.
+    answer: The role of a UIC Global Leaders Club member is to attend and be a delegate on local and international events referred to by the club moderator Sir Charles Nieves and club adviser Sir Rene Barbiera, II.
 ---

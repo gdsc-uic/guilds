@@ -108,8 +108,8 @@ export default function Home() {
 					What is Guilds ?
 				</Button>
 
-				<GuildsModal 
-					isOpen={isOpen} 
+				<GuildsModal
+					isOpen={isOpen}
 					onClose={onClose} />
 			</Flex>
 
@@ -142,50 +142,50 @@ export default function Home() {
 				top={["60rem", "68rem", "57rem", "63rem"]}
 			/>
 
-			<Center 
-				mt={["20" ,"50", "100"]} 
-				color="#000000" 
-				fontWeight="bold" 
+			<Center
+				mt={["20", "50", "100"]}
+				color="#000000"
+				fontWeight="bold"
 				flexDirection="column">
 				<Heading fontSize={["35", "35", "53"]} mb="2rem" textAlign="center">
 					Find and join existing clubs
 				</Heading>
-				
+
 				<VStack spacing="10">
-					<SearchBar 
-						query={router.query['q']?.toString() ?? ''} 
+					<SearchBar
+						query={router.query['q']?.toString() ?? ''}
 						onSubmit={handleSearchBar} />
 
-					<Stack 
-						alignItems="center" 
-						direction="row" 
-						wrap="wrap" 
+					<Stack
+						alignItems="center"
+						direction="row"
+						wrap="wrap"
 						m={'0px'}
 						// columnGap="1rem"
 						rowGap="0.5rem"
-						justifyContent="center" 
-						// shouldWrapChildren
-						// px="1rem"
-						// spacing="1rem"
-						>
-					{(clubTags ?? []).map(tag => (
-						<Button
-							key={`tag_${tag}`}
-							bg="#F2779A"
-							color="white"
-							onClick={() => router.push(`/?q=${tag}`, undefined, { shallow: true })}
-							minW={{sm: "auto", md: "10rem", lg:"14rem"}}
-							py="25"
-							// mt={["1rem", "1rem", "0"]}
-							marginLeft={"8px"}
-							borderRadius="15px"
-							borderWidth="4px"
-							borderColor="black"
-							boxSizing="border-box"
-						>
-							{tag}
-						</Button>
-					))}
+						justifyContent="center"
+					// shouldWrapChildren
+					// px="1rem"
+					// spacing="1rem"
+					>
+						{(clubTags ?? []).map(tag => (
+							<Button
+								key={`tag_${tag}`}
+								bg="#F2779A"
+								color="white"
+								onClick={() => router.push(`/?q=${tag}`, undefined, { shallow: true })}
+								minW={{ sm: "auto", md: "10rem", lg: "14rem" }}
+								py="25"
+								// mt={["1rem", "1rem", "0"]}
+								marginLeft={"8px"}
+								borderRadius="15px"
+								borderWidth="4px"
+								borderColor="black"
+								boxSizing="border-box"
+							>
+								{tag}
+							</Button>
+						))}
 					</Stack>
 				</VStack>
 			</Center>
@@ -195,7 +195,7 @@ export default function Home() {
 	);
 }
 
-function ClubResults({ clubs, error }: {clubs: Club[] | null, error?: any}) {
+function ClubResults({ clubs, error }: { clubs: Club[] | null, error?: any }) {
 	return (
 		<Flex
 			wrap="wrap"
@@ -208,8 +208,8 @@ function ClubResults({ clubs, error }: {clubs: Club[] | null, error?: any}) {
 				<Box
 					key={club._id}
 					p="0.5rem"
-					width={{ base: "100%", sm: "100%", md: "50%", lg: "25%" }} 
-					minWidth="300px" 
+					width={{ base: "100%", sm: "100%", md: "50%", lg: "25%" }}
+					minWidth="300px"
 				>
 					<ClubCard club={club} />
 				</Box>
@@ -238,9 +238,9 @@ function SearchBar({ query, onSubmit }: { query: string, onSubmit: FormEventHand
 					boxShadow="-7px 7px black"
 					name="search_query"
 				/>
-				<InputRightElement 
-				w={["9rem", "9rem", "13rem"]} 
-				h="100%"
+				<InputRightElement
+					w={["9rem", "9rem", "13rem"]}
+					h="100%"
 				>
 					<Button
 						h="100%"

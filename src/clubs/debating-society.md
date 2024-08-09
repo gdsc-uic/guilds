@@ -2,62 +2,54 @@
 name: UIC Debating Society
 org_type: non-academic
 description:
-  full: UIC Debating Society improves the intellectual and academic capabilities of its members by helping develop multiple aspects of their personality and increasing their ability to speak eloquently. More than that, the club promotes critical thinking and advances awareness of political and social issues that affect the status quo.
-  short: The official non-academic club of the University of the Immaculate Conception for public speaking and debate-related activities.
+  full: The UIC Debating Society is the official non-academic club of the University of the Immaculate Conception for public speaking and debate-related activities. It is an organization that is dedicated to honing the skills of its student members while ensuring that they grow as socially aware individuals in society.
+  short: The UIC Debating Society is the official non-academic club of the University of the Immaculate Conception for public speaking and debate-related activities.
+  
+links:
+  - label: Gmail
+    url: debsoc@uic.edu.phuniversity-of-the-immaculate-conception
+  - label: Facebook
+    url: https://www.facebook.com/uicdebatingsociety/
+  - label: X (Twitter)
+    url: https://x.com/uicdebsoc?lang=en&lang=en
 tags:
-  - debate
-  - public speaking
+  - Debate
+  - Public Speaking
+
 assets:
-  logo: logo.jpg
-  cover_photo: cover_photo.jpg
-  slideshows:
-    - 1.jpg
-    - 2.jpg
-    - 3.jpg
-    - 4.jpg
-    - 5.jpg
-    - 6.jpg
+  logo: logo.png
+  cover_photo: cover.png
 theme:
-  primary_color: "#f476b4"
-  secondary_color: "#daf5e6"
-registration:
-  form_url: https://forms.gle/kYGhLCievSPujR3LA
-  meeting_url: https://us06web.zoom.us/j/83254555213?pwd=VU55YVY4a1U5cElFNXk5MHZ0OSt4Zz09
+  primary_color: "#dd576d"
+  secondary_color: "#fffff2"
 officers:
-  - name: Jaya Mae R. Sarte
+  - name: Valerie Acorda
     position: Mayor
-    photo_name: Sarte - Mayor.jpg
-  - name: Karl Kirby Z. Costales
+    photo_name: ACORDA.jpg
+  - name: Kurt Artillo
     position: Vice Mayor - Internal
-    photo_name: Costales.gif
-  - name: Joel Augustin Generoso Jr.
+    photo_name: ARTILLO.jpg
+  - name: Jaya Sarte
     position: Vice Mayor - External
-    photo_name: Generoso.JPG
-  - name: Al Ryan Ibañez
+    photo_name: SARTE.JPEG
+  - name: Mykhael Venarao
     position: Secretary
-    photo_name: blank_pic.webp
-  - name: Athena Sabellano
-    position: Assistant Secretary
-    photo_name: blank_pic.webp
-  - name: Khyle Montebon
-    position: Logistics
-    photo_name: Montebon.png
-  - name: Diana Flores
+    photo_name: VENARAO.JPG
+  - name: Elle Butaslac
     position: Treasurer
-    photo_name: Flores.jpg
-  - name: Den Wesly Balboa
-    position: Creatives
-    photo_name: blank_pic.webp
-  - name: Mara Dollyrie Ras
+    photo_name: BUTASLAC.png
+  - name: Marienne Lastimosa
+    position: Auditor
+    photo_name: LASTIMOSA.jpg
+  - name: Haneikah Loveres
     position: PIO
-    photo_name: blank_pic.webp
+    photo_name: LOVERES.jpeg
+  
 faqs:
-  - question: Do we need to have experience in debate or any public speaking activities to join the club?
-    answer: Anyone can join as long as you are willing to dedicate your time for training and other activities of the club.
+  - question: Do we need to have experience to join the club?
+    answer: No, the UIC Debating Society will be having workshops and training that would train you to be competition-ready, as well as enhance your debating/adjudicating skills.`
+  - question: How does a member get picked to compete in a competition?
+    answer: The officers usually pick the members who are consistently participating in training and different activities that the club proposes.
+  - question: Does the club join local, regional, or international competitions?
+    answer: Yes, the UIC debating society competes in different competitions that are either held online or face-to-face. This helps the members to enhance their skills and gain more experience in debating/adjudicating. 
 ---
-
-## Zoom Meeting
-To join the Zoom meeting you may visit: [https://us06web.zoom.us/j/83254555213?pwd=VU55YVY4a1U5cElFNXk5MHZ0OSt4Zz09](https://us06web.zoom.us/j/83254555213?pwd=VU55YVY4a1U5cElFNXk5MHZ0OSt4Zz09)
-
-Meeting ID: 832 5455 5213
-Passcode: DEBSOC

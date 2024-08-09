@@ -1,0 +1,103 @@
+---
+name: The PharmChem CARES
+org_type: academic
+links:
+  - label: Facebook
+    url: https://www.facebook.com/thepharmchemcares/
+  - label: Twitter
+    url: https://twitter.com/pharmchemcares?s=09
+description:
+  full: The PharmChem CARES is the official academic club of the College of Pharmacy and Chemistry under the University of the Immaculate Conception. The PharmChem CARES extends their service among varied aspects. The name CARES stands for Community, Academics, Religious, Environment, and Sociocultural. Each of which are involved in their different activities and projects made by The PharmChem CARES that enhance, promote, and preserve every targeted area.
+  short: The Official Academic Club of the College of Pharmacy and Chemistry
+tags:
+  - cares
+assets:
+  logo: logo.png
+  cover_photo: cover_photo.png
+theme:
+  primary_color: "#602E9E"
+  secondary_color: "#FFFFFF"
+registration:
+  form_url: https://forms.gle/kYGhLCievSPujR3LA
+  meeting_url: https://meet.google.com/pfx-idks-dft
+officers:
+  - name: Rigil Calantoc
+    position: Chair Person
+    photo_name: 00.CALANTOC.png
+  - name: Shania Muksan
+    position: Executive Director
+    photo_name: 01.MUKSAN.png
+  - name: James Bais
+    position: Operations Manager
+    photo_name: 02.BAIS.png
+  - name: Ej Cas
+    position: Quality Assurance Manager
+    photo_name: 03.CAS.png
+  - name: Arra Malanum
+    position: Finance Manager
+    photo_name: 04.MALANUM.png
+  - name: Vina Celocia
+    position: Asst. Quality Assurance Manager
+    photo_name: 05.CELOCIA.png
+  - name: Trisha Rhudy
+    position: Asst. Finance Manager
+    photo_name: 06.RHUDY.png
+  - name: Nicole Del Rosario
+    position: Community Operations Team Leader
+    photo_name: 07.DEL ROSARIO.png
+  - name: Al Hassan
+    position: Community Compliance Team Leader
+    photo_name: 08.HASSAN.png
+  - name: Shaira Lanticse
+    position: Academics Operations Team Leader
+    photo_name: 09.LANTICSE.png
+  - name: Nicole Summer Lim
+    position: Academics Compliance Team Leader
+    photo_name: 10.LIM.png
+  - name: Rapha Bulawan
+    position: Religious Operations Team Leader
+    photo_name: 11.BULAWAN.png
+  - name: Stan Alajid
+    position: Religious Compliance Team Leader
+    photo_name: 12.ALAJID.png 
+  - name: Hani Loveres
+    position: Environmental Operatios Team Leader
+    photo_name: 13.LOVERES.png
+  - name: Franxyne Fuerzas
+    position: Environmental Compliance Team Leader
+    photo_name: 14.FUERZAS.png
+  - name: Phoebe Garcia
+    position: Sociocultural Operations Team Leader
+    photo_name: 15.GARCIA.png
+  - name: Inna Furog
+    position: Sociocultural Compliance Team Leader
+    photo_name: 16.FUROG.png
+  - name: Inderah Laidan
+    position: Communications Director
+    photo_name: 17.LAIDAN.png
+  - name: Gail Laurente
+    position: Podcares Director
+    photo_name: 18.LAURENTE.png
+  - name: Pauline Corda
+    position: Technical Director
+    photo_name: 19.CORDA.png
+  - name: Xela Gonzales
+    position: Property Custodian
+    photo_name: 20.GONZALES.png
+  - name: Mia Bonoan
+    position: Property Custodian
+    photo_name: 21.BONOAN.png
+  
+# faqs:
+#   - question: What is the fundamental task of the church?
+#     answer: Catechesis
+---
+
+Inevitable circumstances have put the PharmChem CARES into an unprecedented shift in terms of its service to society. Despite the changing paradigm, the organization believes in continuing the passion of uplifting others no matter the set-up, either virtual or face-to-face, together with the students who also continually seek to improve themselves into socially conscious, active, and responsible citizens of the nation.  
+
+  
+Through our branding, “Ad Nova Ratione”, which means towards new grounds, the PharmChem CARES is excited once again to extend its capability to make a change beyond the virtual world. As we once again dawn to transcend towards more face-to-face activities, we believe in continually surpassing the organization’s consistency and competence toward new and better grounds along with time.
+
+With our deeper and richer color scheme, we are grounded in showing bolder and more confident actions through our activities in the Community, Academics, Religious, Environment, and Sociocultural areas that can make a significant impact to the people and of the student body. Hand in hand, let’s bring forth our society towards better and newer grounds.
+#AdNovaRatione⚓
+
