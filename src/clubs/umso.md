@@ -18,8 +18,7 @@ assets:
 theme:
   primary_color: "#f3f4e7"
   secondary_color: "#1f5014"
-registration:
-  form_url: https://docs.google.com/forms/d/e/1FAIpQLSfnCFaYLHTInMVC7chgOkebpQPQYnwvMsv_XyMKeQtecvcNiQ/viewform
+
 officers:
   - name: Datuyaman Datumanong 
     position: Mayor

@@ -19,11 +19,21 @@ tags:
 assets:
   logo: logo.png
   cover_photo: cover.jpeg
+  slideshows:
+    - 1.jpg 
+    - 2.jpg
+    - 3.jpg
+    - 4.jpg
+    - 5.jpg
+    - 6.jpg
+    - 7.jpg
+    - 8.jpeg
+    - 9.jpeg
 theme:
   primary_color: "#800000"
   secondary_color: "#da2a9c"
-registration:
-  form_url: https://docs.google.com/forms/d/1tyU8vO_dKlJ5ylfqkGwodalMg_xCiKlUMLBysy4Ni1g/edit?fbclid=IwY2xjawEeWflleHRuA2FlbQIxMAABHbYxKynFNfGIKHM7XYYJ55jzDvMKnw-pL1rhWJsA55anByvU7RykTNLa2Q_aem_CBUKEQ6nuMr_Q48r57diOw
+
+
 officers:
   - name: Jevilyn Odog
     position: President

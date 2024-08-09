@@ -5,19 +5,25 @@ description:
   full: The EAGLES Club, an academic club founded in the spirit of great love for learning, provides guidance and great opportunities for future educators to excel in the field of teaching and extend service to others. It promotes enhancement of the student’s knowledge and skills in line with teaching strategies, to develop a sense of responsibility among BACHELOR OF ELEMENTARY EDUCATION, BACHELOR OF EARL
   short: The EAGLES Club, an academic club founded in the spirit of great love for learning, provides guidance and great opportunities for future educators to excel in the field of teaching and extend service to others.
 
+tags:
+  - Collaboration
+  - Learning
+  
 links:
   - label: Facebook
     url: https://www.facebook.com/uiceagles?mibextid=LQQJ4d 
 
-tags:
-  - Collaboration
-  - Learning
-registration:
-  form_url: https://docs.google.com/forms/d/e/1FAIpQLSdbzdK0cJsc83olBSEjJvPtpHJp7Wz3w6lwC6pYylZ1RZMiXA/viewform?usp=pp_url 
-
 assets:
   logo: logo.png
   cover_photo: cover_photo.png
+  slideshows:
+    - 1.jpg 
+    - 2.jpg
+    - 3.jpg
+    - 4.jpg
+    - 5.jpg
+    - 6.jpg
+    
 theme:
   primary_color: "#79F6FC"
   secondary_color: "#FBFDAA"

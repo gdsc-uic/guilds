@@ -19,8 +19,7 @@ assets:
 theme:
   primary_color: "#fa5790"
   secondary_color: "#3ff7252"
-registration:
-  form_url: https://www.facebook.com/uicleadsglobal
+
 officers:
   - name: Pyae Sone Chan Thar Aung
     position: President
